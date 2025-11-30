@@ -2159,183 +2159,185 @@ elif page == "Comparisons":
 
             st.divider()
 
-            # Load review data for additional analysis
-            reviews_df = load_aggregated_data("agg_reviews.csv")
+            # GRAPH 3: Value Score Comparison (Rating vs Price)
+            st.markdown("#### 💎 Value Score Analysis")
             
-            if len(reviews_df) > 0:
-                # Filter reviews for both restaurants
-                rest1_reviews = reviews_df[reviews_df['name'] == rest1_name].copy()
-                rest2_reviews = reviews_df[reviews_df['name'] == rest2_name].copy()
-                
-                # GRAPH 3: Rating Trends Over Time
-                if len(rest1_reviews) > 0 and len(rest2_reviews) > 0 and 'date' in reviews_df.columns:
-                    st.markdown("#### 📈 Rating Trends Over Time")
-                    
-                    # Convert dates
-                    rest1_reviews['date'] = pd.to_datetime(rest1_reviews['date'], errors='coerce')
-                    rest2_reviews['date'] = pd.to_datetime(rest2_reviews['date'], errors='coerce')
-                    
-                    # Sort and calculate rolling averages
-                    rest1_reviews = rest1_reviews.dropna(subset=['date']).sort_values('date')
-                    rest2_reviews = rest2_reviews.dropna(subset=['date']).sort_values('date')
-                    
-                    if len(rest1_reviews) > 0 and len(rest2_reviews) > 0:
-                        rest1_reviews['rolling_rating'] = rest1_reviews['rating'].rolling(window=10, min_periods=1).mean()
-                        rest2_reviews['rolling_rating'] = rest2_reviews['rating'].rolling(window=10, min_periods=1).mean()
-                        
-                        fig_time = go.Figure()
-                        
-                        fig_time.add_trace(go.Scatter(
-                            x=rest1_reviews['date'],
-                            y=rest1_reviews['rolling_rating'],
-                            mode='lines',
-                            name=rest1_name,
-                            line=dict(color='#667eea', width=2.5),
-                            hovertemplate='<b>%{y:.2f}★</b><br>%{x}<extra></extra>'
-                        ))
-                        
-                        fig_time.add_trace(go.Scatter(
-                            x=rest2_reviews['date'],
-                            y=rest2_reviews['rolling_rating'],
-                            mode='lines',
-                            name=rest2_name,
-                            line=dict(color='#ef553b', width=2.5),
-                            hovertemplate='<b>%{y:.2f}★</b><br>%{x}<extra></extra>'
-                        ))
-                        
-                        fig_time.update_layout(
-                            title="Rating Trends (10-Review Rolling Average)",
-                            xaxis_title="Date",
-                            yaxis_title="Average Rating",
-                            hovermode='x unified',
-                            height=400,
-                            yaxis=dict(range=[0, 5])
-                        )
-                        
-                        st.plotly_chart(fig_time, use_container_width=True)
-                        
-                        st.divider()
+            # Calculate value scores (higher rating / lower price = better value)
+            rest1_value_score = (rest1_data['avg_rating'] / rest1_data['median_price']) * 20
+            rest2_value_score = (rest2_data['avg_rating'] / rest2_data['median_price']) * 20
+            
+            value_comparison = pd.DataFrame({
+                'Restaurant': [rest1_name, rest2_name],
+                'Value Score': [rest1_value_score, rest2_value_score],
+                'Avg Rating': [rest1_data['avg_rating'], rest2_data['avg_rating']],
+                'Price Tier': [rest1_data['median_price'], rest2_data['median_price']]
+            })
+            
+            fig_value = px.scatter(
+                value_comparison,
+                x='Price Tier',
+                y='Avg Rating',
+                size='Value Score',
+                color='Restaurant',
+                text='Restaurant',
+                title='Rating vs Price (Bubble Size = Value Score)',
+                color_discrete_map={rest1_name: "#667eea", rest2_name: "#ef553b"},
+                labels={'Price Tier': 'Price Tier (💰)', 'Avg Rating': 'Average Rating (★)'}
+            )
+            
+            fig_value.update_traces(textposition='top center', marker=dict(sizemode='diameter'))
+            fig_value.update_layout(height=400, showlegend=True)
+            st.plotly_chart(fig_value, use_container_width=True)
+            
+            st.divider()
 
-                # GRAPH 4: Rating Distribution Comparison
-                if len(rest1_reviews) > 0 and len(rest2_reviews) > 0 and 'rating' in reviews_df.columns:
-                    st.markdown("#### ⭐ Rating Distribution")
-                    
-                    rating_dist = pd.DataFrame({
-                        'Rating': ['1★', '2★', '3★', '4★', '5★'],
-                        rest1_name: [
-                            len(rest1_reviews[rest1_reviews['rating'] == r]) / len(rest1_reviews) * 100
-                            for r in [1, 2, 3, 4, 5]
-                        ],
-                        rest2_name: [
-                            len(rest2_reviews[rest2_reviews['rating'] == r]) / len(rest2_reviews) * 100
-                            for r in [1, 2, 3, 4, 5]
-                        ]
-                    })
-                    
-                    fig_dist = px.bar(
-                        rating_dist,
-                        x='Rating',
-                        y=[rest1_name, rest2_name],
-                        barmode='group',
-                        title="Percentage of Reviews by Rating",
-                        color_discrete_map={rest1_name: "#667eea", rest2_name: "#ef553b"},
-                        labels={'value': 'Percentage of Reviews (%)', 'Rating': 'Star Rating'}
-                    )
-                    
-                    fig_dist.update_layout(height=400)
-                    st.plotly_chart(fig_dist, use_container_width=True)
-                    
-                    st.divider()
+            # GRAPH 4: Sentiment Comparison
+            st.markdown("#### 💭 Sentiment Analysis")
+            
+            sentiment_data = pd.DataFrame({
+                'Restaurant': [rest1_name, rest2_name],
+                'Positive Sentiment': [
+                    rest1_data['avg_sentiment'] * 100,
+                    rest2_data['avg_sentiment'] * 100
+                ],
+                'Negative Sentiment': [
+                    (1 - rest1_data['avg_sentiment']) * 100,
+                    (1 - rest2_data['avg_sentiment']) * 100
+                ]
+            })
+            
+            fig_sentiment = go.Figure()
+            
+            fig_sentiment.add_trace(go.Bar(
+                name='Positive Sentiment',
+                x=sentiment_data['Restaurant'],
+                y=sentiment_data['Positive Sentiment'],
+                marker_color='#48bb78',
+                text=sentiment_data['Positive Sentiment'].apply(lambda x: f'{x:.1f}%'),
+                textposition='inside'
+            ))
+            
+            fig_sentiment.add_trace(go.Bar(
+                name='Negative Sentiment',
+                x=sentiment_data['Restaurant'],
+                y=sentiment_data['Negative Sentiment'],
+                marker_color='#f56565',
+                text=sentiment_data['Negative Sentiment'].apply(lambda x: f'{x:.1f}%'),
+                textposition='inside'
+            ))
+            
+            fig_sentiment.update_layout(
+                barmode='stack',
+                title='Sentiment Distribution',
+                yaxis_title='Percentage (%)',
+                height=400,
+                yaxis=dict(range=[0, 100])
+            )
+            
+            st.plotly_chart(fig_sentiment, use_container_width=True)
+            
+            st.divider()
 
-                # GRAPH 5: Sentiment Analysis Comparison
-                if 'sentiment' in reviews_df.columns and len(rest1_reviews) > 0 and len(rest2_reviews) > 0:
-                    st.markdown("#### 💭 Sentiment Breakdown")
-                    
-                    col1, col2 = st.columns(2)
-                    
-                    with col1:
-                        rest1_sentiment_counts = rest1_reviews['sentiment'].value_counts()
-                        if len(rest1_sentiment_counts) > 0:
-                            fig_sent1 = px.pie(
-                                values=rest1_sentiment_counts.values,
-                                names=rest1_sentiment_counts.index,
-                                title=f"{rest1_name}",
-                                color_discrete_map={
-                                    'positive': '#48bb78', 
-                                    'negative': '#f56565', 
-                                    'neutral': '#ed8936'
-                                },
-                                hole=0.4
-                            )
-                            fig_sent1.update_traces(textposition='inside', textinfo='percent+label')
-                            st.plotly_chart(fig_sent1, use_container_width=True)
-                    
-                    with col2:
-                        rest2_sentiment_counts = rest2_reviews['sentiment'].value_counts()
-                        if len(rest2_sentiment_counts) > 0:
-                            fig_sent2 = px.pie(
-                                values=rest2_sentiment_counts.values,
-                                names=rest2_sentiment_counts.index,
-                                title=f"{rest2_name}",
-                                color_discrete_map={
-                                    'positive': '#48bb78', 
-                                    'negative': '#f56565', 
-                                    'neutral': '#ed8936'
-                                },
-                                hole=0.4
-                            )
-                            fig_sent2.update_traces(textposition='inside', textinfo='percent+label')
-                            st.plotly_chart(fig_sent2, use_container_width=True)
-                    
-                    st.divider()
+            # GRAPH 5: Popularity vs Quality Matrix
+            st.markdown("#### 📊 Popularity vs Quality Matrix")
+            
+            # Load all restaurants for context
+            all_restaurants = restaurant_detailed.copy()
+            
+            # Create scatter plot with all restaurants in gray, highlight selected two
+            fig_matrix = go.Figure()
+            
+            # Add all restaurants as background
+            fig_matrix.add_trace(go.Scatter(
+                x=all_restaurants['review_count'],
+                y=all_restaurants['avg_rating'],
+                mode='markers',
+                name='Other Restaurants',
+                marker=dict(size=8, color='lightgray', opacity=0.3),
+                text=all_restaurants['name'],
+                hovertemplate='<b>%{text}</b><br>Reviews: %{x}<br>Rating: %{y:.2f}★<extra></extra>'
+            ))
+            
+            # Highlight Restaurant 1
+            fig_matrix.add_trace(go.Scatter(
+                x=[rest1_data['review_count']],
+                y=[rest1_data['avg_rating']],
+                mode='markers+text',
+                name=rest1_name,
+                marker=dict(size=15, color='#667eea', line=dict(width=2, color='white')),
+                text=[rest1_name],
+                textposition='top center',
+                hovertemplate='<b>%{text}</b><br>Reviews: %{x}<br>Rating: %{y:.2f}★<extra></extra>'
+            ))
+            
+            # Highlight Restaurant 2
+            fig_matrix.add_trace(go.Scatter(
+                x=[rest2_data['review_count']],
+                y=[rest2_data['avg_rating']],
+                mode='markers+text',
+                name=rest2_name,
+                marker=dict(size=15, color='#ef553b', line=dict(width=2, color='white')),
+                text=[rest2_name],
+                textposition='top center',
+                hovertemplate='<b>%{text}</b><br>Reviews: %{x}<br>Rating: %{y:.2f}★<extra></extra>'
+            ))
+            
+            fig_matrix.update_layout(
+                title='Restaurant Positioning: Review Count vs Rating',
+                xaxis_title='Number of Reviews (Popularity)',
+                yaxis_title='Average Rating (Quality)',
+                height=500,
+                showlegend=True,
+                yaxis=dict(range=[0, 5])
+            )
+            
+            st.plotly_chart(fig_matrix, use_container_width=True)
+            
+            st.divider()
 
-                # GRAPH 6: Review Volume Over Time
-                if 'date' in reviews_df.columns and len(rest1_reviews) > 0 and len(rest2_reviews) > 0:
-                    st.markdown("#### 📊 Review Volume Over Time")
-                    
-                    # Drop rows with invalid dates
-                    rest1_reviews_dated = rest1_reviews.dropna(subset=['date'])
-                    rest2_reviews_dated = rest2_reviews.dropna(subset=['date'])
-                    
-                    if len(rest1_reviews_dated) > 0 and len(rest2_reviews_dated) > 0:
-                        # Aggregate by month
-                        rest1_monthly = rest1_reviews_dated.groupby(rest1_reviews_dated['date'].dt.to_period('M')).size().reset_index(name='count')
-                        rest2_monthly = rest2_reviews_dated.groupby(rest2_reviews_dated['date'].dt.to_period('M')).size().reset_index(name='count')
-                        
-                        rest1_monthly['date'] = rest1_monthly['date'].dt.to_timestamp()
-                        rest2_monthly['date'] = rest2_monthly['date'].dt.to_timestamp()
-                        
-                        fig_volume = go.Figure()
-                        
-                        fig_volume.add_trace(go.Bar(
-                            x=rest1_monthly['date'],
-                            y=rest1_monthly['count'],
-                            name=rest1_name,
-                            marker_color='#667eea',
-                            opacity=0.7
-                        ))
-                        
-                        fig_volume.add_trace(go.Bar(
-                            x=rest2_monthly['date'],
-                            y=rest2_monthly['count'],
-                            name=rest2_name,
-                            marker_color='#ef553b',
-                            opacity=0.7
-                        ))
-                        
-                        fig_volume.update_layout(
-                            title="Monthly Review Volume",
-                            xaxis_title="Month",
-                            yaxis_title="Number of Reviews",
-                            barmode='group',
-                            height=400
-                        )
-                        
-                        st.plotly_chart(fig_volume, use_container_width=True)
+            # GRAPH 6: Competitive Advantage Analysis
+            st.markdown("#### 🎖️ Competitive Advantage")
+            
+            # Calculate percentile rankings
+            all_rest_sorted_rating = all_restaurants['avg_rating'].sort_values()
+            all_rest_sorted_sentiment = all_restaurants['avg_sentiment'].sort_values()
+            all_rest_sorted_reviews = all_restaurants['review_count'].sort_values()
+            
+            rest1_rating_percentile = (all_rest_sorted_rating < rest1_data['avg_rating']).sum() / len(all_rest_sorted_rating) * 100
+            rest2_rating_percentile = (all_rest_sorted_rating < rest2_data['avg_rating']).sum() / len(all_rest_sorted_rating) * 100
+            
+            rest1_sentiment_percentile = (all_rest_sorted_sentiment < rest1_data['avg_sentiment']).sum() / len(all_rest_sorted_sentiment) * 100
+            rest2_sentiment_percentile = (all_rest_sorted_sentiment < rest2_data['avg_sentiment']).sum() / len(all_rest_sorted_sentiment) * 100
+            
+            rest1_reviews_percentile = (all_rest_sorted_reviews < rest1_data['review_count']).sum() / len(all_rest_sorted_reviews) * 100
+            rest2_reviews_percentile = (all_rest_sorted_reviews < rest2_data['review_count']).sum() / len(all_rest_sorted_reviews) * 100
+            
+            percentile_data = pd.DataFrame({
+                'Metric': ['Rating Percentile', 'Sentiment Percentile', 'Popularity Percentile'],
+                rest1_name: [rest1_rating_percentile, rest1_sentiment_percentile, rest1_reviews_percentile],
+                rest2_name: [rest2_rating_percentile, rest2_sentiment_percentile, rest2_reviews_percentile]
+            })
+            
+            fig_percentile = px.bar(
+                percentile_data,
+                x='Metric',
+                y=[rest1_name, rest2_name],
+                barmode='group',
+                title='Percentile Rankings (vs All Restaurants)',
+                color_discrete_map={rest1_name: "#667eea", rest2_name: "#ef553b"},
+                labels={'value': 'Percentile (%)', 'Metric': 'Performance Metric'}
+            )
+            
+            fig_percentile.update_layout(
+                height=400,
+                yaxis=dict(range=[0, 100])
+            )
+            
+            st.plotly_chart(fig_percentile, use_container_width=True)
 
     else:
         st.warning("No restaurants match the current filters. Please adjust filters.")
-
+        
 # ============ PAGE: DATA TABLE ============
 elif page == "Data Table":
     st.markdown(
