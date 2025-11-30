@@ -577,7 +577,7 @@ if page == "Overview":
             )
             fig.update_layout(
                 title="Rating & Review Trends Over Time",
-                height=400,
+                height=450,
                 hovermode="x unified",
             )
             fig.update_yaxes(title_text="Avg Rating", secondary_y=False)
@@ -677,7 +677,7 @@ if page == "Overview":
                     "Excellent": "#43e97b",
                 },
             )
-            fig.update_layout(showlegend=False, height=400)
+            fig.update_layout(showlegend=False, height=450)
             st.plotly_chart(fig, use_container_width=True)
 
             total = rating_cat["count"].sum()
