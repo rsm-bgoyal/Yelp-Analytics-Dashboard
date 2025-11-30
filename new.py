@@ -954,13 +954,13 @@ elif page == "Exploratory Analysis":
                 go.Bar(
                     x=rating_dist["stars"],
                     y=rating_dist["count"],
-                    marker=dict(color="#667eea"),
+                    marker=dict(color="#a78bfa"),
                 )
             )
             fig.add_vline(
                 x=kpis.iloc[0]["avg_rating"],
                 line_dash="dash",
-                line_color="red",
+                line_color="#fda4af",
                 annotation_text=f"Mean: {kpis.iloc[0]['avg_rating']:.2f}",
             )
             fig.update_layout(
@@ -974,7 +974,7 @@ elif page == "Exploratory Analysis":
             display_insight(
                 f"Mean: <strong>{kpis.iloc[0]['avg_rating']:.2f}★</strong>, "
                 f"Median: <strong>{kpis.iloc[0]['median_rating']:.2f}★</strong>. "
-                f"Ratings above the red line exceed average performance.",
+                f"Ratings above the pink line exceed average performance.",
                 "📊",
             )
 
@@ -989,8 +989,9 @@ elif page == "Exploratory Analysis":
                 title="Average Rating by Price Tier",
                 labels={"price_tier": "Price Tier ($)", "avg_stars": "Avg Rating"},
                 color="price_tier",
-                color_discrete_sequence=px.colors.qualitative.Set2,
+                color_continuous_scale=[[0, '#fda4af'], [0.5, '#a78bfa'], [1, '#93c5fd']],
             )
+            fig.update_layout(showlegend=False)
             st.plotly_chart(fig, use_container_width=True)
 
             best_tier = price_stats.loc[price_stats["avg_stars"].idxmax(), "price_tier"]
@@ -1032,7 +1033,7 @@ elif page == "Exploratory Analysis":
             color="price_tier",
             title="Price Tier Distribution by Top Cities",
             barmode="stack",
-            color_discrete_sequence=px.colors.qualitative.Set2,
+            color_discrete_sequence=["#fda4af", "#f9a8d4", "#c4b5fd", "#a78bfa", "#93c5fd"],
         )
         st.plotly_chart(fig, use_container_width=True)
 
@@ -1107,7 +1108,7 @@ elif page == "Cuisine Analysis":
                     error_y=dict(type="data", array=top_15["std_rating"]),
                     marker=dict(
                         color=top_15["avg_rating"],
-                        colorscale="Viridis",
+                        colorscale=[[0, '#fda4af'], [0.5, '#a78bfa'], [1, '#93c5fd']],
                         showscale=False,
                     ),
                 )
@@ -1137,8 +1138,9 @@ elif page == "Cuisine Analysis":
                 y="count",
                 title="Top Cuisines by Review Count",
                 color="count",
-                color_continuous_scale="Plasma",
+                color_continuous_scale=[[0, '#fda4af'], [0.33, '#f9a8d4'], [0.66, '#a78bfa'], [1, '#93c5fd']],
             )
+            fig.update_layout(showlegend=False)
             st.plotly_chart(fig, use_container_width=True)
 
             top_3 = cuisine_count.head(3)
@@ -1158,7 +1160,7 @@ elif page == "Cuisine Analysis":
         fig = px.imshow(
             heatmap_pivot,
             labels=dict(x="Price Tier ($)", y="Cuisine", color="Avg Rating"),
-            color_continuous_scale="RdYlGn",
+            color_continuous_scale=[[0, '#fda4af'], [0.5, '#fde68a'], [1, '#93c5fd']],
             aspect="auto",
             title="Average Rating Heatmap",
             zmin=2,
@@ -1169,7 +1171,7 @@ elif page == "Cuisine Analysis":
         best = heatmap_data.loc[heatmap_data["avg_rating"].idxmax()]
         display_insight(
             f"Best combo: <strong>{best['cuisine']} at ${int(best['price_tier'])}</strong> ({best['avg_rating']:.2f}★). "
-            f"Green = value winners; Red = expectation gaps.",
+            f"Blue = value winners; Pink = expectation gaps.",
             "🔥",
         )
 
@@ -1186,10 +1188,11 @@ elif page == "Cuisine Analysis":
                 y="positive_pct",
                 title="Sentiment by Cuisine (% Positive)",
                 color="positive_pct",
-                color_continuous_scale="RdYlGn",
+                color_continuous_scale=[[0, '#fda4af'], [0.5, '#fbbf24'], [1, '#93c5fd']],
                 text="positive_pct",
             )
             fig.update_traces(texttemplate="%{text:.1f}%", textposition="outside")
+            fig.update_layout(showlegend=False)
             st.plotly_chart(fig, use_container_width=True)
 
             display_insight(
@@ -1200,6 +1203,11 @@ elif page == "Cuisine Analysis":
     with col4:
         st.markdown("<h3>📈 Cuisine Trends Over Time</h3>", unsafe_allow_html=True)
         if len(cuisine_trends) > 0:
+            # Get unique cuisines and assign pastel colors
+            cuisines = cuisine_trends['cuisine'].unique()
+            pastel_colors = ['#a78bfa', '#fda4af', '#93c5fd', '#fbbf24', '#f9a8d4']
+            color_map = {cuisine: pastel_colors[i % len(pastel_colors)] for i, cuisine in enumerate(cuisines)}
+            
             fig = px.line(
                 cuisine_trends,
                 x="year_month",
@@ -1207,6 +1215,7 @@ elif page == "Cuisine Analysis":
                 color="cuisine",
                 title="Top 5 Cuisines Rating Trends",
                 markers=True,
+                color_discrete_map=color_map,
             )
             st.plotly_chart(fig, use_container_width=True)
 
@@ -1215,8 +1224,6 @@ elif page == "Cuisine Analysis":
                 f"diverging = widening quality gaps.",
                 "📈",
             )
-
-
 # ============ PAGE: MAP EXPLORER ============
 elif page == "Map Explorer":
     st.markdown(
