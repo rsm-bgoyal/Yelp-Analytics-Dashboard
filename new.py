@@ -2027,8 +2027,8 @@ elif page == "Comparisons":
 
             st.divider()
 
-            # GRAPH 1: Original Side-by-Side Comparison
-            st.markdown("#### 📊 Side-by-Side Comparison")
+            # CHART 1: Side-by-Side Metrics Comparison
+            st.markdown("#### 📊 Key Metrics Comparison")
             comparison_df = pd.DataFrame(
                 {
                     "Metric": [
@@ -2064,7 +2064,7 @@ elif page == "Comparisons":
 
             st.divider()
 
-            # GRAPH 2: Radar Chart for Multi-Dimensional Comparison
+            # CHART 2: Performance Radar Chart
             st.markdown("#### 🎯 Performance Radar")
             
             # Calculate normalized metrics for radar chart
@@ -2123,8 +2123,7 @@ elif page == "Comparisons":
 
             st.divider()
 
-            # METRICS: Detailed Metrics with Delta Indicators
-            st.markdown("#### 📋 Detailed Metrics")
+            # Detailed Metrics with Delta
             col1, col2 = st.columns(2)
             
             with col1:
@@ -2159,87 +2158,8 @@ elif page == "Comparisons":
 
             st.divider()
 
-            # GRAPH 3: Value Score Comparison (Rating vs Price)
-            st.markdown("#### 💎 Value Score Analysis")
-            
-            # Calculate value scores (higher rating / lower price = better value)
-            rest1_value_score = (rest1_data['avg_rating'] / rest1_data['median_price']) * 20
-            rest2_value_score = (rest2_data['avg_rating'] / rest2_data['median_price']) * 20
-            
-            value_comparison = pd.DataFrame({
-                'Restaurant': [rest1_name, rest2_name],
-                'Value Score': [rest1_value_score, rest2_value_score],
-                'Avg Rating': [rest1_data['avg_rating'], rest2_data['avg_rating']],
-                'Price Tier': [rest1_data['median_price'], rest2_data['median_price']]
-            })
-            
-            fig_value = px.scatter(
-                value_comparison,
-                x='Price Tier',
-                y='Avg Rating',
-                size='Value Score',
-                color='Restaurant',
-                text='Restaurant',
-                title='Rating vs Price (Bubble Size = Value Score)',
-                color_discrete_map={rest1_name: "#667eea", rest2_name: "#ef553b"},
-                labels={'Price Tier': 'Price Tier (💰)', 'Avg Rating': 'Average Rating (★)'}
-            )
-            
-            fig_value.update_traces(textposition='top center', marker=dict(sizemode='diameter'))
-            fig_value.update_layout(height=400, showlegend=True)
-            st.plotly_chart(fig_value, use_container_width=True)
-            
-            st.divider()
-
-            # GRAPH 4: Sentiment Comparison
-            st.markdown("#### 💭 Sentiment Analysis")
-            
-            sentiment_data = pd.DataFrame({
-                'Restaurant': [rest1_name, rest2_name],
-                'Positive Sentiment': [
-                    rest1_data['avg_sentiment'] * 100,
-                    rest2_data['avg_sentiment'] * 100
-                ],
-                'Negative Sentiment': [
-                    (1 - rest1_data['avg_sentiment']) * 100,
-                    (1 - rest2_data['avg_sentiment']) * 100
-                ]
-            })
-            
-            fig_sentiment = go.Figure()
-            
-            fig_sentiment.add_trace(go.Bar(
-                name='Positive Sentiment',
-                x=sentiment_data['Restaurant'],
-                y=sentiment_data['Positive Sentiment'],
-                marker_color='#48bb78',
-                text=sentiment_data['Positive Sentiment'].apply(lambda x: f'{x:.1f}%'),
-                textposition='inside'
-            ))
-            
-            fig_sentiment.add_trace(go.Bar(
-                name='Negative Sentiment',
-                x=sentiment_data['Restaurant'],
-                y=sentiment_data['Negative Sentiment'],
-                marker_color='#f56565',
-                text=sentiment_data['Negative Sentiment'].apply(lambda x: f'{x:.1f}%'),
-                textposition='inside'
-            ))
-            
-            fig_sentiment.update_layout(
-                barmode='stack',
-                title='Sentiment Distribution',
-                yaxis_title='Percentage (%)',
-                height=400,
-                yaxis=dict(range=[0, 100])
-            )
-            
-            st.plotly_chart(fig_sentiment, use_container_width=True)
-            
-            st.divider()
-
-            # GRAPH 5: Popularity vs Quality Matrix
-            st.markdown("#### 📊 Popularity vs Quality Matrix")
+            # CHART 3: Popularity vs Quality Matrix
+            st.markdown("#### 📊 Market Positioning")
             
             # Load all restaurants for context
             all_restaurants = restaurant_detailed.copy()
@@ -2283,7 +2203,7 @@ elif page == "Comparisons":
             ))
             
             fig_matrix.update_layout(
-                title='Restaurant Positioning: Review Count vs Rating',
+                title='Review Count vs Rating (Competitive Context)',
                 xaxis_title='Number of Reviews (Popularity)',
                 yaxis_title='Average Rating (Quality)',
                 height=500,
@@ -2292,48 +2212,53 @@ elif page == "Comparisons":
             )
             
             st.plotly_chart(fig_matrix, use_container_width=True)
-            
+
             st.divider()
 
-            # GRAPH 6: Competitive Advantage Analysis
-            st.markdown("#### 🎖️ Competitive Advantage")
+            # CHART 4: Sentiment Comparison
+            st.markdown("#### 💭 Sentiment Breakdown")
             
-            # Calculate percentile rankings
-            all_rest_sorted_rating = all_restaurants['avg_rating'].sort_values()
-            all_rest_sorted_sentiment = all_restaurants['avg_sentiment'].sort_values()
-            all_rest_sorted_reviews = all_restaurants['review_count'].sort_values()
-            
-            rest1_rating_percentile = (all_rest_sorted_rating < rest1_data['avg_rating']).sum() / len(all_rest_sorted_rating) * 100
-            rest2_rating_percentile = (all_rest_sorted_rating < rest2_data['avg_rating']).sum() / len(all_rest_sorted_rating) * 100
-            
-            rest1_sentiment_percentile = (all_rest_sorted_sentiment < rest1_data['avg_sentiment']).sum() / len(all_rest_sorted_sentiment) * 100
-            rest2_sentiment_percentile = (all_rest_sorted_sentiment < rest2_data['avg_sentiment']).sum() / len(all_rest_sorted_sentiment) * 100
-            
-            rest1_reviews_percentile = (all_rest_sorted_reviews < rest1_data['review_count']).sum() / len(all_rest_sorted_reviews) * 100
-            rest2_reviews_percentile = (all_rest_sorted_reviews < rest2_data['review_count']).sum() / len(all_rest_sorted_reviews) * 100
-            
-            percentile_data = pd.DataFrame({
-                'Metric': ['Rating Percentile', 'Sentiment Percentile', 'Popularity Percentile'],
-                rest1_name: [rest1_rating_percentile, rest1_sentiment_percentile, rest1_reviews_percentile],
-                rest2_name: [rest2_rating_percentile, rest2_sentiment_percentile, rest2_reviews_percentile]
+            sentiment_data = pd.DataFrame({
+                'Restaurant': [rest1_name, rest2_name],
+                'Positive Sentiment': [
+                    rest1_data['avg_sentiment'] * 100,
+                    rest2_data['avg_sentiment'] * 100
+                ],
+                'Negative Sentiment': [
+                    (1 - rest1_data['avg_sentiment']) * 100,
+                    (1 - rest2_data['avg_sentiment']) * 100
+                ]
             })
             
-            fig_percentile = px.bar(
-                percentile_data,
-                x='Metric',
-                y=[rest1_name, rest2_name],
-                barmode='group',
-                title='Percentile Rankings (vs All Restaurants)',
-                color_discrete_map={rest1_name: "#667eea", rest2_name: "#ef553b"},
-                labels={'value': 'Percentile (%)', 'Metric': 'Performance Metric'}
-            )
+            fig_sentiment = go.Figure()
             
-            fig_percentile.update_layout(
+            fig_sentiment.add_trace(go.Bar(
+                name='Positive Sentiment',
+                x=sentiment_data['Restaurant'],
+                y=sentiment_data['Positive Sentiment'],
+                marker_color='#48bb78',
+                text=sentiment_data['Positive Sentiment'].apply(lambda x: f'{x:.1f}%'),
+                textposition='inside'
+            ))
+            
+            fig_sentiment.add_trace(go.Bar(
+                name='Negative Sentiment',
+                x=sentiment_data['Restaurant'],
+                y=sentiment_data['Negative Sentiment'],
+                marker_color='#f56565',
+                text=sentiment_data['Negative Sentiment'].apply(lambda x: f'{x:.1f}%'),
+                textposition='inside'
+            ))
+            
+            fig_sentiment.update_layout(
+                barmode='stack',
+                title='Customer Sentiment Distribution',
+                yaxis_title='Percentage (%)',
                 height=400,
                 yaxis=dict(range=[0, 100])
             )
             
-            st.plotly_chart(fig_percentile, use_container_width=True)
+            st.plotly_chart(fig_sentiment, use_container_width=True)
 
     else:
         st.warning("No restaurants match the current filters. Please adjust filters.")
