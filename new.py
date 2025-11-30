@@ -577,7 +577,7 @@ if page == "Overview":
             )
             fig.update_layout(
                 title="Rating & Review Trends Over Time",
-                height=450,
+                height=400,
                 hovermode="x unified",
             )
             fig.update_yaxes(title_text="Avg Rating", secondary_y=False)
