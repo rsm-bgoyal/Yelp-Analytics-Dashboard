@@ -1951,8 +1951,7 @@ elif page == "Advanced Insights":
             "🏆",
         )
 
-
-# ============ PAGE: COMPARISONS ============
+# ============ PAGE: COMPARISONS (ENHANCED) ============
 elif page == "Comparisons":
     st.markdown(
         """
@@ -2028,7 +2027,7 @@ elif page == "Comparisons":
 
             st.divider()
 
-            # Comparison Chart
+            # GRAPH 1: Original Side-by-Side Comparison
             st.markdown("#### 📊 Side-by-Side Comparison")
             comparison_df = pd.DataFrame(
                 {
@@ -2062,9 +2061,280 @@ elif page == "Comparisons":
                 color_discrete_map={rest1_name: "#667eea", rest2_name: "#ef553b"},
             )
             st.plotly_chart(fig, use_container_width=True)
+
+            st.divider()
+
+            # GRAPH 2: Radar Chart for Multi-Dimensional Comparison
+            st.markdown("#### 🎯 Performance Radar")
+            
+            # Calculate normalized metrics for radar chart
+            max_reviews = max(rest1_data['review_count'], rest2_data['review_count'])
+            
+            radar_data = pd.DataFrame({
+                'Metric': ['Rating', 'Sentiment', 'Popularity', 'Value'],
+                rest1_name: [
+                    rest1_data['avg_rating'] / 5 * 100,  # Normalize to 100
+                    rest1_data['avg_sentiment'] * 100,
+                    min(rest1_data['review_count'] / max_reviews * 100, 100) if max_reviews > 0 else 0,
+                    (6 - rest1_data['median_price']) / 5 * 100  # Inverse (lower price = higher value)
+                ],
+                rest2_name: [
+                    rest2_data['avg_rating'] / 5 * 100,
+                    rest2_data['avg_sentiment'] * 100,
+                    min(rest2_data['review_count'] / max_reviews * 100, 100) if max_reviews > 0 else 0,
+                    (6 - rest2_data['median_price']) / 5 * 100
+                ]
+            })
+            
+            fig_radar = go.Figure()
+            
+            fig_radar.add_trace(go.Scatterpolar(
+                r=radar_data[rest1_name],
+                theta=radar_data['Metric'],
+                fill='toself',
+                name=rest1_name,
+                line_color='#667eea',
+                fillcolor='rgba(102, 126, 234, 0.2)'
+            ))
+            
+            fig_radar.add_trace(go.Scatterpolar(
+                r=radar_data[rest2_name],
+                theta=radar_data['Metric'],
+                fill='toself',
+                name=rest2_name,
+                line_color='#ef553b',
+                fillcolor='rgba(239, 85, 59, 0.2)'
+            ))
+            
+            fig_radar.update_layout(
+                polar=dict(
+                    radialaxis=dict(
+                        visible=True,
+                        range=[0, 100],
+                        showticklabels=True,
+                        ticks='outside'
+                    )
+                ),
+                showlegend=True,
+                height=450
+            )
+            
+            st.plotly_chart(fig_radar, use_container_width=True)
+
+            st.divider()
+
+            # METRICS: Detailed Metrics with Delta Indicators
+            st.markdown("#### 📋 Detailed Metrics")
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown(f"### 🏪 {rest1_name}")
+                st.metric("Average Rating", f"{rest1_data['avg_rating']:.2f}★")
+                st.metric("Positive Sentiment", f"{rest1_data['avg_sentiment'] * 100:.1f}%")
+                st.metric("Total Reviews", f"{rest1_data['review_count']:,}")
+                st.metric("Price Tier", "💰" * int(rest1_data['median_price']))
+                
+            with col2:
+                st.markdown(f"### 🏪 {rest2_name}")
+                rating_diff = rest2_data['avg_rating'] - rest1_data['avg_rating']
+                sentiment_diff = (rest2_data['avg_sentiment'] - rest1_data['avg_sentiment']) * 100
+                review_diff = rest2_data['review_count'] - rest1_data['review_count']
+                
+                st.metric(
+                    "Average Rating", 
+                    f"{rest2_data['avg_rating']:.2f}★",
+                    delta=f"{rating_diff:+.2f}"
+                )
+                st.metric(
+                    "Positive Sentiment", 
+                    f"{rest2_data['avg_sentiment'] * 100:.1f}%",
+                    delta=f"{sentiment_diff:+.1f}pp"
+                )
+                st.metric(
+                    "Total Reviews", 
+                    f"{rest2_data['review_count']:,}",
+                    delta=f"{review_diff:+,}"
+                )
+                st.metric("Price Tier", "💰" * int(rest2_data['median_price']))
+
+            st.divider()
+
+            # Load review data for additional analysis
+            reviews_df = load_aggregated_data("agg_reviews.csv")
+            
+            if len(reviews_df) > 0:
+                # Filter reviews for both restaurants
+                rest1_reviews = reviews_df[reviews_df['name'] == rest1_name].copy()
+                rest2_reviews = reviews_df[reviews_df['name'] == rest2_name].copy()
+                
+                # GRAPH 3: Rating Trends Over Time
+                if len(rest1_reviews) > 0 and len(rest2_reviews) > 0 and 'date' in reviews_df.columns:
+                    st.markdown("#### 📈 Rating Trends Over Time")
+                    
+                    # Convert dates
+                    rest1_reviews['date'] = pd.to_datetime(rest1_reviews['date'], errors='coerce')
+                    rest2_reviews['date'] = pd.to_datetime(rest2_reviews['date'], errors='coerce')
+                    
+                    # Sort and calculate rolling averages
+                    rest1_reviews = rest1_reviews.dropna(subset=['date']).sort_values('date')
+                    rest2_reviews = rest2_reviews.dropna(subset=['date']).sort_values('date')
+                    
+                    if len(rest1_reviews) > 0 and len(rest2_reviews) > 0:
+                        rest1_reviews['rolling_rating'] = rest1_reviews['rating'].rolling(window=10, min_periods=1).mean()
+                        rest2_reviews['rolling_rating'] = rest2_reviews['rating'].rolling(window=10, min_periods=1).mean()
+                        
+                        fig_time = go.Figure()
+                        
+                        fig_time.add_trace(go.Scatter(
+                            x=rest1_reviews['date'],
+                            y=rest1_reviews['rolling_rating'],
+                            mode='lines',
+                            name=rest1_name,
+                            line=dict(color='#667eea', width=2.5),
+                            hovertemplate='<b>%{y:.2f}★</b><br>%{x}<extra></extra>'
+                        ))
+                        
+                        fig_time.add_trace(go.Scatter(
+                            x=rest2_reviews['date'],
+                            y=rest2_reviews['rolling_rating'],
+                            mode='lines',
+                            name=rest2_name,
+                            line=dict(color='#ef553b', width=2.5),
+                            hovertemplate='<b>%{y:.2f}★</b><br>%{x}<extra></extra>'
+                        ))
+                        
+                        fig_time.update_layout(
+                            title="Rating Trends (10-Review Rolling Average)",
+                            xaxis_title="Date",
+                            yaxis_title="Average Rating",
+                            hovermode='x unified',
+                            height=400,
+                            yaxis=dict(range=[0, 5])
+                        )
+                        
+                        st.plotly_chart(fig_time, use_container_width=True)
+                        
+                        st.divider()
+
+                # GRAPH 4: Rating Distribution Comparison
+                if len(rest1_reviews) > 0 and len(rest2_reviews) > 0 and 'rating' in reviews_df.columns:
+                    st.markdown("#### ⭐ Rating Distribution")
+                    
+                    rating_dist = pd.DataFrame({
+                        'Rating': ['1★', '2★', '3★', '4★', '5★'],
+                        rest1_name: [
+                            len(rest1_reviews[rest1_reviews['rating'] == r]) / len(rest1_reviews) * 100
+                            for r in [1, 2, 3, 4, 5]
+                        ],
+                        rest2_name: [
+                            len(rest2_reviews[rest2_reviews['rating'] == r]) / len(rest2_reviews) * 100
+                            for r in [1, 2, 3, 4, 5]
+                        ]
+                    })
+                    
+                    fig_dist = px.bar(
+                        rating_dist,
+                        x='Rating',
+                        y=[rest1_name, rest2_name],
+                        barmode='group',
+                        title="Percentage of Reviews by Rating",
+                        color_discrete_map={rest1_name: "#667eea", rest2_name: "#ef553b"},
+                        labels={'value': 'Percentage of Reviews (%)', 'Rating': 'Star Rating'}
+                    )
+                    
+                    fig_dist.update_layout(height=400)
+                    st.plotly_chart(fig_dist, use_container_width=True)
+                    
+                    st.divider()
+
+                # GRAPH 5: Sentiment Analysis Comparison
+                if 'sentiment' in reviews_df.columns and len(rest1_reviews) > 0 and len(rest2_reviews) > 0:
+                    st.markdown("#### 💭 Sentiment Breakdown")
+                    
+                    col1, col2 = st.columns(2)
+                    
+                    with col1:
+                        rest1_sentiment_counts = rest1_reviews['sentiment'].value_counts()
+                        if len(rest1_sentiment_counts) > 0:
+                            fig_sent1 = px.pie(
+                                values=rest1_sentiment_counts.values,
+                                names=rest1_sentiment_counts.index,
+                                title=f"{rest1_name}",
+                                color_discrete_map={
+                                    'positive': '#48bb78', 
+                                    'negative': '#f56565', 
+                                    'neutral': '#ed8936'
+                                },
+                                hole=0.4
+                            )
+                            fig_sent1.update_traces(textposition='inside', textinfo='percent+label')
+                            st.plotly_chart(fig_sent1, use_container_width=True)
+                    
+                    with col2:
+                        rest2_sentiment_counts = rest2_reviews['sentiment'].value_counts()
+                        if len(rest2_sentiment_counts) > 0:
+                            fig_sent2 = px.pie(
+                                values=rest2_sentiment_counts.values,
+                                names=rest2_sentiment_counts.index,
+                                title=f"{rest2_name}",
+                                color_discrete_map={
+                                    'positive': '#48bb78', 
+                                    'negative': '#f56565', 
+                                    'neutral': '#ed8936'
+                                },
+                                hole=0.4
+                            )
+                            fig_sent2.update_traces(textposition='inside', textinfo='percent+label')
+                            st.plotly_chart(fig_sent2, use_container_width=True)
+                    
+                    st.divider()
+
+                # GRAPH 6: Review Volume Over Time
+                if 'date' in reviews_df.columns and len(rest1_reviews) > 0 and len(rest2_reviews) > 0:
+                    st.markdown("#### 📊 Review Volume Over Time")
+                    
+                    # Drop rows with invalid dates
+                    rest1_reviews_dated = rest1_reviews.dropna(subset=['date'])
+                    rest2_reviews_dated = rest2_reviews.dropna(subset=['date'])
+                    
+                    if len(rest1_reviews_dated) > 0 and len(rest2_reviews_dated) > 0:
+                        # Aggregate by month
+                        rest1_monthly = rest1_reviews_dated.groupby(rest1_reviews_dated['date'].dt.to_period('M')).size().reset_index(name='count')
+                        rest2_monthly = rest2_reviews_dated.groupby(rest2_reviews_dated['date'].dt.to_period('M')).size().reset_index(name='count')
+                        
+                        rest1_monthly['date'] = rest1_monthly['date'].dt.to_timestamp()
+                        rest2_monthly['date'] = rest2_monthly['date'].dt.to_timestamp()
+                        
+                        fig_volume = go.Figure()
+                        
+                        fig_volume.add_trace(go.Bar(
+                            x=rest1_monthly['date'],
+                            y=rest1_monthly['count'],
+                            name=rest1_name,
+                            marker_color='#667eea',
+                            opacity=0.7
+                        ))
+                        
+                        fig_volume.add_trace(go.Bar(
+                            x=rest2_monthly['date'],
+                            y=rest2_monthly['count'],
+                            name=rest2_name,
+                            marker_color='#ef553b',
+                            opacity=0.7
+                        ))
+                        
+                        fig_volume.update_layout(
+                            title="Monthly Review Volume",
+                            xaxis_title="Month",
+                            yaxis_title="Number of Reviews",
+                            barmode='group',
+                            height=400
+                        )
+                        
+                        st.plotly_chart(fig_volume, use_container_width=True)
+
     else:
         st.warning("No restaurants match the current filters. Please adjust filters.")
-
 
 # ============ PAGE: DATA TABLE ============
 elif page == "Data Table":
