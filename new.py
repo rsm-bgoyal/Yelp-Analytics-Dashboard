@@ -461,9 +461,9 @@ if page == "Overview":
         with col1:
             st.markdown(
                 f"""
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                <div style="background: linear-gradient(135deg, #a78bfa 0%, #c4b5fd 100%);
                     padding: 25px; border-radius: 15px; text-align: center;
-                    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2); color: white;">
+                    box-shadow: 0 8px 16px rgba(167, 139, 250, 0.2); color: white;">
                     <div style="font-size: 32px; margin-bottom: 5px;">🏪</div>
                     <div style="font-size: 28px; font-weight: bold;">{int(k["total_restaurants"]):,}</div>
                     <div style="font-size: 12px; opacity: 0.9;">Restaurants</div>
@@ -475,9 +475,9 @@ if page == "Overview":
         with col2:
             st.markdown(
                 f"""
-                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                <div style="background: linear-gradient(135deg, #fda4af 0%, #f9a8d4 100%);
                     padding: 25px; border-radius: 15px; text-align: center;
-                    box-shadow: 0 8px 16px rgba(245, 87, 108, 0.2); color: white;">
+                    box-shadow: 0 8px 16px rgba(253, 164, 175, 0.2); color: white;">
                     <div style="font-size: 32px; margin-bottom: 5px;">⭐</div>
                     <div style="font-size: 28px; font-weight: bold;">{int(k["total_reviews"]):,}</div>
                     <div style="font-size: 12px; opacity: 0.9;">Total Reviews</div>
@@ -489,9 +489,9 @@ if page == "Overview":
         with col3:
             st.markdown(
                 f"""
-                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                <div style="background: linear-gradient(135deg, #93c5fd 0%, #7dd3fc 100%);
                     padding: 25px; border-radius: 15px; text-align: center;
-                    box-shadow: 0 8px 16px rgba(79, 172, 254, 0.2); color: white;">
+                    box-shadow: 0 8px 16px rgba(147, 197, 253, 0.2); color: white;">
                     <div style="font-size: 32px; margin-bottom: 5px;">📈</div>
                     <div style="font-size: 28px; font-weight: bold;">{k["avg_rating"]:.2f}</div>
                     <div style="font-size: 12px; opacity: 0.9;">Avg Rating</div>
@@ -503,9 +503,9 @@ if page == "Overview":
         with col4:
             st.markdown(
                 f"""
-                <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+                <div style="background: linear-gradient(135deg, #fde68a 0%, #fbbf24 100%);
                     padding: 25px; border-radius: 15px; text-align: center;
-                    box-shadow: 0 8px 16px rgba(67, 233, 123, 0.2); color: white;">
+                    box-shadow: 0 8px 16px rgba(253, 230, 138, 0.2); color: white;">
                     <div style="font-size: 32px; margin-bottom: 5px;">😊</div>
                     <div style="font-size: 28px; font-weight: bold;">{k["positive_pct"]:.1f}%</div>
                     <div style="font-size: 12px; opacity: 0.9;">Positive</div>
@@ -517,9 +517,9 @@ if page == "Overview":
         with col5:
             st.markdown(
                 f"""
-                <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+                <div style="background: linear-gradient(135deg, #c4b5fd 0%, #e9d5ff 100%);
                     padding: 25px; border-radius: 15px; text-align: center;
-                    box-shadow: 0 8px 16px rgba(250, 112, 154, 0.2); color: white;">
+                    box-shadow: 0 8px 16px rgba(196, 181, 253, 0.2); color: white;">
                     <div style="font-size: 32px; margin-bottom: 5px;">🔗</div>
                     <div style="font-size: 28px; font-weight: bold;">{k["correlation"]:.3f}</div>
                     <div style="font-size: 12px; opacity: 0.9;">Correlation</div>
@@ -533,7 +533,7 @@ if page == "Overview":
     # Key Insights
     st.markdown("<h2>💡 Key Insights</h2>", unsafe_allow_html=True)
     for i, insight in enumerate(get_insights_from_kpis(kpis)):
-        colors = ["#667eea", "#f093fb", "#4facfe", "#43e97b", "#fa709a"]
+        colors = ["#a78bfa", "#fda4af", "#93c5fd", "#fbbf24", "#c4b5fd"]
         color = colors[i % len(colors)]
         st.markdown(
             f"""
@@ -561,8 +561,8 @@ if page == "Overview":
                     y=ts_data["avg_stars"],
                     name="Avg Rating",
                     mode="lines+markers",
-                    line=dict(color="#667eea", width=3),
-                    marker=dict(size=6)
+                    line=dict(color="#a78bfa", width=3),
+                    marker=dict(size=6, color="#a78bfa")
                 ),
                 secondary_y=False,
             )
@@ -571,7 +571,7 @@ if page == "Overview":
                     x=ts_data["year_month"],
                     y=ts_data["review_count"],
                     name="Review Count",
-                    marker=dict(color="rgba(102, 126, 234, 0.3)"),
+                    marker=dict(color="rgba(147, 197, 253, 0.3)"),
                 ),
                 secondary_y=True,
             )
@@ -599,18 +599,15 @@ if page == "Overview":
     with col2:
         st.markdown("<h3>⭐ Rating Distribution</h3>", unsafe_allow_html=True)
         if len(rating_dist) > 0:
-            # Create color gradient from purple to blue matching the theme
-            colors_gradient = ['#764ba2', '#667eea', '#667eea', '#4facfe', '#43e97b']
-            rating_dist_sorted = rating_dist.sort_values('stars')
-            
+            # Create gradient from pink to purple to blue
             fig = px.bar(
-                rating_dist_sorted,
+                rating_dist,
                 x="stars",
                 y="count",
                 title="Rating Distribution",
                 labels={"stars": "Star Rating", "count": "Count"},
                 color="stars",
-                color_continuous_scale=[[0, '#764ba2'], [0.5, '#667eea'], [1, '#43e97b']]
+                color_continuous_scale=[[0, '#fda4af'], [0.5, '#a78bfa'], [1, '#93c5fd']]
             )
             fig.update_layout(height=400, showlegend=False)
             fig.update_traces(marker=dict(line=dict(width=0)))
@@ -634,7 +631,7 @@ if page == "Overview":
                 values="count",
                 names="sentiment",
                 title="Overall Sentiment",
-                color_discrete_map={"Positive": "#43e97b", "Negative": "#f5576c"},
+                color_discrete_map={"Positive": "#fbbf24", "Negative": "#fda4af"},
                 hole=0.4
             )
             fig.update_traces(textposition='inside', textinfo='percent+label')
@@ -671,13 +668,13 @@ if page == "Overview":
                 title="Rating Category Distribution",
                 color="rating_category",
                 color_discrete_map={
-                    "Poor": "#f5576c",
-                    "Average": "#fa709a",
-                    "Good": "#667eea",
-                    "Excellent": "#43e97b",
+                    "Poor": "#fda4af",
+                    "Average": "#f9a8d4",
+                    "Good": "#a78bfa",
+                    "Excellent": "#93c5fd",
                 },
             )
-            fig.update_layout(showlegend=False, height=450)
+            fig.update_layout(showlegend=False, height=400)
             st.plotly_chart(fig, use_container_width=True)
 
             total = rating_cat["count"].sum()
