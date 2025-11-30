@@ -1,0 +1,1133 @@
+business_id,name,latitude,longitude,address,city,business_stars,avg_sentiment,price_tier,review_count
+--onnLZrsCazmcy2P_7fcw,Sizzler,34.435307,-119.81968,5555 Hollister Ave,Goleta,3.0,0.5714285714285714,2.0,7
+-8iATYRnN46Km0_-ldx6cg,Pace food+drink,34.416157,-119.69483,413 State St,Santa Barbara,4.0,0.8313253012048193,2.0,166
+-9r8nAzWyRSLxBWt8uQOdA,Hana Kitchen,34.41325,-119.85647,6558 Pardall Rd,Isla Vista,3.0,0.521865889212828,1.0,343
+-ALqLSTzkGDMscHdxA1NgA,Su Casa Fresh Mexican Grill,34.41822,-119.7158,1417 San Andres St,Santa Barbara,4.5,0.8275862068965517,1.0,29
+-BdYhP-12elmFV7oB1iv4A,Corner Tap Room,34.401382,-119.72247,1905 Cliff Dr,Santa Barbara,5.0,0.9090909090909091,,44
+-CoZunWzch6HzMaM34dOEQ,Mels Place,34.419968,-119.699265,6 De La Guerra Pl,Santa Barbara,3.5,0.6,,5
+-FM4CxOg4XXmX_Ebky_SiQ,Finch & Fork,34.42036,-119.70248,31 W Carrillo St,Santa Barbara,4.0,0.8145048814504882,2.0,1434
+-FRHYI6doGCjIsXiKHkUqw,Deja Vu Cafe IV,34.411728,-119.8568,966 Embarcadero Del Mar,Goleta,2.5,0.39622641509433965,1.0,106
+-H-fZonTLitwHFY_PLAIjA,Taffy's Pizza,34.42955,-119.717606,2026 De La Vina St,Santa Barbara,4.0,0.7171717171717171,2.0,198
+-I7M6l0h46VdiN09Y1NUZw,Apna Indian Kitchen,34.41924,-119.69839,718 State St,Santa Barbara,4.5,0.8862745098039215,2.0,255
+-Lwq2vdrQolANLzEbYMPpQ,Le Crepe Shoppe,34.415752,-119.69428,15 W Gutierrez St,Santa Barbara,4.0,0.8636363636363636,1.0,22
+-M7wzxpUsdSkQd9PDGsJWA,Tyler's Donuts,34.39466,-119.51293,1002 Casitas Pass Rd,Carpinteria,4.0,0.7222222222222222,1.0,54
+-SS3ep20HKhuOhzDkkt9aA,Tinker's Burgers,34.421574,-119.60122,"2275 Ortega Hill Rd, Ste C",Summerland,4.0,0.6911764705882353,2.0,204
+-TArOdux8Z4oH-jIM1FJuQ,Bistro 1111,34.417652,-119.66912,1111 E Cabrillo Blvd,Santa Barbara,3.5,0.5714285714285714,2.0,63
+-TSPsir3LSLO9vVBkvkqUw,The Coffee Bean & Tea Leaf,34.398964,-119.51873,4991 Carpinteria Ave,Carpinteria,3.5,0.6166666666666667,2.0,60
+-VvMsFD0W2nQuO9buaeC1g,Los Tarascos,34.441227,-119.828384,5915B Calle Real,Goleta,4.5,0.8958333333333334,1.0,144
+-e8RwknT5szoLk9uBZjzcw,Riverbench Santa Barbara Tasting Room,34.414814,-119.69056,"137 Anacapa St, Ste C",Santa Barbara,4.0,0.8278688524590164,2.0,122
+-fxH1XplVLVtWg2ZJWwRdA,Sam's To Go,34.400864,-119.72265,"315 Meigs Rd, Ste I",Santa Barbara,4.5,0.8636363636363636,1.0,88
+-ipZBVF9nWm1vzrvQ3444A,Habit Burger Grill,34.438324,-119.74965,3890 La Cumbre Plz Ln,Santa Barbara,4.0,0.7647058823529411,1.0,136
+-jrT-2bTSDaqJtzHRpY9ag,Dumpling King,34.411716,-119.85696,"966 Embarcadero Del Mar, Ste C",Isla Vista,3.5,0.6181818181818182,1.0,55
+-kOUmMiIimNSBIDdFN0x-Q,Beachside Bar-Cafe,34.41705,-119.829216,5905 Sandspit Rd,Goleta,3.5,0.672782874617737,2.0,654
+-kY_HDP7IMvGl-kBIZVU4A,Dune Coffee Roasters - Anacapa,34.418995,-119.69507,528 Anacapa St,Santa Barbara,4.0,0.7909090909090909,2.0,330
+-kfHz1kimX62QEceFkkB_g,Edomasa,34.435944,-119.72534,2710 De La Vina St,Santa Barbara,3.5,0.7167070217917676,2.0,413
+-loV4cB2Uh9TCltTRgGzWQ,Renaud's Patisserie & Bistro,34.42537,-119.70591,"1324 State St, Ste N, Arlington Plaza",Santa Barbara,4.0,0.7979274611398963,2.0,386
+-nwNPb3G-0L95igrhkvMtw,Panda Express,34.41872,-119.700165,605 Paseo Nuevo,Santa Barbara,2.5,0.3469387755102041,1.0,49
+-r6nmLB5Vi2TLQCxh0_dtw,South Coast Deli- Carrillo,34.421703,-119.70133,10 E Carrillo St,Santa Barbara,4.0,0.8099547511312217,1.0,221
+-ujBP1Dw0j1-Ffaz97-LXQ,Lama Dog Tap Room,34.41575,-119.68848,116 Santa Barbara St,Santa Barbara,4.0,0.7983539094650206,2.0,243
+04Ss49U_QKYLotcJMAH8cA,Ike’s Love & Sandwiches,34.43074,-119.714264,1936 State St,Santa Barbara,4.0,0.72,2.0,100
+06pNHtxgPhGhZpM0Z2uzNw,Hollister Brewing Company,34.429497,-119.87114,6980 Marketplace Dr,Goleta,3.5,0.6362038664323374,2.0,569
+07yUvKzFb-yPzJKoT0zamQ,Piranha Restaurant & Sushi Bar,34.419167,-119.69834,714 State St,Santa Barbara,3.0,0.42857142857142855,3.0,7
+0LXeNx7wGTqbMSwKkGC3xg,Altamirano Mexican Restaurant,34.426273,-119.684456,"422 N Milpas St, Ste 1",Santa Barbara,4.0,0.8,2.0,25
+0Qs-G8Xs-mz-jmQH5lez5A,Museum Cafe,34.42347,-119.703926,1130 State St,Santa Barbara,4.5,0.9130434782608695,2.0,23
+0RxU5OglQyPVtLKC1LPgsA,Bree'osh,34.42141,-119.64648,"1150 Coast Village Rd, Ste E",Santa Barbara,4.5,0.8786692759295499,2.0,511
+0WrdiQ4qJBu2Gc7wRcIfdw,Tupelo Junction Cafe,34.423943,-119.70494,1218 State St,Santa Barbara,4.0,0.7743490838958534,2.0,1037
+0YI4tyK4MrTAveuj2js4OA,Firehouse Subs,34.41192,-119.85482,"6530 Seville Rd., #103",Isla Vista,4.5,0.8333333333333334,1.0,24
+0ac5lGA_0wdKDnib3y59Xg,Flor De Maiz,34.413193,-119.68844,29 E Cabrillo Blvd,Santa Barbara,4.0,0.7477272727272727,2.0,440
+0c28ysQJ_M1fVToTFV-FWQ,Wingman Rodeo - Montecito Street,34.41171,-119.69605,235 W Montecito St,Santa Barbara,4.0,0.6818181818181818,2.0,44
+0cWnURpfrb4MqKSzyVN4SQ,Alcazar Tapas Bar,34.40171,-119.7212,1812 Cliff Dr,Santa Barbara,4.0,0.864516129032258,2.0,155
+0f0l62WKla-j2cfnPn7P2Q,The Coffee Bean & Tea Leaf,34.44084,-119.824486,5745 Calle Real,Goleta,3.5,0.6164383561643836,1.0,73
+0iHHsSqphxrBWWecYEJcuQ,Cajé Coffee - Arlington St,34.424854,-119.706085,1316 State St,Santa Barbara,4.5,0.9444444444444444,2.0,72
+0iLgVQpBeIYYwQZIblTTVw,Cafe 154,34.451096,-119.76009,"4151 Foothill Rd Building A Main Fl, Bldg A",Santa Barbara,4.0,0.8,,10
+0it-2gWk_gyuZyEMQzBBuQ,Corktree Cellars Wine Bar & Bistro,34.398174,-119.51881,910 Linden Ave,Carpinteria,4.0,0.7325102880658436,2.0,243
+0m0SQSIzM9WcDhJ7UEVCLQ,Ty Lounge,34.417248,-119.641884,1260 Channel Drive,Santa Barbara,4.0,0.8125,3.0,32
+0mUVD5sDXZjd66XwATN8XA,Phresh Teas,34.43564,-119.8204,"5599 Hollister Ave, Unit B & C",Goleta,4.0,0.7358490566037735,1.0,106
+0nR7jHCkFEzmA1n2b5g1nw,Basil's Italian,34.41933,-119.69597,608 Anacapa St,Santa Barbara,4.5,0.7692307692307693,2.0,65
+0qu0fNTOsSmuREYVIMPuIQ,Cold Spring Tavern,34.521626,-119.84056,5995 Stagecoach Rd,Santa Barbara,4.5,0.833011583011583,2.0,1036
+0tbscjPg4IzURekIn_CJ1Q,Juice Ranch,34.41446,-119.69444,33 Parker Way,Santa Barbara,4.0,0.7450980392156863,2.0,153
+0yD-SZAfjpH36-o7_pospw,Rincon Brewery,34.4129,-119.85781,6583 Pardall Rd,Isla Vista,4.0,0.8,2.0,15
+12Gc4OFQ-WAW0fAk2hRZuQ,Kin Bakeshop,34.440628,-119.73678,3404 State St,Santa Barbara,5.0,0.96,,25
+18eWJFJbXyR9j_5xfcRLYA,Siam Elephant,34.39651,-119.52168,509 Linden Ave,Carpinteria,4.5,0.8680851063829788,2.0,470
+1Du1NruqJwxnzgEUHc42Jw,SB Sunshine Cafe,34.440655,-119.73878,3514 State St,Santa Barbara,4.5,0.8732394366197183,2.0,213
+1FURjeGJi_LBXcJQg8eskw,Padaro Beach Grill,34.406834,-119.548584,3765 Santa Claus Ln,Carpinteria,4.5,0.8802197802197802,2.0,910
+1J0NIfmrSuV72KzhmYFxMA,Pane E Vino,34.438305,-119.63319,1482 E Valley Rd,Montecito,4.0,0.725,2.0,80
+1ONK4BD8Fuh1mfBCrB2aOQ,Crazy Jim's Tacos Y Más,34.4168,-119.695885,505 State St,Santa Barbara,4.0,0.7222222222222222,,18
+1U8Kt44FIkC7RnJsNjaMTA,Teru Japanese Cuisine,34.424408,-119.70606,1305 State St,Santa Barbara,4.5,0.8857142857142857,,35
+1cYZIJM5P3yOsIjq8qxoSw,On the Side,34.435947,-119.85413,6521 Pardall Rd,Isla Vista,3.5,0.5714285714285714,2.0,7
+1hRWfuA-8THwYsDYgj-oIg,Holdren's Grill,34.42944,-119.87011,6920 Market Pl Dr,Goleta,2.5,0.3469387755102041,3.0,49
+1kVnChI4aqsPw9i2PVqkkw,Fresco Cafe,34.43942,-119.75142,"3987 State St, Ste B",Santa Barbara,4.0,0.7624113475177305,2.0,282
+1l4-uhraQzNiRjppKyMUUQ,Jeannine's American Bakery Restaurant,34.43119,-119.87406,"7060 Hollister Ave, Ste 105",Goleta,4.5,0.9145299145299145,2.0,117
+1lwulkAD5htni3rbHW8oeg,Subway,34.40215,-119.72255,"1940 Cliff Dr, Ste B-13",Santa Barbara,3.0,0.4166666666666667,1.0,12
+1oGCzoCC6HnQWpdK9cCP0g,Low Pigeon Coffee Roasters,34.4213,-119.69101,401 E Haley St,Santa Barbara,5.0,0.9361702127659575,2.0,94
+1pYZMmpdy2MviWBbagMwbA,Italian & Greek Delicatessen,34.418854,-119.697685,636 State St,Santa Barbara,4.5,0.8333333333333334,1.0,6
+1pd4VYTww1UWDVai2r2RKg,805 Boba,34.41895,-119.69974,213 Paseo Nuevo,Santa Barbara,3.0,0.5118110236220472,1.0,254
+1rC0hBT49gVljFQYTIGIaA,The James Joyce,34.417065,-119.69614,513 State St,Santa Barbara,3.5,0.7168674698795181,2.0,166
+1xsBRB203LiYLcC3mktfdA,Kunin Wines,34.41528,-119.68991,116 E Yanonali St,Santa Barbara,4.0,0.7543859649122807,2.0,171
+2-cH9tqCu3yHRJJoKTYjHw,European Deli,34.442764,-119.83062,149 N Fairview Ave,Goleta,4.5,0.8181818181818182,1.0,11
+22q2wGlAmJN8MkhZl2RzRw,Sakura Express,34.4198,-119.70019,819 State St,Santa Barbara,2.0,0.29411764705882354,1.0,34
+23OxrUaCvvVrwSa1z3xG-w,Recipes Bakery & Gifts: An Australian Coffee House,34.420242,-119.694664,604 Santa Barbara St,Santa Barbara,4.5,0.8625954198473282,2.0,131
+27zlxlmlQu9KBr5Vj4MGeg,Pickles & Swiss,34.431133,-119.87429,"7060 Hollister Ave, Ste 102",Goleta,4.5,0.8378378378378378,2.0,814
+29YqJwOGEuAWqlHZxMc1OA,Paradise Cafe,34.420036,-119.69685,702 Anacapa St,Santa Barbara,3.5,0.6643835616438356,2.0,292
+29t8lDBLiwkEd1HA356dOw,Bagel Cafe,34.41097,-119.85713,6551 Trigo Rd,Goleta,4.0,0.7150127226463104,1.0,393
+2DBo3WFKwpbtl9kJzuroIg,Mika,34.42877,-119.871605,7020 Market Place Dr,Goleta,2.5,0.34375,2.0,32
+2N9WHETHcYJsfYpHQ-qN_A,Crushcakes Cafe & Simply Pies,34.435413,-119.81233,5392 Hollister Ave,Goleta,3.5,0.6441717791411042,2.0,163
+2OJqIloZMAZXCW3uzF8jJw,El Sitio,34.424942,-119.67113,138 S Salinas St,Santa Barbara,4.0,0.5789473684210527,1.0,38
+2QaNH5-RCRNIkToUOBc22Q,La Salsa Fresh Mexican Grill,34.439514,-119.75163,"3987 State St, Ste D",Santa Barbara,4.0,0.8846153846153846,2.0,26
+2QvkOHC-pWGiAmvQ9xX64Q,Nardonne's La Famiglia Pizzeria,34.418095,-119.69853,17 W Ortega St,Santa Barbara,4.5,0.8404255319148937,2.0,94
+2RtyOlU9mwyVisvgOECaDA,Uniboil,34.43542,-119.82037,"5599 Hollister Ave, Unit C",Goleta,4.0,0.6926605504587156,2.0,218
+2T7622XwGOhJf7O4ND_XBA,Angry Wings,34.413273,-119.85478,6530 Pardall Rd,Isla Vista,3.5,0.5454545454545454,2.0,55
+2WHu0k5VVM1Pn9AFzkSBlA,Here's the Scoop,34.420914,-119.64496,1187 Coast Village Rd,Montecito,3.5,0.6936936936936937,2.0,111
+2Y0L3Hf6U-76jGvviKy5pA,El Taco Grande,34.395855,-119.51167,1096 Casitas Pass Rd,Carpinteria,3.0,0.5726495726495726,1.0,117
+2YnQAJdeFrcgPa8MqIYcDg,Cody's Cafe,34.43662,-119.79173,4898 Hollister Ave,Santa Barbara,3.5,0.698051948051948,2.0,308
+2YoQRByvTjdP4GSVnPcANA,Pastavino,34.42963,-119.87038,"Camino Real Marketplace, 6920 Market Pl Dr",Goleta,3.0,0.4423076923076923,2.0,52
+2aP9wvEqpGLLDVpWTWlAog,Reynaldo's  Bakery,34.398335,-119.519485,895 Linden Ave,Carpinteria,4.5,0.8345864661654135,1.0,133
+2bl6G1zgXUHbMGwEocqMSg,Daves Dogs - Cart,34.41962,-119.676765,132 S Milpas St,Santa Barbara,5.0,0.9753086419753086,1.0,162
+2h3SEwpI6fiuTF9mcN1S_Q,El Zarape,34.41856,-119.7161,1435 San Andres St,Santa Barbara,4.0,0.7816091954022989,1.0,87
+2nF2syYoD5VBFk01le6NkA,Montecito Deli & Catering,34.4214,-119.64642,1150 Coast Village Rd,Santa Barbara,4.5,0.875,1.0,32
+2pBNVsJo3a3CPbInUu9lvQ,Char West,34.40976,-119.68534,221 Stearns Wharf,Santa Barbara,3.0,0.4925373134328358,2.0,134
+2rv-W-PBYciHvOhruq8rlg,Java Jones,34.413136,-119.85661,"6560 Pardall Rd, Ste C",Goleta,3.5,0.6666666666666666,1.0,15
+2swMZVA832zkmdPBrddPRQ,Backyard Bowls,34.441513,-119.82313,5668 Calle Real,Goleta,4.5,0.8445378151260504,1.0,238
+2xxkaRy7rP5EUyjFt2J5kA,Nikka Ramen,34.440884,-119.823524,5701 Calle Real,Goleta,4.5,0.8263888888888888,2.0,576
+3-dQbvti2EpSfs9jKcyIjQ,State & A Bar and Grill,34.423332,-119.7048,1201 State St,Santa Barbara,3.0,0.4838709677419355,2.0,31
+304FY8qhcOpm9SIkrzmhoQ,Reunion Kitchen + Drink,34.41702,-119.668976,1118 E Cabrillo Blvd,Santa Barbara,4.5,0.9032258064516129,2.0,62
+34Eqv8jXgxg_EEwcsNgeeg,Backyard Bowls,34.415115,-119.694496,331 Motor Way,Santa Barbara,4.0,0.8313432835820895,2.0,670
+3DSgJFIaXjdknbZn3LSnPQ,Dart Coffee Co,34.415806,-119.6899,121 E Yanonali St,Santa Barbara,4.5,0.888,2.0,125
+3ESm27p4DACKCpzZmiRxgw,Mala Town,34.413,-119.85649,6555 Pardall Rd,Goleta,4.0,0.6,,5
+3RtMd3VZ21WL5auDr6Jp9A,Cafe Zoma,34.420986,-119.70121,918 State St,Santa Barbara,4.0,0.75,2.0,28
+3VrqxApK-iwfRohlAuIt0g,Cajun Kitchen Cafe,34.441135,-119.83163,6025 Calle Real,Goleta,4.0,0.7368421052631579,2.0,114
+3Wy21heeDm8h2tSZfcj6OA,Lure Fish House,34.43885,-119.74816,"3815 State St, Ste G131",Santa Barbara,4.5,0.8520208604954368,2.0,1534
+3XjwPkcbuhssRwZKnoYOyQ,The Pan,34.418148,-119.69621,18 E Cota St,Santa Barbara,4.0,0.8095238095238095,2.0,21
+3bZADX_g9efvqGXaAY7Kbg,Petros Restaurant,34.42475,-119.70617,1316 State St,Santa Barbara,4.0,0.7025641025641025,2.0,195
+3cnjGli5iwGsUF06Dne9Yg,Challwa,34.42465,-119.68669,724 E Haley St,Santa Barbara,4.5,1.0,,5
+3czlT5lRF9uKmGZ2rknJqA,Santa Barbara Tamales To Go,34.436592,-119.69204,20 E Cota St,Santa Barbara,4.5,0.6666666666666666,2.0,9
+3fH5YQKRJu55TFPnMhv1ZQ,Freeman's Flying Chicken,34.430134,-119.73796,3400 Calle Real,Santa Barbara,3.5,0.6060606060606061,2.0,33
+3fpAmsSuEFNF29UUPpgwlw,Spudnuts & Bagels,34.440197,-119.7414,3629 State St,Santa Barbara,4.5,0.9433333333333334,1.0,300
+3lty2YUwjp61iUqNgKVEMw,Marmalade Cafe,34.43846,-119.748344,3825 State St,Santa Barbara,3.5,0.5675675675675675,2.0,185
+3rzlcCvPUJ56jvYWl7iGvA,Modern Times Kitchen,34.416534,-119.69458,418 State St,Santa Barbara,4.5,0.9259259259259259,2.0,54
+3tvi-OJ_-iK1ecjzSaH-oA,Hook And Press Donuts,34.4233,-119.70285,15 East Figueroa St,Santa Barbara,4.5,0.8251121076233184,1.0,223
+3xJ_6qxRA0sdUm3ThCPiCw,Giannfranco's Trattoria,34.396652,-119.52079,666 Linden Ave,Carpinteria,4.0,0.6666666666666666,2.0,282
+425FOxIzHPcOB0niWc6-1w,Spudnuts Donuts,34.418987,-119.704796,"220 W Carrillo St, Ste 1",Santa Barbara,3.5,0.6,1.0,100
+42cHjHD6Kkv7Ms3-lLsimw,Takenoya,34.441933,-119.82864,5934 Calle Real,Goleta,2.5,0.3783783783783784,2.0,74
+45D7B9CqiUTTPUFcqmLx5Q,Live Oak Cafe,34.430313,-119.72093,2220 Bath St,Santa Barbara,4.5,0.8726591760299626,2.0,267
+45Ut-AN8h3c88-pYTrGBnA,PokeCeviche,34.413013,-119.85723,901 Embarcadero Del Mar,Goleta,4.0,0.6086956521739131,2.0,161
+49Sy1N3MTnK6Eslh1tgZQQ,Matty's Hot Chicken,34.423607,-119.707054,38 W Victoria St,Santa Barbara,3.5,0.75,,12
+4D7QDfPOsSPfKxBi3gs_qQ,Olio Pizzeria,34.423813,-119.70605,"11 W Victoria St, Ste 21",Santa Barbara,4.0,0.75625,2.0,640
+4F3wxihvRNXK9cuxlOOJBg,Blaze Pizza,34.413296,-119.85591,6546 Pardall Rd,Goleta,3.5,0.6918238993710691,1.0,159
+4FdsX3MbkcdBRAr1aymF6A,La Paloma Cafe,34.42004,-119.69685,702 Anacapa St,Santa Barbara,4.5,0.8571428571428571,,77
+4IqrY1mXK65HgrrgkpE-cw,Sushi | Bar Montecito,34.421246,-119.6404,1295 Coast Village Rd,Montecito,4.5,0.9186046511627907,4.0,86
+4KAuy-zNBxD9QvnkldwEww,The Marquee,34.423664,-119.70483,1212 State St,Santa Barbara,4.0,0.7872340425531915,2.0,47
+4NozMd-0ufrS7sUZ95948w,Island Brewing Company,34.3956,-119.52069,5049 6th St,Carpinteria,4.5,0.9077490774907749,2.0,271
+4VW4_ghjdYw0Wl40Voa9cw,Delgado's Mexican Foods,34.402115,-119.52977,4401 Carpinteria Ave,Carpinteria,3.5,0.5975609756097561,2.0,246
+4a_3ninzpidm2MwMcdRJ-g,Elephant Bar Restaurant,34.43354,-119.835396,521 Firestone Road,Goleta,3.0,0.4235294117647059,2.0,85
+4ejnTeRzv8z102DBIWjQLg,Ca' Dario Pizzeria,34.425224,-119.70492,29 E Victoria St,Santa Barbara,4.0,0.6475409836065574,2.0,122
+4h4Uskb7B8OTI7oDR7wImQ,Mesa Burger - Goleta,34.429356,-119.87182,7010 Market Pl Dr,Goleta,4.0,0.7272727272727273,2.0,110
+4haTJpBzX-7ilN77LWAIDw,California Crisp Cafe,34.419273,-119.69843,718 State St,Santa Barbara,3.5,0.6,2.0,10
+4kfbEcAMepvkjt3H7INYBg,The Good Lion,34.42378,-119.704796,1212 State St,Santa Barbara,4.5,0.9116809116809117,2.0,351
+4lWMnL-wLekry77FwaruSQ,Fat Mo's Burgers,34.413136,-119.85655,6558 Pardall Rd,Isla Vista,2.0,0.4,,10
+4sOLSCiwSdHhzcXC9Sd0xQ,Northstar Coffee,34.420883,-119.70105,918 State St,Santa Barbara,4.0,0.9130434782608695,2.0,23
+4uspKB1d3pGdgjOClA-UkQ,Cajun Kitchen Cafe,34.428574,-119.716385,"1924 De La Vina St, Ste A",Santa Barbara,4.0,0.8135593220338984,2.0,236
+4xBkP-W_WaOzBiP8yD7yvg,The Nugget Bar and Grill,34.423523,-119.706245,21 W Victoria St,Santa Barbara,4.0,0.7962962962962963,2.0,54
+4yBeWUqxuru02oZccjDN7Q,Taqueria Altamirano,34.415367,-119.691315,217 E Anacapa St,Santa Barbara,4.5,0.8333333333333334,1.0,12
+4z2Frpficc3NqHkGfpMXJQ,Senor Frog's,34.39804,-119.519135,892 Linden Ave,Carpinteria,3.0,0.5086206896551724,2.0,116
+52ov7d0148JvYG78_c-Bsw,goa taco,34.41924,-119.69839,718 State St,Santa Barbara,4.0,0.7923728813559322,2.0,236
+5B-m3Nir02zheQnEGopV0w,Killer Shrimp,34.416508,-119.694405,416 State St,Santa Barbara,4.0,0.7414965986394558,2.0,147
+5GUA13zYgw4_8F6qUMU_LA,Green Star Coffee,34.423546,-119.7069,38 W Victoria St,Santa Barbara,4.5,0.8412698412698413,1.0,63
+5RsVAkDnMrcSbErS6P1eew,Cajé Coffee Roasters - Isla Vista,34.412,-119.85514,948 Embarcadero Del Norte,Isla Vista,4.5,0.9060150375939849,1.0,266
+5YKOs_VGFHgUv7DSMLaQeA,Finestra Cafe,34.422997,-119.70272,15 E Figueroa St,Santa Barbara,3.0,0.6,,5
+5Z3uvoIoOFUzTmrBmIJv2g,Nona's Italian Deli,34.424297,-119.69474,415 E De La Guerra St,Santa Barbara,3.0,0.5263157894736842,1.0,38
+5ZXMarIwfGjOxo9KD5oFQQ,Gaucho Cafe,34.44,-119.83103,At the UCen,Goleta,4.0,0.8,1.0,5
+5dGu7C1UEPLs_FIj_Qin0g,Santa Barbara Organic Kitchen,34.41611,-119.689674,"205 Santa Barbara St, Ste B",Santa Barbara,3.5,0.8,2.0,5
+5kZFpY6mXiNZzZcotXbfVA,Lovin Oven Mediterranean,34.411335,-119.85769,6578 Trigo Rd,Goleta,4.0,0.7777777777777778,1.0,54
+5lGOPqwxBNR9hfA9mFr2vA,Mac N Cheese After Dark,34.4162,-119.69516,423 State St,Santa Barbara,4.5,0.8285714285714286,1.0,140
+5p_14QRkLFd6QyhpPzfW3A,Left At Albuquerque,34.418938,-119.69801,700 State St,Santa Barbara,3.0,0.46153846153846156,2.0,26
+5pyYBpuNOAqgN9nSpk8vaQ,Madison's Sports Grill,34.41727,-119.69654,525 State St,Santa Barbara,3.0,0.4927536231884058,2.0,69
+5t5fKwgnfaT-ScmfTcxwHg,JJ’s Diner,34.416046,-119.6949,413 State St,Santa Barbara,4.5,0.8787878787878788,2.0,66
+5tVPbd0gJZHyEEWpXW7vCg,Wing's Restaurant,34.439705,-119.770836,4427 Hollister Ave,Santa Barbara,3.5,0.6216216216216216,1.0,37
+5tkZfqkwx6axbN9P5UlC8w,Taco Bell,34.396606,-119.51342,1045 Casitas Pass Road,Carpinteria,2.5,0.4117647058823529,1.0,34
+5uNCvNy9L6peKeKP1RRPyg,Saigon Vietnamese Restaurant,34.424294,-119.70531,"1230 State St, Unit A",Santa Barbara,3.5,0.5466321243523317,2.0,386
+5vIfUavd23X3lBzjnnc4QA,Winchell's Donuts,34.423798,-119.68151,202 N Milpas,Santa Barbara,3.0,0.6190476190476191,1.0,21
+5vObJIHLO-QOMrw_MvC4rA,The Worker Bee Cafe,34.398827,-119.5188,973 Linden Ave,Carpinteria,4.0,0.8209658421672555,2.0,849
+64Rl3pT4Md4-8ckeaNVZCQ,Bucatini,34.41684,-119.69523,436 State St,Santa Barbara,3.5,0.5492957746478874,2.0,284
+69_5ZefofuhXv2ymn-xc9A,South Coast Deli- Isla Vista,34.412975,-119.85478,6521 Pardall Rd,Isla Vista,4.0,0.8481012658227848,1.0,158
+6E9KjyDAdL_vDQCWwhj_KA,Crushcakes & Cafe,34.399296,-119.51901,4945 Carpinteria Ave,Carpinteria,3.5,0.7100371747211895,2.0,269
+6EPPtwJR1kdIfHiCjzCzuw,The Harbor Restaurant,34.410477,-119.686844,210 Stearns Wharf,Santa Barbara,3.5,0.577962577962578,2.0,481
+6EizP0XyqITuGZ8GZMI9Lw,Toma Restaurant & Bar,34.408634,-119.6935,324 West Cabrillo Blvd,Santa Barbara,4.5,0.8804347826086957,3.0,1104
+6HKIfenWg3zt2CYx4D5r_Q,Tepeyac Taquitos,34.418934,-119.70424,201 W Carrillo St,Santa Barbara,3.5,0.6666666666666666,1.0,6
+6HTGlttrzCMsuGBHO1ZGiw,Barbareño,34.418045,-119.70295,205 W Canon Perdido St,Santa Barbara,4.5,0.8341232227488151,3.0,422
+6KtMnjvgO1F79P7tCnEKOA,Carpinteria and Linden Pub,34.39932,-119.51855,4954 Carpinteria Ave,Carpinteria,3.5,0.7878787878787878,1.0,33
+6MXO883UaicdJuobFkKJUw,Lucky Dragon,34.429684,-119.86702,"6831 Hollister Ave, Ste B",Goleta,3.5,0.5978260869565217,2.0,92
+6RBZfirnzE4NahJTn1UPNA,La Super-Rica Taqueria,34.427944,-119.68729,622 N Milpas St,Santa Barbara,4.0,0.7119866814650389,1.0,1802
+6RBrYMiAf8jFJI4fDoQpcw,De La Guerra Dining Commons,34.40963,-119.84503,1501 Residential Services,Santa Barbara,3.0,0.6666666666666666,2.0,6
+6TciI6uBdrd8z1av1YleLg,Pepe's Mexican Restaurant,34.435165,-119.82865,254 Orange Ave,Goleta,3.5,0.6886792452830188,2.0,212
+6VVbLYay8czrjKJ4xRoTxQ,Judge For Yourself Cafe,34.42599,-119.70266,1218 Santa Barbara St,Santa Barbara,4.5,0.868421052631579,2.0,114
+6aUb_f9C7a2oOxaIfRGSdA,Chicken in a Barrel BBQ-Goleta,34.44082,-119.82376,5711 Calle Real,Goleta,4.0,0.7478991596638656,2.0,119
+6acxMT_WGbA-cUN5RXpIfw,Momma Donna,34.416157,-119.69483,413 State St,Santa Barbara,5.0,0.9444444444444444,2.0,18
+6afesz8yZhjOgijkWl4jig,The Coffee Bean & Tea Leaf,34.41985,-119.69992,811 State St,Santa Barbara,3.5,0.5641025641025641,1.0,78
+6kPHr6gZaU9732ptn9gJrA,La Guerrerita Mexican Food,34.435905,-119.82307,"5698 Hollister Ave, Ste A",Goleta,4.0,0.7878787878787878,1.0,132
+6smGb7xv5fDbBsLgW1WC2w,Shintori Sushi Factory,34.44023,-119.728325,3001 State St,Santa Barbara,3.5,0.708994708994709,2.0,189
+72yw_QJwkKEjpa7CumQCeQ,Rusty's Pizza Parlor,34.441055,-119.831505,6025 Calle Real,Goleta,2.5,0.36,2.0,25
+748Tn5Hsf4LMCCA_WxVBfA,Little Asia,34.41233,-119.85498,6527 Madrid Rd,Isla Vista,2.5,0.3793103448275862,1.0,29
+7Bu1EQENC0M77VcU-jxATA,The Fig Grill,34.441826,-119.82913,5940 Calle Real,Goleta,3.0,0.48148148148148145,2.0,27
+7IdIGemGZodDAA_9mJCigA,Farmer Boy,34.440044,-119.73734,3427 State St,Santa Barbara,4.0,0.7566539923954373,2.0,263
+7grEnJV48N6BxbEP3uxISA,Mr B Restaurant & Cafe,34.436726,-119.74869,"140 S Hope Ave, Ste A102",Santa Barbara,4.0,0.8095238095238095,2.0,21
+7kLn2XsFwyJ-yFn4qx40TQ,Buena Onda at Mosaic Locale,34.42292,-119.70442,1131 State St,Santa Barbara,4.5,0.9142857142857143,,35
+7o-p4IlitJ-SbSCZ84vHqQ,Campus Point Coffee,34.413277,-119.85677,6560 Pardall Rd,Goleta,4.5,0.9,1.0,10
+7oPREWTlY8RIMfwT1R0YYw,SALTY at the Beach,34.404003,-119.6938,"113 Harbor Way, Ste 180",Santa Barbara,4.0,0.7428571428571429,,70
+7tO1ZfWN6OEo1pWtdgxfqA,The Melting Pot,34.419346,-119.69613,608 Anacapa St,Santa Barbara,4.0,0.6363636363636364,3.0,11
+7wSnkgOORRCqVDa_n8Upxg,Garrett's Old Fashioned Restaurant,34.430836,-119.71496,2001 State St,Santa Barbara,4.0,0.8349514563106796,2.0,515
+7wcHZ80HLJVwUijAH_efJQ,Breakwater Restaurant,34.404278,-119.69405,107 Harbor Way,Santa Barbara,3.5,0.6244131455399061,2.0,213
+7yR4oQcapZBKCkRLB3Isig,El Torito,34.413105,-119.6885,29 E Cabrillo Blvd,Santa Barbara,2.5,0.3825136612021858,2.0,183
+8BUr8GviR2o_b-brO21wwQ,Kyle's Isla Vista,34.412968,-119.85689,900 Embarcadero Del Mar,Isla Vista,2.5,0.25,,12
+8FgcWn7bdMC-TMrE4Q3xMg,Bangkok Palace,34.43683,-119.72668,2829 De La Vina St,Santa Barbara,3.5,0.5625,2.0,48
+8JzURExziDYuCrd7Ve9nDQ,Los Tarascos Bakery and Deli,34.42028,-119.69153,314 E Haley St,Santa Barbara,4.5,0.8863636363636364,1.0,44
+8Lbz0hfE4MWzd7yDu9atBA,Uncorked Wine Tasting and Kitchen,34.421745,-119.6899,432 E Haley St,Santa Barbara,5.0,0.9745222929936306,2.0,157
+8MQNb0Cnkfq-G1OIViukjQ,Seagrass Restaurant,34.419407,-119.69682,30 E Ortega St,Santa Barbara,4.0,0.7058823529411765,3.0,221
+8MoqZqlNN9AXzG91_Hpc_Q,Dargan's Irish Pub & Restaurant,34.419098,-119.69746,18 E Ortega St,Santa Barbara,4.0,0.8178694158075601,2.0,291
+8RlO6NuhWzXktp-1croq5A,Szechuan Restaurant,34.402412,-119.72351,1994 Cliff Dr,Santa Barbara,3.5,0.6967213114754098,2.0,244
+8Vo6LN9gqULhXzoxj5k6kQ,The Black Sheep,34.419247,-119.69704,26 E Ortega St,Santa Barbara,4.5,0.825098814229249,2.0,1012
+8WltHaNG6wD1d4h3LE_zaA,Kogilicious,34.4116,-119.85512,956 Embarcadero Del Norte,Isla Vista,4.0,0.8527131782945736,1.0,129
+8_r9EZL6vX5fPBoVh3gUrA,La Playa Azul Cafe,34.423233,-119.69874,914 Santa Barbara St,Santa Barbara,4.0,0.7537993920972644,2.0,329
+8qGe4GQYyZstFhYa0rvpIg,McDonald's,34.43686,-119.830185,146 S Fairview Ave,Goleta,2.0,0.13559322033898305,1.0,59
+8r_n8JdKQ0gePm2neSkL7A,Sushi Ai,34.42953,-119.872185,7020 Marketplace Dr,Goleta,3.0,0.4870689655172414,2.0,232
+92Z2WFvC86Qy3TOI-oBGVg,Fiesta Market & Deli,34.402096,-119.52788,4502 Carpinteria Ave,Carpinteria,4.0,0.7407407407407407,1.0,27
+95NWdx75Gwy4r_IGGuCnmQ,Juice N Things,34.39892,-119.518684,4991 Carpinteria Ave,Carpinteria,4.0,0.76,,25
+9CBW1G-JR9ioTgwFTK6kbQ,Minnow Cafe,34.42083,-119.69819,9 Breakwater,Santa Barbara,4.0,0.8333333333333334,1.0,12
+9D1Vuxuh-hvwkYBrqje1nA,Stacky's Seaside,34.421425,-119.59977,2315 Lillie Ave,Summerland,3.5,0.671875,1.0,64
+9Ekfby4OgzWs96RO8M4tnQ,Caje,34.395794,-119.51375,1007 Casitas Pass Rd,Carpinteria,4.5,0.8,1.0,5
+9JR9Ht6IX1r2jPPG689JyA,Subway,34.42189,-119.70278,"1021 State St, Ste A",Santa Barbara,2.5,0.3684210526315789,1.0,19
+9JaoQxrPpDfQ_vbZFgSXIw,Neighbor Tim's BBQ,34.432774,-119.84828,152 -E Aero Camino,Goleta,4.5,0.9375,,16
+9MsMKG0v3NstaPqKGYFVOw,Corazon Cocina,34.42179,-119.69921,126 E Canon Perdido St,Santa Barbara,4.5,0.8974358974358975,2.0,39
+9RDKqyqXJcupSnA2vCIs_A,Cafe Luna,34.421394,-119.59825,2354 Lillie Ave,Summerland,4.0,0.7415730337078652,2.0,89
+9Ujw_PoR_Vv67gf4vsAk-g,Giovanni's,34.42078,-119.64492,1187 Coast Village Rd,Santa Barbara,3.0,0.48148148148148145,1.0,54
+9_uigKs9GCwg9dFKkq_Kfg,Starbucks,34.4199,-119.699524,800 State St,Santa Barbara,2.5,0.35135135135135137,1.0,74
+9dp3hVDlQ0VtjPW_7ISoXg,Chuck's Waterfront Grill,34.404285,-119.69368,"113 Harbor Way, Ste 180",Santa Barbara,3.5,0.6007604562737643,2.0,263
+9fJziJ3o9-QXKuKolg7yEA,The India Club,34.440773,-119.823555,5701 Calle Real,Goleta,3.5,0.6733333333333333,2.0,150
+9h0i4lVC5eCVhRTanWsEAg,Le Cafe Stella,34.438538,-119.73516,3302 Mc Caw Ave,Santa Barbara,3.5,0.6764705882352942,2.0,272
+9jEv_7tueRJdV5CZwVcwPg,PokeCeviche,34.419285,-119.69992,651 Paseo Nuevo,Santa Barbara,4.0,0.7744360902255639,2.0,133
+9kfN12wVGnKo54AaRjz0vQ,Guicho's Eatery,34.398537,-119.5193,901 Linden Ave,Carpinteria,4.5,0.8342541436464088,2.0,181
+9u79dIXLQzmt9rnOZEnBaQ,The Habit Burger Grill,34.4185,-119.69746,628 State St,Santa Barbara,4.0,0.7412140575079872,1.0,313
+9uJuBPIQyrC0v9pVv3JKRQ,Panera Bread,34.43965,-119.74912,3851 State St,Santa Barbara,2.5,0.28888888888888886,1.0,180
+9ugpNKKhnYRa51qXoxUw_A,Lilly's Tacos,34.414314,-119.69445,310 Chapala St,Santa Barbara,4.5,0.8756019261637239,1.0,1246
+9xW7LsJpyhVZFRb6z9xorg,Ca' Dario Goleta,34.42954,-119.86927,"250 Storke Rd, Unit B",Goleta,4.0,0.7877094972067039,2.0,179
+A263bVzMdU_-TIMhewOrjQ,Domingo's Cafe,34.435993,-119.826004,5782 Hollister Ave,Goleta,4.0,0.8093385214007782,2.0,257
+A2slwG21Uulatt357w58PA,Mojo Asian Fusion Café,34.412,-119.8549,"6530 Seville Rd, Ste 103",Isla Vista,4.0,0.7475728155339806,1.0,103
+ALMuGwPnbAVc4SIbcmQmcA,Santa Barbara Bay Cafe,34.414906,-119.69029,131 Anacapa St,Santa Barbara,3.5,0.6,2.0,10
+AQw0B8j9QV1RkFLLFiwkuw,Esau's Cafe,34.396446,-119.52174,507 Linden Ave,Carpinteria,4.0,0.7151335311572701,2.0,337
+AV3XPH1iv8PKSO6mrnYgLg,Pearl Social Santa Barbara,34.414444,-119.690674,"131 Anacapa St, Ste B",Santa Barbara,4.5,0.8421052631578947,2.0,38
+AXC__4yZrn-N3BT7-2bV_Q,Biergarten,34.41339,-119.68894,11 Anacapa St,Santa Barbara,4.0,0.7884615384615384,2.0,104
+Aes-0Q_guDeYewMapFs_vg,Longboard's Grill,34.41029,-119.68654,210 Stearns Wharf,Santa Barbara,3.0,0.5454545454545454,2.0,517
+Af_vfa_cMTsDlTvfnIBM2w,Gina's Pizza,34.429417,-119.872635,7038 Market Pl Dr,Goleta,3.5,0.6363636363636364,1.0,66
+AgVekFXqwt4Y1HxfQcpyiw,Peebee & Jays,34.39617,-119.51432,1007 Casitas Pass Rd,Carpinteria,4.0,0.825503355704698,1.0,149
+AgiBcv5rKdV9QIO5yF7w8g,Harbor of Santa Barbara Inc,34.410477,-119.686844,210 Stearns Wharf,Santa Barbara,3.5,0.8,2.0,5
+Aj44kUBmEfJlUsGCvKJKtw,Starbucks,34.419346,-119.70439,208 West Carrillo St,Santa Barbara,3.0,0.47619047619047616,1.0,21
+Ak4vFqHZUWU5KXONRnuieQ,Los Altos Restaurant,34.425,-119.683304,318 N Milpas St,Santa Barbara,4.0,0.8083832335329342,2.0,167
+Ak_vHsHsYRP928VHVRL_tQ,Panda Express,34.441624,-119.83286,131 N. Fairview Ave.,Goleta,2.5,0.2804878048780488,1.0,82
+AmAc0eD6lyVyb7QdOAO1Mg,Soho Restaurant & Music Club,34.423798,-119.70529,"1221 State St, Ste 205",Santa Barbara,3.5,0.6428571428571429,2.0,140
+AodOl1tvAKi6QHKCnyWwng,Denny's,34.44102,-119.822365,5677 Calle Real,Goleta,3.0,0.5483870967741935,1.0,31
+AqOSpSqdocwtIjqTECW2ng,Broad Street Oyster Company,34.416527,-119.69457,418 State St,Santa Barbara,5.0,1.0,,5
+ArIXofDAcFztX8Ry0_81sw,Carl's Jr.,34.385048,-119.49074,"6307 Carpinteria Ave, Ste A",Carpinteria,2.5,0.7,1.0,10
+AzZqXglv_puXwd4kCvM7ew,Rudy's,34.422504,-119.69838,138 E Canon Perdido St,Santa Barbara,4.0,0.7346938775510204,1.0,98
+B1yPXzIIJrLWyTcE4jsYuQ,Goat Tree,34.41347,-119.69065,36 State St,Santa Barbara,3.5,0.6335403726708074,2.0,322
+B2Mpi0gW4-oFFVKkDpIxvg,Pattaya Thai Restaurant,34.436268,-119.82954,5918 Hollister Ave,Goleta,3.5,0.6556016597510373,2.0,241
+B3dzK9OqrT_sN0FNQs_OgQ,Spiritland Bistro,34.427135,-119.70243,230 E Victoria St,Santa Barbara,4.0,0.7307692307692307,2.0,52
+B3kpvT4oLJdQmU9lPnxdKA,Eladio's Restaurant,34.41219,-119.68961,1 State St,Santa Barbara,3.5,0.5947955390334573,2.0,269
+BBBT3Mogjo3hPPA0de--Dw,Le Café,34.410843,-119.85524,"6533 Trigo Rd, Ste 106",Isla Vista,2.5,0.3,1.0,10
+BErYojCJSO959vzaz9JclQ,Savoy Cafe & Deli,34.421932,-119.70407,24 W Figueroa St,Santa Barbara,4.5,0.8839590443686007,2.0,586
+BEzvmorW8ILha6tcSxBBwA,Valentino's Take N Bake Pizza,34.439747,-119.77065,4421 Hollister Ave,Santa Barbara,4.5,0.7971014492753623,2.0,69
+BHZZFNH4wu5VAq_JypqjiQ,Panino,34.42256,-119.65172,1014 Coast Village Rd,Montecito,3.5,0.7352941176470589,2.0,68
+BVzFvRrgMpL62oPIqGvLMg,South Coast Deli-Goleta,34.43567,-119.80978,"185 S Patterson Ave, Ste A",Goleta,4.5,0.8138888888888889,1.0,360
+BZq27sUTa_hruRKXr1x54g,I'a Fish Market and Cafe,34.423595,-119.707016,"38 W Victoria St, Ste 119",Santa Barbara,4.5,0.855072463768116,2.0,69
+B_q2xoAgTyn6U4YNEc3kSw,China Pavilion,34.42252,-119.70573,1202 Chapala St,Santa Barbara,3.5,0.598314606741573,2.0,356
+BaWVwChTW_MqkKru_WZp3g,Super Cuca's Restaurant,34.41928,-119.7159,626 W Micheltorena St,Santa Barbara,4.0,0.7943262411347518,1.0,282
+Bm-NlFiZWMCwmmz9B_rlCA,Santa Barbara Wine Therapy,34.416763,-119.69572,12 W Haley St,Santa Barbara,4.0,0.8359375,2.0,256
+BseHdXex5Od2Or_TyUIoWQ,Courthouse Tavern,34.425343,-119.70271,129 E Anapamu St,Santa Barbara,4.0,0.7692307692307693,2.0,13
+Btm9ODncqCqYsnpawaHioA,Tyger Tyger,34.415806,-119.6899,121 E Yanonali St,Santa Barbara,4.0,0.7411764705882353,2.0,170
+BwUWmUFKCuJ-nN9vFwMt2Q,Himalayan Kitchen,34.416424,-119.69545,431 State St,Santa Barbara,4.0,0.7115902964959568,2.0,371
+ByKCIpZWHYUTuCJcoZ-ONQ,Giovanni's,34.4129,-119.85781,6583 Pardall Rd,Goleta,4.0,0.7472527472527473,1.0,91
+C-aATB7SbuwMBPN5dgjghQ,Rusty's Pizza Parlor,34.440094,-119.74346,3731 State St,Santa Barbara,3.0,0.5303030303030303,2.0,132
+C-zgOpqD2K0xDJU4ty7zKg,Honor Market,34.421043,-119.6419,"1255 Coast Village Rd, Ste 102A",Santa Barbara,4.5,0.8666666666666667,2.0,60
+C5x1e9G5lwcfZ54_6bMbNA,Cielo,34.398174,-119.5171,5096 Carpinteria Ave,Carpinteria,3.0,0.4878048780487805,2.0,41
+C6AiAF35zwpAoK5jjm-nhA,Montecito Coffee Shop,34.43729,-119.63228,1498 E Valley Rd,Santa Barbara,3.5,0.7368421052631579,2.0,38
+C9_UPkwXYx9B3fxNLkCHgA,The Coffee Bean & Tea Leaf,34.424873,-119.83649,500 James Fowler Rd,Santa Barbara,3.0,0.5,,8
+CF1Gj1KGL13QcDkUwOvS3g,iGrill Korean BBQ,34.440624,-119.7324,3132 State St,Santa Barbara,3.5,0.6585365853658537,2.0,41
+CLlnfxaYPTVLKE4VR-U1Yg,La Cocina Mexican Restaurant,34.42378,-119.70429,7 E Anapamu St,Santa Barbara,4.0,0.8108108108108109,,74
+COSC9JC0Vjr89CaTZuPkUA,Santa Barbara Craft Ramen,34.416725,-119.69524,436 State St,Santa Barbara,4.0,0.7713097713097713,2.0,481
+CTmAWi-W8_Id00EjHF5Uwg,Rusty's Pizza Parlor,34.397266,-119.51599,5250 Carpinteria Ave,Carpinteria,3.5,0.5074626865671642,2.0,134
+CUWituEeIX3xA0xU7X82Ow,Brasil Arts Cafe,34.424133,-119.70538,"1230 State St, Ste C",Santa Barbara,4.0,0.784741144414169,2.0,367
+CYwC5OjwCN6ib_AQDxi3Ow,In-N-Out Burger,34.44294,-119.79078,4865 Calle Real,Goleta,4.0,0.7260869565217392,1.0,230
+Ce6B2-CYAjGvRZe3GKyxYA,Rusty's Pizza Parlor,34.41851,-119.70535,232 W Carrillo St,Santa Barbara,3.0,0.5076923076923077,2.0,130
+Ch6O9z9_hHDACROLTr2JUQ,European Deli Market,34.440266,-119.77077,4422 Hollister Ave,Santa Barbara,4.5,0.9375,1.0,48
+CkENBnSJFfPA1hY0qrqfCg,Carlitos Cafe Y Cantina,34.425053,-119.706505,"1324 State St, Ste A",Santa Barbara,3.5,0.684,2.0,750
+CoZ2mpsMBP8HUG1ymKoZTg,Opal Restaurant & Bar,34.424763,-119.70676,1325 State St,Santa Barbara,4.0,0.8340122199592668,2.0,982
+CrWrO6KT5KKg_EdhAgKsaw,Cafe Luck,34.418217,-119.69612,18 E Cota St,Santa Barbara,3.5,0.6785714285714286,2.0,56
+CuRjZOmfnXjefwEpyzmTTw,4 Eggs & Pizza,34.4238,-119.70529,"1221 State St, Ste 10",Santa Barbara,5.0,0.9508196721311475,2.0,61
+CwL56LgcMz7Bvi4xODHVSw,La Arcada Bistro,34.42271,-119.703224,1112 State St,Santa Barbara,3.5,0.6206896551724138,2.0,145
+CziOtnFSklimJnBgksDDwA,Pascucci,34.419106,-119.69924,509 State St,Santa Barbara,3.5,0.609845031905196,2.0,1097
+D-1BoOczhXGgwhBOR5v-nQ,Little Alex's,34.42283,-119.65186,1024 Coast Village Rd,Santa Barbara,3.5,0.6071428571428571,1.0,112
+D5n8XvQqC_vzOCi63wNChQ,Eastside Deli,39.382812,-120.08375,10068 Hirschdale Rd,Truckee,5.0,0.9615384615384616,1.0,26
+DBtNuEt5U_dXoalpU8rbcQ,Outpost,34.441628,-119.821,5650 Calle Real,Goleta,4.0,0.6231884057971014,2.0,207
+DEegOHB-VnPXsptrCf3qMA,Mac's Grog N Groc,34.417892,-119.694756,501 Anacapa St,Santa Barbara,4.0,0.8,,5
+DEmAmcR4xNilT5WY5ImEFA,Vegan GreenGO,34.440125,-119.74086,3613 State St,Santa Barbara,4.0,0.7437722419928826,2.0,281
+DJKYqYmhl9xuSlmkS4r0Eg,Sup & Jus,34.430454,-119.872345,7000 Hollister Ave,Goleta,4.0,0.7647058823529411,1.0,34
+DLTwr11KNMA1hEN7OrkY2A,Mac's Fish and Chip Shop,34.41685,-119.69581,503 State St,Santa Barbara,3.5,0.7105831533477321,2.0,463
+DOfiulOub9hVPBCtiDl9Fw,Lucky Penny,34.414642,-119.69023,127 Anacapa St,Santa Barbara,4.0,0.7987804878048781,2.0,656
+DQgX6IbCPg3SKdFAgWK1uw,Flightline Restaurant,34.4338,-119.83537,521 Firestone Rd,Goleta,3.5,0.5347432024169184,2.0,331
+DV0BJwh9qzPqcxufrA_7ag,Sam's to Go - Milpas,34.42904,-119.688644,726 N Milpas St,Santa Barbara,3.0,0.48484848484848486,2.0,33
+D_WS8rM-DVygaCKbIErZ6Q,Palapa,34.440662,-119.760506,4123 State St,Santa Barbara,4.0,0.75,2.0,240
+DbYZpG1O8Qknfk_IqXtHxg,The Cliff Room,34.40173,-119.72149,1828 Cliff Dr,Santa Barbara,4.0,0.7,1.0,40
+DcRfabRzYkddMEUFyPMBgw,American Ale,34.414562,-119.69187,214 State St,Santa Barbara,3.0,0.5,1.0,16
+DdD7j67fu8kM6DkvY4JCIA,Panaderia Veronica,34.419823,-119.676155,201 S Milpas St,Santa Barbara,4.5,0.8888888888888888,1.0,27
+Dp9Jxlocw7cnos9fE7HKIQ,Jack's Bistro & Bagels,34.439953,-119.7506,3891 State St,Santa Barbara,3.5,0.5555555555555556,2.0,9
+DqVpNtgFCP47n6frh-LREA,El Paseo Mexican Restaurant,34.42077,-119.699165,10 El Paseo,Santa Barbara,3.5,0.6052631578947368,2.0,266
+Dr2tI5lPLiXQrE0iZRim9A,Kotuku Elixir Bar & Superfood Store,34.420578,-119.69891,25 E De La Guerra St,Santa Barbara,4.5,0.8461538461538461,2.0,39
+E1R-xslwl7XeTN5lQ7mWPg,Little Kitchen,34.417946,-119.69849,17 W Ortega St,Santa Barbara,4.5,0.8357142857142857,2.0,280
+E1b_hNr22N2wGkq5Z9fmHw,Juice Ranch,34.42078,-119.64492,"1187 Coast Village Rd, Ste 5",Santa Barbara,3.5,0.6666666666666666,,21
+E6HHiJMCpTkjOsSly3kzeA,The Imperial,34.43475,-119.819756,320 S Kellogg Ave,Goleta,4.5,0.8682170542635659,2.0,129
+E7RtIisUoRMcADSebBgNAA,Santa Barbara FisHouse,34.4136,-119.68807,101 E Cabrillo Blvd,Santa Barbara,3.5,0.6817792985457656,2.0,1169
+E8tiSAB6O4TPeVdKR0K5Ug,Rusty's Pizza Parlor,34.425903,-119.684395,414 N Milpas St,Santa Barbara,3.0,0.4943820224719101,1.0,89
+EBuSqlpzzyfZZkEgPxVV1Q,Wingstop,34.43929,-119.74918,"3849 State St, Ste 163",Santa Barbara,3.0,0.5952380952380952,,42
+EC9-hDcyqE8c_m03X3VhIQ,Panera Bread,34.419003,-119.69807,700 State Street,Santa Barbara,2.5,0.3870967741935484,2.0,31
+EEkCKh3obNA6hE4D4pNUqQ,Sam's To Go,34.4358,-119.8303,5979 Hollister Ave,Goleta,3.5,0.7142857142857143,1.0,7
+EEwmN2uP1PmOyxpTstSIxA,Fernando's Churros,34.424335,-119.68324,827 E Montecito St,Santa Barbara,4.5,0.8372093023255814,1.0,43
+EILVLAwEPdGAV_ZC0edtgA,Little Caesars,34.437603,-119.83094,109 S Fairview Ave,Goleta,2.5,0.3448275862068966,1.0,29
+EPkF-beh6gg_s3HtlAdfiw,Goleta Sushi House,34.435917,-119.824844,5744 Hollister Ave,Goleta,4.0,0.7231404958677686,2.0,484
+ERuy9x26QrzqVwP1oFSObQ,La Hacienda,34.43508,-119.82647,298 Pine Ave,Goleta,4.0,0.78,2.0,50
+ERzIS-WRLw-80_B4yqcG3Q,Chuck's of Hawaii,34.440704,-119.750084,3888 State St,Santa Barbara,3.5,0.662962962962963,2.0,270
+EUzWWnvcx1pkkWxk2XV6QA,The Habit,34.413258,-119.855194,888 Embarcadero Del Norte,Isla Vista,4.0,0.7333333333333333,1.0,60
+EWl5aixg4hCcuVYpz4BLKQ,Cafe Los Arcos,34.417137,-119.67581,633 E Cabrillo Blvd,Santa Barbara,3.0,0.4,2.0,10
+EXYbKA1tocvOK_1tXxZXLA,Sushi GoGo,34.403973,-119.693306,"119 Harbor Way, Ste B",Santa Barbara,3.5,0.6956521739130435,2.0,184
+EZc2myE2mYk2h9JK9qu8gw,Finney's Crafthouse,34.412766,-119.69034,"35 State St, Ste A",Santa Barbara,4.5,0.8042671614100185,2.0,1078
+E_ac8Q20OJD9L8cafCBKaQ,Milk & Honey Tapas,34.42257,-119.70546,30 W Anapamu St,Santa Barbara,4.0,0.8265682656826568,2.0,542
+EaTbY8HFwwF7i3SjVbHGYw,Montecito Wine Bistro,34.437325,-119.63132,516 San Ysidro Rd,Montecito,4.0,0.7272727272727273,2.0,154
+Eqi8jrVowPBlCKAInDfFRw,The Natural Cafe,34.436222,-119.82891,5892 Hollister Ave,Goleta,4.0,0.8373983739837398,1.0,123
+EvC-VdZwoUToLcjUtcntqQ,Hanamura,34.41286,-119.85722,901 Embarcadero Del Mar,Isla Vista,2.0,0.2857142857142857,,14
+Ey0t4U6yqtxCeMaGPf7GcA,Brummis - the German Taste,34.440697,-119.73231,3130 State St,Santa Barbara,4.5,0.8938053097345132,2.0,113
+EzhRlsTdACV60rOgrGYyqA,IHOP,34.42808,-119.71125,1701 State St,Santa Barbara,3.0,0.5252525252525253,1.0,99
+F-NlTcl5BHb07E7TFb2TJw,Rosarito,34.411728,-119.8568,966 Embarcadero Del Mar,Isla Vista,2.5,0.3983050847457627,1.0,118
+F3dxQiOwN55rSLw-BNSq6A,Sweet Alley,34.41201,-119.85754,955 Embarcadero Del Mar,Goleta,4.0,0.803921568627451,1.0,51
+F6KHs4GDw_9tpuv65M6PGA,IV Deli Mart,34.41292,-119.8564,6553 Pardall Rd,Goleta,3.5,0.616580310880829,1.0,193
+FAc2Mv92KL00cbLdpAc0kQ,Giovanni's Pizza Carpinteria,34.398514,-119.51823,5003 Carpinteria Ave,Carpinteria,3.0,0.4292929292929293,2.0,198
+FBqYnP7H3TMHYQvafuBTSA,Hiwi Tropical Fusion,34.413055,-119.856476,6555 Pardall Rd,Goleta,3.5,0.6666666666666666,1.0,159
+FE5R_F7svUphKeUWuxA0JA,Del Pueblo Cafe,34.435932,-119.80285,5134 Hollister Ave,Santa Barbara,4.0,0.6787330316742082,2.0,221
+FEBwxZMEpxRwVXx9Fm0XZw,Chad's,34.409943,-119.69226,216 W Cabrillo Blvd,Santa Barbara,4.0,0.7480680061823802,2.0,1294
+FH0MVF7kK0D76Hh4e7hXfQ,Jeannine's American Bakery Restaurant,34.440193,-119.74088,3607 State St,Santa Barbara,4.0,0.76592082616179,2.0,581
+FH1sTH13rupNdANai7JFxA,The Bourbon Room,34.440628,-119.77192,4444 Hollister Ave,Santa Barbara,4.0,0.8468468468468469,2.0,111
+FQxEfhBd1gMrurP19bhK8w,Mama's Bakery & Deli,34.435383,-119.810745,5342 Hollister Ave,Santa Barbara,4.0,0.8048780487804879,1.0,41
+FSWJmMXXKAXdL6mrc-DzBQ,Nordstrom Ebar Artisan Coffee,34.419712,-119.701,17 W Canon Perdido St,Santa Barbara,4.5,0.8636363636363636,2.0,22
+FY_FkUeQxVqAjc9V0IAc2Q,Blenders in the Grass,34.42939,-119.87191,7014 Marketplace Dr,Goleta,4.5,0.88,1.0,100
+FYc3iwBUhGhxJAtJ6oRvJQ,Carl's Jr.,34.440136,-119.75241,3925 State St,Santa Barbara,2.5,0.4,1.0,10
+FdoqtMadj4ybDAL7S-yUBQ,Summerland Beach Cafe,34.42194,-119.600235,2294 Lillie Ave,Summerland,4.0,0.7781065088757396,2.0,676
+Fg68C3AwFu74dXMhgX3qIw,Carl's Jr,34.42164,-119.67844,7 S Milpas St,Santa Barbara,3.5,0.6666666666666666,1.0,18
+FjVAwrTr0AMfs78pDLamtA,Subway,34.429466,-119.86707,"6831 Hollister Ave, Ste J",Goleta,2.5,0.2777777777777778,1.0,18
+FpNhzu3w0XgyedhOLDuK8g,Teddy's By The Sea,34.398205,-119.517136,5096 Carpinteria Ave,Carpinteria,4.5,0.8304347826086956,2.0,460
+FyK0sYez1ImnovyzJ_iGZw,East,34.4237,-119.7047,1208 State St,Santa Barbara,2.5,0.40816326530612246,2.0,49
+G0rJD85hUDQ0Omz0rOFeOQ,Nikka Fish Market and Grill,34.44162,-119.8241,5722 Calle Real,Goleta,4.0,0.8035264483627204,2.0,397
+GBD-YjcOD1nG0wv4L0Lvfg,Venus in Furs,34.418217,-119.69612,18 E Cota St,Santa Barbara,5.0,0.875,,24
+GEGTsaKaO1R9fFB4sGS5qw,Santa Barbara Food Connection,34.43542,-119.82037,5599 Hollister Ave,Goleta,4.5,0.9,,10
+GIFnN4Uk3wg3uOh0g2JxIw,Domino's Pizza,34.396572,-119.51348,1039 Casitas Pass Rd,Carpinteria,2.5,0.3333333333333333,1.0,21
+GQue4Nouo2Mg5R2GotVS7w,Big Yellow House,34.421677,-119.602684,108 Pierpont Rd,Summerland,4.5,0.6,,10
+GR9fdito21ebH62tG8o_Yg,Palmieri's Cocktail Lounge,34.41848,-119.716034,1431 San Andres St,Santa Barbara,4.5,1.0,1.0,9
+GUuLWkqfieTDwORs8z8mDg,Courtyard Cafe,34.414894,-119.840546,Ucsb Campus,Goleta,3.5,0.625,1.0,16
+Gg2ZHe57Ztuv8JaFj0mNhw,Dank Bowl Kitchen,34.412888,-119.857216,901 Embarcadero Del Mar,Isla Vista,4.5,0.8264705882352941,2.0,340
+GgcvRnt5_z3NEC0D6vNncQ,Cafe Buenos Aires,34.424828,-119.70603,1316 State St,Santa Barbara,3.5,0.5964912280701754,2.0,57
+Gl3XO4ECKKli8-bKKdkkYA,KFC,34.426586,-119.68606,515 N Milpas St,Santa Barbara,2.0,0.24324324324324326,1.0,37
+Gof3vW62_EDmqgAPTL-nKQ,Pascucci,34.429386,-119.87016,6920 Camino Real Marketplace,Goleta,2.0,0.26704545454545453,2.0,176
+GpESl2dXOH8rxs0pAbIyAw,Alphie's Restaurant,34.435432,-119.82424,5725 Hollister Ave,Goleta,3.5,0.5819209039548022,1.0,177
+GyWxMEMzRZJ-mb6OAq7jyA,Taqueria El Pastorcito,34.42874,-119.71744,2009 De La Vina St,Santa Barbara,4.0,0.7272727272727273,1.0,55
+Gz3vi3dVKMylBb8HV1tP8Q,Blenders In the Grass,34.421967,-119.650185,"1046 Coast Village Rd, Ste F",Santa Barbara,3.5,0.5714285714285714,1.0,70
+H4Zf42Q3I8JyQ-V5l4dJrg,Blush Lounge,34.41868,-119.69752,630 State St,Santa Barbara,3.5,0.6557734204793029,2.0,459
+H5bsmYmdO3FBVQHC3jfx2g,John Dunn Gourmet Dining Room,34.4064,-119.69729,721 Cliff Dr,Santa Barbara,4.0,1.0,1.0,5
+HA_Hks9YjRqz3Yk6JDAaIQ,Bougainvillea,34.414204,-119.69165,"202 State St, Ste A",Santa Barbara,4.5,0.7857142857142857,2.0,14
+HE-9l_2RSingLV2RZItdsA,Anna's Marketplace Bakery,34.42946,-119.87213,7018 Marketplace Dr,Goleta,4.0,0.7511737089201878,1.0,213
+HGRR2w9KddspVBYA-4bSlQ,Sunnyside Market & Deli,34.420876,-119.68886,436-B East Gutierrez St,Santa Barbara,4.0,0.7692307692307693,1.0,13
+HMRiG6zL_q2u8e8IqUmQvg,Mr. Pickle's Sandwich Shop,34.413105,-119.85565,6545 Pardall Rd.,Isla Vista,4.5,1.0,1.0,9
+HNACff49-kXS7l0MyLOzHw,Rusty's Pizza Parlor,34.436535,-119.79106,4880 Hollister Ave,Santa Barbara,2.5,0.32653061224489793,2.0,49
+Hj44PIrCtv61ETVclzLMwg,Jeannine's American Bakery Restaurant,34.42308,-119.70283,15 E Figueroa St,Santa Barbara,4.0,0.7460732984293194,2.0,382
+Hj8sSN8O_UTSCNkEO33q4g,Wahoo's Fish Tacos,34.41149,-119.847496,494 Ucen Rd,Isla Vista,3.0,0.5,1.0,14
+Hl_vXTiYLozWo7T9Cq17vw,Aperitivo,34.416454,-119.69567,7 W Haley St,Santa Barbara,5.0,0.9791666666666666,,48
+Hlx8S2GLF7hMuIKx4sU-gg,Cesar's Place,34.4286,-119.688225,712 N Milpas St,Santa Barbara,4.0,0.7,2.0,120
+Hlzn3A-B2-Q1xj3FHe_D0A,Jake's Cottage Cuisine Cafe,34.43743,-119.72745,2911 De La Vina St,Santa Barbara,3.5,0.5,1.0,8
+Hqz96v1ymucUKNzIWfEKXw,Subway,34.43082,-119.71416,"1936 State St, Ste B",Santa Barbara,3.0,0.2,1.0,5
+HrsWLRW7sPxjeC_hDA0Diw,Santa Barbara's Wood Fired Pizza,34.437622,-119.72623,2840 De La Vina St,Santa Barbara,4.0,0.6,,5
+HtxYbysdeXwexRrSkKdt2A,Jay C's Place,34.411728,-119.8568,"966 Embarcadero Del Mar, Unit C",Isla Vista,4.5,0.8,,5
+I0jFTYVDs-WHwKR2XHQlRA,Zen Yai Thai Cuisine,34.41626,-119.69525,425 State St,Santa Barbara,4.0,0.7471590909090909,2.0,352
+I3yiknZLxXVIjYp4WmLz2w,Petrini's Restaurant,34.441162,-119.822556,5711 Calle Real,Goleta,3.0,0.38961038961038963,2.0,77
+I7tLQ1YEJjcN16josIx6Dw,Panino,34.44152,-119.82313,5666 Calle Real,Goleta,3.5,0.65625,2.0,64
+IDtLPgUrqorrpqSLdfMhZQ,Helena Avenue Bakery,34.414444,-119.690674,"131 Anacapa St, Ste C",Santa Barbara,4.0,0.8054862842892768,2.0,401
+IDyJPdJ-zTXJ_FSSOMOgbg,Taco's To Go,34.397392,-119.51998,794 Linden Ave,Carpinteria,4.0,0.7816091954022989,1.0,87
+IG-CwPl5mb6-hmpFjXUIvA,Choppa Poke,34.419247,-119.698395,716 State St,Santa Barbara,4.0,0.6792452830188679,,53
+INaAIFXWueRVjgmuNtJTEw,Dutch Garden Restaurant,34.440308,-119.76334,4203 State St,Santa Barbara,4.5,0.8717948717948718,2.0,156
+IQFb8aeU7QW-BxpFhGMnlg,Ca’Dario - Montecito,34.42078,-119.64492,1187 Coast Village Rd,Montecito,4.0,0.6764705882352942,,34
+IQPsL4ZKgYpvuN0BJn_yhQ,Mundos,34.429955,-119.690796,901 N Milpas St,Santa Barbara,4.5,0.828125,2.0,64
+IRyKDIF51M0GcqS8yfPcYA,Mesa Cafe,34.40222,-119.7228,1972 Cliff Dr,Santa Barbara,4.0,0.7057291666666666,2.0,384
+ISptOKAGjQnnawYFOz3e4A,The Creekside Bar,34.440094,-119.771866,4444 Hollister Ave,Santa Barbara,4.0,0.8125,1.0,16
+IUgQmteI-mbt_qjL2ZENKA,Epiphany Restaurant,34.423515,-119.70622,21 W Victoria St,Santa Barbara,3.5,0.6206896551724138,3.0,29
+IXQH9-nnTWZFgBF0V3MH-A,Cali-Forno Pizzeria,34.420612,-119.70095,905 State St,Santa Barbara,4.0,0.6875,,16
+IZJacI6XEUxy3_wbW76Qfw,Chili's,34.429733,-119.87058,6950 Market Place Dr,Goleta,2.5,0.3564356435643564,2.0,202
+IZZ7J14VnJGyUqYH1tgT6w,Satellite,34.422615,-119.70403,1117 State St,Santa Barbara,4.5,0.901840490797546,2.0,163
+Ifw5wqcChnL4zBigtR7NKA,El Sitio,34.43729,-119.83041,102 S Fairview Ave,Goleta,3.5,0.6125,1.0,80
+IoAubn7CpU2rqcURxUo1MA,Barb's Pies,34.418217,-119.69612,18 E Cota St,Santa Barbara,4.5,0.9408284023668639,2.0,169
+IofBnKUFeC1Z2uyFOTxNDw,JR's BBQ,34.439213,-119.775215,4444 Hollister Ave,Goleta,4.0,0.8571428571428571,2.0,7
+IoihJkcF2FcE-sHOneat-A,Petit Valentien,34.422943,-119.70303,"1114 State St, Ste 14",Santa Barbara,4.0,0.7830985915492957,2.0,355
+J52h9uXJgEKyIz0iq8S0Xw,Piano Gastrolounge,34.425304,-119.7027,129 E Anapamu St,Santa Barbara,3.5,0.625,3.0,24
+JD4yd4N8HCDziaJKJXk2yA,Tori's Oatmeal Lounge,34.42051,-119.87066,"555 Storke Rd, 3301",Goleta,2.5,0.4,1.0,5
+JSrab1rTrhBq0X80o6fPrQ,Red Pepper Restaurant,34.43414,-119.82858,282 Orange Ave,Goleta,4.0,0.7752161383285303,2.0,347
+JUruKsTe0fdPbQHCT8XTug,Root 217,34.411423,-119.84392,1180 UCen Rd,Goleta,3.0,0.5757575757575758,1.0,33
+JZrspVMm79n_iHTYftkI0g,La Tapatia Bakery,34.430138,-119.68976,832 N Milpas St,Santa Barbara,4.0,0.7678571428571429,1.0,56
+JfXYFsOEElqn5ukwDBml6Q,Phresh Teas  - IV location,34.41289,-119.85728,"901 Embarcadero Del Mar, Unit 104",Isla Vista,3.0,0.5,,10
+Ji3XN5gL1aBlbhtFEGpMFA,Mollie's,34.4239,-119.70495,1218 State St,Santa Barbara,3.5,0.6496350364963503,2.0,137
+JjmmSW_QQh2Db4fuIEMATA,Persona Pizzeria,34.42061,-119.70095,905 State St,Santa Barbara,4.0,0.7283950617283951,2.0,648
+JpwG8sDNsHuD0f6NF6YuGw,Rusty's Pizza Parlor,34.41317,-119.691315,111 State St,Santa Barbara,3.0,0.5269461077844312,2.0,167
+Js3m_GdqNUGnEgXJ8WMtfQ,Hana Kitchen,34.416504,-119.69562,503 State St,Santa Barbara,3.0,0.5232558139534884,1.0,258
+JxVPdQrAac7qNUnwse7xcw,L's Kitchen,34.41579,-119.68994,121 E Yanonali St,Santa Barbara,5.0,0.9230769230769231,1.0,13
+KIpghikMrBbxx75tx_ZJUw,Starbucks,34.411594,-119.848145,1180 University Ctr,Santa Barbara,3.0,0.46153846153846156,,13
+KMBCvNByuzXlPoNzHeBhZw,6831 AA Hollister Ave,34.429512,-119.86927,"250 Storke Rd, Ste E",Goleta,3.0,0.6470588235294118,1.0,17
+KMuVQ8E4VIhdjwDo5jPPcg,Montecito Confections,34.42172,-119.64629,"1150 Coast Village Rd, Ste E",Montecito,4.5,0.7692307692307693,2.0,26
+KU4zXPo6v8c3N_l14wivQA,Jade Restaurant,34.440624,-119.7324,3132 State St,Santa Barbara,3.5,0.6,2.0,15
+KcGCtmMca0EjY_wCv_HN4Q,Mercury Lounge,34.435818,-119.82834,5871 Hollister Ave,Goleta,4.0,0.8164556962025317,2.0,158
+KdNQZQaMd4rKjNphqGHX6A,Kahuna Grill,34.429462,-119.87204,7010 Market Pl Dr,Goleta,4.0,0.7474747474747475,1.0,198
+Kg71HUigI1rnY3UMFiLx0w,Tangonadas,34.42207,-119.702225,"1014 State St, Ste B",Santa Barbara,4.5,0.8985507246376812,1.0,69
+KiE0h68HGOO7ZXAqkMBdiw,Starbucks,34.41944,-119.70445,1015 De La Vina St,Santa Barbara,2.5,0.3888888888888889,1.0,36
+Ksz_jsyyK3Zjlq_Cz81ZBA,Adama Vegan Comfort Cuisine,34.415688,-119.69601,428 Chapala St,Santa Barbara,4.0,0.7306122448979592,2.0,245
+KxTipxTtvRDOntfze34NPw,Ye Olde Butcher Shop,34.440247,-119.76699,4317 State St,Santa Barbara,2.0,0.3181818181818182,1.0,22
+L4-_gPiqsuX50JN_-qUhNQ,Jeannine’s American Bakery & Restaurant,34.412205,-119.68959,1 State St,Santa Barbara,5.0,0.9512195121951219,2.0,41
+L6nIOUwcTGgQKExGHmvTzQ,Noodle City,34.43579,-119.8283,5869 Hollister Ave,Goleta,3.5,0.6566265060240963,1.0,498
+L7-PPe0fj-6U7qq31vjWnQ,Rincon Beach Bar,34.406403,-119.54772,3805 Santa Claus Ln,Carpinteria,4.5,0.9026548672566371,,113
+L8rhRyXtpq2nCE0il1KN_g,Coral Tree Cafe,34.415733,-119.84668,5221 Cheadle Hall,Santa Barbara,3.0,0.5172413793103449,1.0,29
+L9CFXQbU79r6PK8Cy9aAgA,Gimeal Cafe,34.436176,-119.828926,5892 Hollister Ave,Goleta,4.5,0.8745980707395499,2.0,311
+L9QTAucz_in5f-ufCrvb1Q,Live Culture,34.420334,-119.71075,"Paseo Nuevo Mall, 11 W De La Guerra",Santa Barbara,3.5,0.7674418604651163,2.0,43
+L9XvUfEWfjEmOJAd21o6rA,Subway,34.413296,-119.85517,"888 Embarcadero Del Norte, Ste C",Isla Vista,2.5,0.4,1.0,20
+L9hRzl4W7TAdcW0Ld09O-A,Penelope's Sno Balls at the Beach,34.393955,-119.52448,200 Linden Ave,Carpinteria,5.0,1.0,,7
+LDrs5hQmJw0mzlIi5Wu9aA,Euphoria Hookah Lounge,34.421825,-119.68976,"434 E Haley St, Ste A",Santa Barbara,3.0,0.5833333333333334,1.0,12
+LEo6sBsQz3xrpKW-DQjTWQ,Panda Express,34.411568,-119.847824,University Center Bldg 558,Santa Barbara,2.5,0.3333333333333333,1.0,18
+LIqjZ2fGRbjjMy0ezyuKSQ,Frankland's Crab,34.421246,-119.6404,1295 Coast Village Rd,Santa Barbara,3.5,0.5333333333333333,2.0,30
+LKM0wL3GMsi8NwEdz-_n8w,Kyle's Kitchen,34.440834,-119.823875,5723 Calle Real,Goleta,4.0,0.7787418655097614,1.0,461
+LMm555z8BReDxgkpF_TEug,Park Place Deli,34.429092,-119.72311,403 W Pueblo St,Santa Barbara,4.0,0.8888888888888888,1.0,9
+LdXB3D3gl3ckxZutLmen1g,Miso Hungry,34.422417,-119.698364,134 E Canon Perdido St,Santa Barbara,4.0,0.7885304659498208,2.0,279
+LgSEHsI9DKyeGVGtn61tEg,Ana's Taco Bar,34.4168,-119.695885,505 State St,Santa Barbara,3.0,0.5568181818181818,1.0,88
+LlGIlNJE2Nv_PXkH7l4Wmg,Lilly's Tacos,34.428493,-119.86909,"290 Storke Rd, Ste D",Goleta,4.5,0.855787476280835,1.0,527
+LsniEK_m_Jbj7JMbT4eRxQ,101 Deli,34.42062,-119.68427,130 N Calle Cesar Chavez,Santa Barbara,4.5,0.8571428571428571,1.0,28
+LswO4EWgN99h6NEEJ7qtCA,Smoke 'N Barrel BBQ Shack,34.42868,-119.8718,"Camino Real Marketplace, 6920 Marketplace Dr",Goleta,2.0,0.2318840579710145,2.0,69
+LtxG9DTXCFpteVkD4SGBlw,Sevtap Winery Tasting Room,34.42136,-119.700035,23 E Canon Perdido St,Santa Barbara,4.0,0.842948717948718,2.0,312
+LuPK46HMxRYEVTXVbBCR1g,Sama Sama Kitchen,34.423702,-119.704636,1208 State St,Santa Barbara,4.0,0.717479674796748,2.0,492
+LwCcNUqX-BEMBd6Xj-JlvA,Los Gallos,34.42881,-119.7173,2009 De La Vina St,Santa Barbara,4.0,0.7962962962962963,1.0,54
+M3LZKA-tVFRJyPeKA3_2OA,Merci To Go,34.422783,-119.65185,1024 Coast Village Rd,Santa Barbara,4.5,1.0,2.0,9
+M9kbUs_xPc9HnU-O6qZX1g,Lettuce B. Frank,34.416126,-119.69479,413 State St,Santa Barbara,3.5,0.6521739130434783,1.0,23
+MAIfD4kJDCydgoD1l2b_vw,Corks n' Crowns,34.41421,-119.68876,32 Anacapa St,Santa Barbara,4.0,0.8035714285714286,2.0,280
+MCsD2G2R0udfzg9FTltUTA,New Baja Grill,34.429546,-119.87228,7024 Market Place Dr,Goleta,4.0,0.7962962962962963,1.0,54
+MG0IlmvAILSzRE4E1gk5hA,Tacos El Rey,34.41648,-119.69562,5 W Haley St,Santa Barbara,4.5,0.9242424242424242,1.0,66
+MJI-bNIn3QDgiGggm9Wp1w,Moby Dick Restaurant,34.40921,-119.68545,220 Stearns Wharf,Santa Barbara,3.0,0.47125140924464487,2.0,887
+MOowZBGbgn7FrTol3dvrlg,Nectar Eatery & Lounge,34.418236,-119.69602,20 E Cota St,Santa Barbara,4.0,0.8308823529411765,2.0,136
+MX2YGruhd0sMNHZGK7p5-Q,Bella Vista,34.417213,-119.642525,1260 Channel Dr,Santa Barbara,4.0,0.7283018867924528,3.0,265
+M_0k-h3euD5T1Pv6vQwEMQ,Sunset Grille,34.402637,-119.52555,4558 Carpinteria Ave,Carpinteria,3.0,0.7222222222222222,2.0,18
+MbzgGsMQpGyVrUJXi_Jw0Q,Dawn Patrol,34.41573,-119.69366,324 State St,Santa Barbara,4.0,0.8107448107448108,2.0,819
+MiMRlsXOpHJMSTDAuw8s1w,Su’s Bowl,34.412926,-119.85734,"901 Embarcadero Del Mar, Unit 100",Isla Vista,3.5,0.65,,20
+MmN1qpG224QxOeq72DpN2g,Aldo's Italian Restaurant,34.42209,-119.702995,1031 State St,Santa Barbara,3.0,0.4935897435897436,2.0,312
+MnAn9IDCGMTXFqUqJ5P53Q,Giovanni's Pizza,34.401382,-119.72247,1905 Cliff Dr,Santa Barbara,3.5,0.6744186046511628,2.0,86
+N-CBZKO37y_WSUN7ZMNGkg,Taqueria El Pastorcito,34.439705,-119.770836,4427 Hollister Ave,Santa Barbara,4.0,0.6666666666666666,1.0,69
+NAWO3P0rl396h0kdRXwuFA,JSB Cafe at Santa Barbara City College,34.40607,-119.69769,721 Cliff Dr,Santa Barbara,4.0,0.75,1.0,16
+NCHUoBAMTDqI754PICPN9A,Starbucks,34.413364,-119.85521,888 Embarcadero Del Norte,Isla Vista,3.0,0.47115384615384615,1.0,104
+NCMTfUJYTasYZ64UuGC-rg,Pizza Online Company,34.441677,-119.82529,5756 Calle Real,Goleta,4.5,0.822429906542056,,107
+NG3SFWgDgjMMpIJoQoQ3XQ,MJ Cafe,34.42561,-119.871124,6985 Santa Felicia Dr,Goleta,5.0,1.0,,13
+NIQWO-Q_F598XlAvZnFVCA,Eureka!,34.418613,-119.70015,601 Paseo Nuevo,Santa Barbara,4.0,0.6796116504854369,2.0,1030
+NIqFlHurHm0cj6QXczYbEQ,Rudys,34.396107,-119.51441,1001 Casitas Pass Rd,Carpinteria,3.0,0.4351145038167939,2.0,131
+NMnn6FJkW802ldqdgScVxQ,Las Aves Cafe,34.430286,-119.72093,2220 Bath St,Santa Barbara,3.5,0.6666666666666666,2.0,39
+NORF647ibBQ4U-VNMgzSLg,Oakberry Açaí Bowls and Smoothies,34.41968,-119.7003,819-B State St,Santa Barbara,4.5,0.8701298701298701,,77
+NTLvzcGNm4IUF_yXIwIhvA,Thario's Kitchen,34.406208,-119.547714,3807 Santa Claus Ln,Carpinteria,4.5,0.8661971830985915,2.0,142
+NTWgjXi0ggOQnTOS1bTjEw,Le Bon Cafe,34.422512,-119.698326,138 E Canon Perdido St,Santa Barbara,4.0,0.8,1.0,5
+NWiDQblpKeZwcHio6oEzUA,The Study Hall,34.412994,-119.85571,6543 Pardall Rd,Isla Vista,3.0,0.46511627906976744,1.0,43
+NWwVZnCb8-Oh9QWWAb2T2Q,Somerset,34.423813,-119.704384,7 E Anapamu St,Santa Barbara,3.5,0.6372549019607843,4.0,102
+NcPL-huY-Ac2VjkZ5KsSRQ,Saigon In and Out,34.416584,-119.69478,424 State St,Santa Barbara,3.5,0.7894736842105263,2.0,19
+Ng4PxR9WVdbnDGC50PbzwQ,Jersey Mike's Subs,34.429516,-119.87253,7034 Market Place Dr,Goleta,3.0,0.47191011235955055,1.0,89
+NmJX_LZ7ShIZqspI31RVZA,Starbucks,34.421734,-119.65025,1046 - A Coast Village Rd,Santa Barbara,3.5,0.550561797752809,1.0,89
+NnAfFmqKH3PBeigmuAeFNA,Santa Barbara Chicken Ranch,34.4418,-119.83271,149 N Fairview Ave,Goleta,3.5,0.6412213740458015,1.0,131
+Nq4k3dnfiOMT_UrOL9xO-A,Ming Dynasty Restaurant,34.428352,-119.86904,"290 Storke Rd, Ste G",Goleta,3.0,0.5104602510460251,2.0,239
+Nv6ruFQa6AG6g8f-_IxFCw,Alito’s,34.416973,-119.696106,509 State St,Santa Barbara,4.0,0.6111111111111112,,18
+NynM3SwsOMFJryABCKuOlg,All India Cafe,34.41643,-119.69545,431 State St,Santa Barbara,3.0,0.4318181818181818,2.0,88
+O0kQGkmlllaN7oU6sQyzPA,Flir Cafe,34.429653,-119.86567,"6769 Hollister Ave, Bldg 6775",Goleta,4.5,0.8181818181818182,1.0,22
+O2lFAWD2WXXx5EKkzPutWQ,Your Place Thai Restaurant,34.422245,-119.67961,"22 N Milpas St, Ste A",Santa Barbara,4.0,0.7301587301587301,2.0,441
+O8rIa0Wvapju2iC9T1Hp8Q,The Good Plow,34.39709,-119.5164,5205 Carpinteria Ave,Carpinteria,4.5,0.85,,20
+OCW1gs6Rjn90_x5EV0PuaA,Fox Wine,34.41585,-119.68853,120 Santa Barbara St,Santa Barbara,4.5,0.8115942028985508,2.0,69
+ODvaMIpjD6bHiwQ9-kmECw,Vices & Spices From Around the World,34.44049,-119.739876,3558 State St,Santa Barbara,4.5,0.8313253012048193,1.0,83
+OFfJsY9KeOyelk46m_jzzw,Blue Tavern,34.413315,-119.69145,119 State St,Santa Barbara,4.0,0.6938775510204082,2.0,147
+OJ9DJLWvQV0h-ZU07QEKag,Gelato n More,34.42411,-119.705055,1222 State St,Santa Barbara,4.0,0.765625,2.0,128
+OM5beWRkxZSu1TShUC3EDw,The Drunken Crab,34.4164,-119.69455,416 State St,Santa Barbara,4.0,0.7732463295269169,2.0,613
+OMWhamtXhqlYCj66MqcxuQ,Aksum Restaurant,34.43145,-119.69385,815 E Figueroa St,Santa Barbara,5.0,1.0,,9
+OODq_Mki-e929E8NfPc7-Q,Whitefoot Meat Market,34.42539,-119.68362,"336 N Milpas St, Ste E",Santa Barbara,4.5,0.8,1.0,10
+OPQkUsUdLN_PPAW6IyEJLQ,Chino's Rock & Tacos,34.419193,-119.69832,714 State St,Santa Barbara,3.5,0.6666666666666666,1.0,18
+OdRkeCycTpMRow9XUXVNWw,Taco Bell,34.44035,-119.745544,3771 State Street,Santa Barbara,2.0,0.6,1.0,5
+Oeaerj6kDDBRGnUh0wLAvA,Woody's BBQ,34.435413,-119.8029,5112 Hollister Ave,Santa Barbara,3.0,0.44932432432432434,2.0,296
+OqZFZcjKqYwVSGEYb5GhNQ,Dang Burger,34.398174,-119.51881,910 Linden Ave,Carpinteria,4.5,0.7142857142857143,,14
+OrU9wTeHJSLMwyGqYg4FAA,Arch Rock,34.41933,-119.69597,608 Anacapa St,Santa Barbara,4.0,0.7315541601255887,2.0,637
+Ow29cE1wS-_LrfN7jEuDPA,Ahi Sushi,34.440193,-119.741516,3631 State St,Santa Barbara,3.5,0.6524822695035462,2.0,141
+OyFxR5E2HBy-K2-0AxCtFg,Domino's Pizza,34.401592,-119.72068,1808 Cliff Dr,Santa Barbara,2.0,0.20930232558139536,1.0,43
+OzGk7arJv6FPrWqaYSvyKQ,Choi's Oriental Market,34.43567,-119.80978,"185 S Patterson Ave, Ste D",Santa Barbara,4.5,0.8820224719101124,2.0,178
+P5cgKbK-cQqqZj0I3_DW0g,Roost,34.4243,-119.70618,1305 State St,Santa Barbara,4.5,0.9358974358974359,,78
+PBXFaKio7FJ-4JehJGh_gg,Fattes Pizza,34.437622,-119.72623,2840 B De La Vina St,Santa Barbara,4.5,0.8,,10
+PFEC0Z-5rT7l_DR6cySCOQ,The Tully,34.4184,-119.71593,1431 San Andres St,Santa Barbara,4.5,0.9473684210526315,1.0,19
+PGVZjuHpB5s5jFMKqKdCmw,Our Daily Bread,34.422108,-119.697525,831 Santa Barbara St,Santa Barbara,3.5,0.6666666666666666,2.0,36
+PHSda9zEwtFicCICD6TP1A,Luna Grill,34.440147,-119.75237,"3925 State St, Unit A",Santa Barbara,4.0,0.6348547717842323,2.0,241
+PNVbv2kyUIHeJTDPis2gRg,Los Agaves,34.42953,-119.87224,7024 Market Pl Dr,Goleta,4.0,0.7383966244725738,2.0,474
+POSwCH5XrPTMRILJaNAjAQ,Champagne Room,34.416443,-119.69566,7 W Haley St,Santa Barbara,5.0,0.9142857142857143,2.0,35
+PPcz-0UtIJ8O7xDT551y2g,Intermezzo By Wine Cask,34.421146,-119.69888,819 Anacapa St,Santa Barbara,4.5,0.8680555555555556,2.0,144
+PR9GKW_tKuQGIAB_aeFPJw,Ike's Place,34.41188,-119.85497,6530 Seville Rd,Goleta,4.0,0.7831325301204819,1.0,166
+PUDTWmMzevJdvsueEmnYqw,Hochaya,34.43119,-119.87406,"7060 Hollister Ave, Ste 101",Goleta,4.5,0.8611111111111112,,36
+PVo1orQ9R7ZHfg90QACh-w,Your Choice,34.440628,-119.73678,3404 State St,Santa Barbara,4.0,0.8028169014084507,2.0,355
+PWWGbkPC_agn-4s1Hv1W5A,Handlebar Coffee Roasters,34.4223,-119.69848,128 E Canon Perdido St,Santa Barbara,4.5,0.9107981220657277,2.0,1065
+PZIVcSuN-G_I6oG6EVKntQ,Anchor Woodfire Kitchen,34.413315,-119.69145,119 State St,Santa Barbara,3.5,0.7580645161290323,3.0,62
+P_QAD4_iMgqTaWd5On_n3g,TAP Thai Cuisine,34.440697,-119.73231,3130 State St,Santa Barbara,3.5,0.6744868035190615,2.0,341
+Pf_7rI6TnV8M_btOBBLg5w,El Sitio,34.43355,-119.884636,7398 Calle Real,Goleta,4.0,0.7627118644067796,1.0,59
+PgtqA056auCp5EbcZMbXPQ,Trattoria Mollie,34.4214,-119.64239,1250 Coast Village Rd,Santa Barbara,3.5,0.6415094339622641,3.0,212
+Pjurvl_qc3IEMxW38Kj3tg,Tiburon Tavern,34.44059,-119.731766,3116 State St,Santa Barbara,4.0,0.8085106382978723,1.0,47
+PnT9JSoMirpKzY6TnG1HhQ,Three Pickles,34.433178,-119.82957,420 S Fairview Ave,Goleta,4.0,0.7628865979381443,1.0,97
+PrJEYGjlhaF0BSZk_Q-uPg,El Pastorcito,34.428165,-119.71641,1915 De La Vina St,Santa Barbara,5.0,1.0,,5
+PsO9LleYQJlFc_r-DJxVzg,Taco Bell,34.42917,-119.68937,821 N Milpas Street,Santa Barbara,3.5,0.5625,1.0,32
+Q0NVfooo9liiTgElEOVA6g,Cabo's Baja Grill & Cantina,34.398174,-119.5171,5096 Carpinteria Ave,Carpinteria,3.0,0.5942028985507246,2.0,69
+Q54wPRfbmO8egJeVTmSkYQ,Che Argentinian Empanadas,34.403786,-119.53396,"4191 Carpinteria Ave, Unit 5",Carpinteria,5.0,0.9444444444444444,,18
+QBNATcq7Stx9LxcSq16W7w,Jamie Slone Wines,34.420418,-119.698906,23 E De La Guerra St,Santa Barbara,4.5,0.9389671361502347,2.0,213
+QBuyT7RmnVj2AnS3NfxIBg,Taqueria El Buen Gusto,34.400146,-119.520355,4835 Carpinteria Ave,Carpinteria,4.0,0.7692307692307693,1.0,13
+QFNrQo2BGE62G-FbIlWWgw,Mels,34.418972,-119.70419,209 W Carrillo St,Santa Barbara,3.5,0.6875,1.0,32
+QFh-h_OZ5Io-mBk32HN28A,Kyle's Kitchen,34.41827,-119.70051,791 Chapala St,Santa Barbara,4.0,0.7507645259938838,2.0,654
+QLHgjBHBoeIUoEvIPvjHnw,Mesa Burger - Santa Barbara,34.4008,-119.72267,"315 Meigs Rd, Ste F",Santa Barbara,4.0,0.7516059957173448,2.0,467
+QNoFrASBpqW8dzdAEIYjNQ,The Brown Pelican,34.40382,-119.74365,2981 Cliff Dr,Santa Barbara,4.0,0.7272727272727273,,11
+QaFbv7aLQBcfT4xMF1_WnQ,Rockfire Grill,34.41288,-119.85778,6583 Pardall Rd,Goleta,4.5,0.8798449612403101,1.0,1290
+QfXEdQpBojorGinfCnrKTA,Subway,34.427383,-119.68715,609 N Milpas St,Santa Barbara,2.5,0.23529411764705882,1.0,17
+Qh4SE3580B-nnH3DwuAXOA,Cafe Zoma,34.43583,-119.82764,"7127 Hollister Ave, Ste18",Goleta,4.5,0.9,1.0,10
+Qki5LF9vIN7KPM3gn2WkJQ,On The Alley - Goleta,34.429787,-119.87261,7038 Market Pl Dr,Goleta,4.0,0.6763485477178424,2.0,241
+QpsBZDw-fE5r5_M6Vto_qA,Cafe Equilibrium,34.41291,-119.85603,"6549 Pardall Rd, Unit B",Goleta,4.0,0.7291666666666666,1.0,96
+Qsd_S2f7fNFqngx2amRE7A,Sojourner Cafe,34.422436,-119.6984,134 E Canon Perdido St,Santa Barbara,4.0,0.7447552447552448,2.0,286
+Qsoq2TGOe59LZy7z6KbQjA,Domino's Pizza,34.427563,-119.68737,617 N Milpas St,Santa Barbara,1.5,0.15517241379310345,1.0,58
+R0U0K_qvwOQbQwPhhKw4Ew,Steve's Patio Cafe,34.439964,-119.7296,3007 De La Vina St,Santa Barbara,3.5,0.6,1.0,35
+R6NxHoRRK5Y4ishGsLrGwA,Restaurant Mimosa,34.419167,-119.69834,714 State St,Santa Barbara,3.5,0.6086956521739131,2.0,23
+R93mEcQ1pjq7q3LzShi3ow,"Villa Craft Beer, Wine & Kitchen",34.41954,-119.69636,618 Anacapa St,Santa Barbara,5.0,0.961038961038961,2.0,77
+RDjtVGc0c04ZIR6em1hCbQ,Nicky D's Wood fired Pizza,34.437622,-119.72623,2840 De La Vina St,Santa Barbara,4.0,0.7258064516129032,2.0,124
+RHgj2ssSXnS0VA7DRvKomg,Sage & Onion,34.419056,-119.6976,34 E Ortega St,Santa Barbara,4.0,0.8571428571428571,3.0,7
+RIXWht1pZG8pe1SJk5hhXw,Poke Theory SB,34.41204,-119.85484,"6530 Seville Rd, Ste 102",Goleta,4.5,0.9272727272727272,2.0,55
+RKuAfE06rDcetvOTI5MbbA,Taqueria El Buen Gusto,34.43014,-119.6901,836 N Milpas St,Santa Barbara,4.5,0.8068181818181818,1.0,88
+RNzhLU8zy1L5dBkjRK4xEA,Sly's,34.397102,-119.52065,686 Linden Ave,Carpinteria,3.5,0.5927051671732523,3.0,329
+RRGLss4hhvZZuR0N6GQlSw,Nook,34.415733,-119.68846,116 Santa Barbara St,Santa Barbara,4.0,0.8037383177570093,2.0,214
+RW3nH6Au6pSCWxJhiGY03Q,Big Eye Raw Bar,34.423805,-119.707275,"38 W Victoria St, Ste 119",Santa Barbara,4.0,0.7454545454545455,2.0,110
+R_8S3Iuhpzoi3nM-xq3kcw,The Daily Grind,34.43785,-119.727135,2912 De La Vina St,Santa Barbara,3.5,0.7047619047619048,1.0,105
+RdFgbrE_8sf6NImEMopaPQ,Beachbreak Cafe,34.41573,-119.69366,324 State St,Santa Barbara,3.5,0.647887323943662,2.0,142
+RiOcLw__HPf_rTOTpYKnHQ,Meet Up Chinese Cuisine,34.42653,-119.734436,2251 Las Positas Rd,Santa Barbara,4.0,0.7266666666666667,2.0,150
+RjOnk_W82F2brYtpDZ59MA,Cubaneo,34.416527,-119.69457,418 State St,Santa Barbara,4.0,0.7388059701492538,2.0,134
+Rl42JbSMsmNW3LRjsTMYAg,Freebirds,34.413265,-119.85569,879 Embarcadero Del Norte,Isla Vista,4.0,0.7662037037037037,2.0,1296
+RnC8N3wdN4subTxtmV3FeA,Malibu Farm at Miramar,34.42102,-119.62856,1759 S Jameson Ln,Montecito,3.5,0.6346153846153846,,52
+RsjgvZO_0aLsg9YxvtBwpg,Pizza Hut,34.44133,-119.82841,"5915 Calle Real, Ste A",Goleta,2.0,0.12244897959183673,1.0,49
+RtJC7xavgAxOITQyAlGCbQ,Tri-County Produce Co,34.418182,-119.6739,335 S Milpas St,Santa Barbara,4.0,0.8526315789473684,2.0,95
+RzgQioExrGZDkY3vNuziOQ,Bobcat Room,34.418144,-119.698364,11 W Ortega St,Santa Barbara,4.0,0.7586206896551724,2.0,29
+S3QHy1sshUeZwXOYviVsXQ,Tre Lune,34.420937,-119.64624,1151 Coast Village Rd,Montecito,4.0,0.6897810218978102,3.0,274
+S4ujTsHtCOsHKrKkcjY30Q,Coast & Olive,34.421406,-119.64066,1295 Coast Village Rd,Montecito,4.5,0.832,,125
+S7Cl9gYqaC9jlw32yd4_Yg,Starbucks,34.43835,-119.74833,"3815 State St, Space #G-141",Santa Barbara,3.0,0.49019607843137253,1.0,51
+S8saWaZlToeNoloR2fMrAQ,Grassini Family Vineyards,34.42011,-119.69957,24 El Paseo,Santa Barbara,4.5,0.9030303030303031,2.0,165
+SAQgO7Ij2cdnMp8VQKBffA,Emilios Ristorante & Bar,34.40856,-119.693375,324 W Cabrillo Blvd,Santa Barbara,3.5,0.74,3.0,50
+SBs30RyeoiEU2LjeiH1YFQ,Crushcakes & Co,34.42172,-119.64629,1150 Coast Village Rd,Montecito,4.5,0.7692307692307693,2.0,13
+SHk_eYKzIOPvgwvTThtXiQ,Romaine's,34.41155,-119.844,UCen,Goleta,3.5,0.8333333333333334,1.0,6
+SOl2m-ZsAmnCuQGdMZeANQ,Red Pepper Chinese Food Express,34.411728,-119.8568,"966 Embarcadero Del Mar, Apt C",Isla Vista,3.5,0.16666666666666666,,6
+SWP5Cck3Hd_g-KWfVkF_IQ,KOL'S,34.410843,-119.85524,6533 Trigo Rd,Isla Vista,4.0,0.7407407407407407,1.0,27
+SYHDOHRNAH-2xsw3XB5qbg,The Shop Kitchen,34.42917,-119.68892,730 N Milpas St,Santa Barbara,4.5,0.8222222222222222,2.0,1125
+SZU9c8V2GuREDN5KgyHFJw,Santa Barbara Shellfish Company,34.408714,-119.68502,230 Stearns Wharf,Santa Barbara,4.0,0.7303600654664485,2.0,2444
+Sa1G0j7YGs0mSa-mU4tvgg,Carl's Jr,34.402496,-119.52485,4610 Carpinteria Ave,Carpinteria,2.5,0.3695652173913043,1.0,46
+SaUbh0sMSev8gKNJYtC76g,Hob Nob,34.423515,-119.70622,21 W Victoria St,Santa Barbara,3.0,0.43478260869565216,2.0,23
+SeneXbKmhHhPtzyTDPDnvA,Sam's To Go - Isla Vista,34.413136,-119.85667,6560 Pardall Rd,Isla Vista,4.0,0.7647058823529411,1.0,136
+Slg6Ec2D7vEBRmgVUfwkzQ,Angel Oak,34.434162,-119.920204,8301 Hollister Ave,Santa Barbara,4.0,0.7268292682926829,4.0,205
+Slihcg1bmYvw-V_FUFghLg,Harbor Meat & Seafood,34.41472,-119.691956,215 Helena Ave,Santa Barbara,5.0,0.9285714285714286,3.0,14
+Sp4HOjXy-LYV_4yy10L3jg,Modern Times Academy of Recreational Sciences,34.416542,-119.69457,418 State St,Santa Barbara,4.5,0.8918918918918919,2.0,74
+Ss6f5v_t5Vddiaz4ZOxL0g,Andersen's Danish Bakery & Restaurant,34.422718,-119.7033,1106 State St,Santa Barbara,4.0,0.7391304347826086,2.0,1127
+SsHMgOW3TT48Z7jeV5beqQ,Kimchi Korean BBQ,34.440594,-119.73241,3132 State St,Santa Barbara,4.0,0.7275541795665634,2.0,323
+SswXHqlzhpbAQS9HVAoBww,Cajun Kitchen,34.433643,-119.82959,420 S Fairview Ave,Goleta,3.5,0.875,2.0,16
+Stx8fUjg_m0-CAcT2NJCNQ,A Healthy Life,34.39627,-119.51272,1054 Casitas Pass Rd,Carpinteria,4.5,0.9,2.0,10
+Swk_Fdv-gRY8zUT2ft18Kg,Starbucks,34.443527,-119.788414,4770 Calle Real,Santa Barbara,3.5,0.46153846153846156,,26
+T2otvNcawDSkhykOG2tOLA,IHOP,34.44335,-119.78812,4765 Calle Real,Santa Barbara,2.5,0.34210526315789475,2.0,114
+T5HC59sxOcW-I3_ViqNbYw,Las Brasas Mexican Grill,34.441227,-119.828384,"5915 Calle Real, Ste B",Goleta,4.0,0.5555555555555556,2.0,9
+T5serOgucL236udCsZI0jA,Xanadu Bakery,34.422234,-119.65213,1028 Coast Village Rd,Santa Barbara,3.0,0.5609756097560976,2.0,41
+T9I4G6Or3sAbyYmB7c23hw,Tino's Italian Grocery,34.419235,-119.70464,210 W Carrillo St,Santa Barbara,4.5,0.8333333333333334,2.0,96
+TCWnTa69sJ3vGQsdEe3Esw,Uncle Roccos Famous NY Pizza,34.416584,-119.69553,437 State St,Santa Barbara,2.5,0.4108761329305136,2.0,331
+TI3Rydw47yBMzY1oW2wJUg,Elsie's,34.417873,-119.70089,117 W De La Guerra St,Santa Barbara,4.0,0.8354430379746836,1.0,158
+TN3tMGLb6AbAnN6rFKmH1A,805 Kabob,34.411335,-119.85773,6578 Trigo Rd,Goleta,3.5,0.6212121212121212,1.0,66
+TSwMwVq5GtQh5LW2t32uGA,Woody's Roundup Bar & Grill,34.430893,-119.73564,"Earl Warren Showgrounds, 3400 Calle Real",Santa Barbara,2.0,0.16666666666666666,1.0,6
+TUtf4FLtotdQDleYpRIfnw,California Pizza Kitchen at Santa Barbara,34.4188,-119.700584,719 Paseo Nuevo,Santa Barbara,3.0,0.5103092783505154,2.0,194
+TVX2a4bVuCE2VUIkiLdZrQ,Flavor of India,34.440613,-119.72937,3026 State St,Santa Barbara,4.0,0.720703125,2.0,512
+TYVln68leW7BYuVksFyB5A,Sevilla,34.415592,-119.69604,428 Chapala St,Santa Barbara,4.0,0.75,3.0,12
+TZ-bgvsk189WywTLFrqfTQ,Ascending Health Juicery,34.426044,-119.70578,34 E Sola St,Santa Barbara,4.5,0.8571428571428571,2.0,7
+T_TX4Lx03Juo4pHF5cMYuA,Ca'Dario Pizzeria Veloce,34.423607,-119.707054,"38 W Victoria St, Ste 104",Santa Barbara,3.0,0.47058823529411764,,34
+Tc1L4BH_2pkCywkAEfCQRg,Burger Express,34.418564,-119.7161,1435 San Andres St,Santa Barbara,4.0,0.8888888888888888,1.0,9
+TeUEijNG9w8m2fNaE7J1TA,TAP Thai Cuisine,34.43115,-119.87377,"7060 Hollister Ave, Ste 106",Goleta,3.0,0.5238095238095238,2.0,21
+Tfo88MgUweNHyOMfQ6TYGw,Bay Roadhouse Bar and Grill,34.414146,-119.691666,202 State St,Santa Barbara,3.5,0.5869565217391305,2.0,92
+Tpr8CltepNzpRpQC2JM4pQ,Sage & Onion Cafe,34.435425,-119.8204,5599 Hollister Ave,Goleta,4.0,0.75,1.0,92
+TqE83vo_rs4h4EycnuLI6g,Peet's Coffee,34.42275,-119.704124,1131 State St,Santa Barbara,4.0,0.775,1.0,40
+TzNk1TcWLZn0JCpO83hBAA,Stella Mare's,34.422504,-119.65809,50 Los Patos Way,Santa Barbara,4.5,0.8343434343434344,3.0,495
+U1Gc3wKN5viu_e68KJVOdQ,Wingman Rodeo - Milpas Street,34.429108,-119.68871,730 N Milpas St,Santa Barbara,4.0,0.6838709677419355,2.0,155
+U1lGcthY52-LUPdxhV3qVw,Paesano's Pizzeria,34.418423,-119.716,1429 San Andres St,Santa Barbara,3.5,0.7241379310344828,2.0,58
+U2hkeMI-q4cS35QolJYN0A,Arigato Sushi,34.42385,-119.705475,1225 State St,Santa Barbara,4.0,0.8006042296072508,3.0,993
+U3grYFIeu6RgAAQgdriHww,Brophy Bros - Santa Barbara,34.40376,-119.69399,119 Harbor Way,Santa Barbara,4.0,0.7975357975357975,2.0,3003
+U7XQ4-xZf-3a5diuDILpFA,Rusty’s Pizza Parlor,34.421417,-119.599724,2315 Lillie Ave,Summerland,3.5,0.6,,15
+UA3HxLprLSOO9J6l1iR2Cg,China Palace,34.421818,-119.64948,1070 Coast Village Rd,Santa Barbara,3.5,0.6376811594202898,2.0,207
+UAy8Qc_T0CuHxQRiUMNN4g,La Salsa,34.445793,-119.743164,"3938 State St, Ste 200",Santa Barbara,3.5,0.6666666666666666,1.0,24
+UBK6zb5-XUETfVzYkRTj1Q,Lab Social,34.421337,-119.69036,414 E Haley St,Santa Barbara,4.5,0.875,2.0,40
+UCf1qieF9Lss61Te-Qnacg,Sushi Cafe,34.42187,-119.7043,28 W Figueroa St,Santa Barbara,3.0,0.5,2.0,10
+UGADjVkBITKPU7I6sMO1oQ,Bella Dolce Bakery,34.41809,-119.700905,113 W De La Guerra St,Santa Barbara,4.0,0.6,2.0,10
+UQZe-qWOpGiyEPsTUko5Rg,Rascal's Vegan Food,34.418217,-119.69612,18 E Cota St,Santa Barbara,4.5,0.92,,25
+USVks6B2Xkf0WLmLIiXqMA,The Hungry Cat,34.422333,-119.705315,1134 Chapala St,Santa Barbara,3.5,0.6957403651115619,3.0,493
+UTp0yIaYklWD5BbQKz_85A,Smithy Kitchen + Bar,34.42378,-119.7043,7 E Anapamu St,Santa Barbara,3.5,0.6223776223776224,3.0,143
+UiJiURqivPDuvMsFgRF3yQ,The Honey B,34.419334,-119.69582,602 Anacapa St,Santa Barbara,4.5,0.8518518518518519,1.0,216
+UjgqSqa4Biy34pHSEdwj_g,Gino's Sicilian Express,34.4221,-119.703705,12 W Figueroa St,Santa Barbara,4.0,0.7840909090909091,1.0,264
+Ukn2qaxEP0sbjoiwn2LwhA,Onus Donuts,34.416046,-119.6949,413 State St,Santa Barbara,4.5,0.8947368421052632,,38
+Umywf9wstVwg30wROIrL_Q,Oveja Blanca Restaurante,34.419548,-119.69693,30 E Ortega St,Santa Barbara,4.5,0.851063829787234,3.0,47
+Un-UDVOuv1co3TMmGaumxA,Shoreline Beach Cafe,34.402603,-119.697945,801 Shoreline Dr,Santa Barbara,4.0,0.7376146788990826,2.0,545
+UuRZpgZsHX7PyykHV3wbZg,Crushcakes & Cafe,34.42572,-119.70524,1315 Anacapa St,Santa Barbara,4.0,0.7493765586034913,2.0,802
+V4lqQdll3_TAEtkrHDYbAA,Italia Pizza & Pasta,34.44276,-119.83067,149 N Fairview Ave,Goleta,3.5,0.6666666666666666,1.0,24
+VAIOtbsxdNmuhUKkQZFRlA,Renaud's Patisserie & Bistro,34.43943,-119.73589,3315 State St,Santa Barbara,4.5,0.8237476808905381,2.0,539
+VC4jqq8Hu1_RjBFt8nHD2Q,Sugar Cat Studio,34.41421,-119.68876,32 Anacapa St,Santa Barbara,5.0,0.9473684210526315,2.0,19
+VJKpVv_l1g943WK6fxwZKQ,Blind Tiger,34.41591,-119.69482,409 State St,Santa Barbara,3.5,0.5909090909090909,2.0,22
+VOcGcN0bvGU_nzxbJgR5jQ,Bettina,34.42256,-119.65172,1014 Coast Village Rd,Santa Barbara,4.5,0.7951070336391437,2.0,327
+VW7GMzoQNMqTs9_cM26LLw,Zaffiro,34.435947,-119.85413,6920 Camino Real Marketplace,Goleta,2.0,0.3333333333333333,2.0,6
+VWL9UqAKfyvGeb0AlOTusA,Silvergreens,34.41305,-119.85688,900 Embarcadero Del Mar,Isla Vista,3.5,0.6761006289308176,1.0,318
+VXxZJNSscbm5bpG5ll2rcQ,212° Hotpot,34.410843,-119.85524,"6533 Trigo Rd, Ste 106",Goleta,4.0,0.7027027027027027,2.0,74
+VZhRxX3BzU09qK4UlXrN4g,Hugos Restaurant,34.396584,-119.51324,1049 Casitas Pass Rd,Carpinteria,4.5,0.8503401360544217,1.0,147
+Vc-hDuD19_eeJ8ULZmLSCw,Stone Age Restaurant,34.425602,-119.68474,415 N Milpas St,Santa Barbara,3.5,0.6262626262626263,2.0,99
+VciWUuWgNshjkRDPHiFCoQ,Subway,34.43871,-119.75185,"3967 State St Space 4, Space 4",Santa Barbara,3.5,0.5,1.0,8
+VeFfrEZ4iWaecrQg6Eq4cg,Cal Taco,34.430542,-119.88237,"7320 Hollister Ave, Ste 1",Goleta,4.0,0.7185929648241206,1.0,199
+VfH9vj-kkAiAwvKYCKzQ0g,The Nugget Bar & Grill,34.398212,-119.51714,5096 Carpinteria Ave,Carpinteria,3.0,0.4444444444444444,2.0,54
+Vg0oTgDyRwi73D5zRywrlg,Centennial Beer Hall,34.435818,-119.82834,5871 Hollister Ave,Goleta,4.0,0.6666666666666666,,9
+VgAKmXE8B7J0I_O_R13UKQ,Santa Barbara Roasting Company,34.41507,-119.694435,321 Motor Way,Santa Barbara,4.0,0.7681992337164751,1.0,522
+VhH_MGOiWsMVOJk1LHFVXw,Rudy's Mexican Restaurant & Take Out,34.419613,-119.700035,811 State St,Santa Barbara,3.5,0.7407407407407407,1.0,27
+VhWtlyWAH6Lw_XBXuKDWng,LaoWang Burger,34.43583,-119.82764,231 S Magnolia Ave,Goleta,4.5,0.7272727272727273,1.0,11
+VqcHpG3ODZ4KHBhbxcL4-Q,Tacos Don Roge,34.39741,-119.520584,751 Linden Ave,Carpinteria,4.0,0.7272727272727273,1.0,176
+Vt5gk5h5VlHXLu-cVKzOXw,M. Special Brewing Company,34.41873,-119.69769,634 State St,Santa Barbara,3.5,0.6666666666666666,,24
+W5-2F8kftKARrEPLhQaZ8A,Tuttini,34.42168,-119.70128,10 E Carrillo St,Santa Barbara,3.5,0.7692307692307693,2.0,13
+W7gSJz80DywKnPRIGjA2Bw,Derf's Cafe,34.42896,-119.71697,2000 De La Vina St,Santa Barbara,3.5,0.6,2.0,130
+W7zCBDLFv13fDzRXJefrrA,Mayo's Carniceria & Tacos,34.43585,-119.7253,2704 De La Vina St,Santa Barbara,3.5,0.6571428571428571,1.0,35
+W8a_FYH-405MtR9_0U7sQQ,The Worker Bee Cafe II,34.43542,-119.82037,5599 Hollister Ave,Goleta,4.0,0.75,2.0,36
+WIH1ptTMD7aII_qfeVeaRg,El Rincon Alteno,34.418453,-119.69399,115 E Haley St,Santa Barbara,4.5,0.9230769230769231,,13
+WQ0cLxAeRpkp6bZP89nDVg,Fat Burger Restaurants of,34.419212,-119.69843,718 State St,Santa Barbara,4.0,0.2857142857142857,2.0,7
+WUGRmrfSzQCyeG6mYAM-vw,Yona Redz,34.417614,-119.69634,532 State St,Santa Barbara,4.5,0.8095238095238095,,126
+WVNkMz4sEl35swjVtKHOFw,Alessia Patisserie & Cafe ,34.422424,-119.698364,134 E Canon Perdido St,Santa Barbara,4.5,0.9478260869565217,2.0,115
+WVuSLF5tLVqMGMmj5pn7mw,La Michoacana Premier,34.42182,-119.67975,"21 N Milpas St, Ste E",Santa Barbara,4.0,0.7,,30
+W_TgYTkBkPhK7Qdx29j9GQ,Blend Me Tender,34.410843,-119.85523,"6533 Trigo Rd, Ste 105",Isla Vista,4.0,0.6666666666666666,2.0,12
+WfN-VixjWAbfe8efJEs3yQ,Renaud's Pattiserie,34.42078,-119.64492,"1187 Coast Village Rd, Ste 7",Montecito,3.5,0.6724137931034483,2.0,58
+WhAp8J-Jkd6LcEtnFZSk5w,Old Town Tavern,34.434864,-119.82919,261 Orange Ave,Goleta,4.0,0.7142857142857143,1.0,42
+WrU1ZYN4jlYcL5mvJrQsCQ,Night Lizard Brewing Company,34.41792,-119.69715,607 State St,Santa Barbara,4.5,0.9558823529411765,2.0,136
+WtGHHomZhFffiL0UiKjGkw,Little Caesars Pizza,34.395454,-119.5115,1048 Casitas Pass Rd,Carpinteria,4.5,0.7142857142857143,1.0,14
+Wy8Hswf2cLQGRZN6armkag,Jack in the Box,34.429897,-119.86878,6875 Hollister Ave,Goleta,1.5,0.16279069767441862,1.0,86
+WzgtV5eNV7rwtJYJUiPJ2w,Mylestone BBQ,34.432228,-119.8761,53 Santa Felicia Dr,Goleta,4.0,0.8,,5
+XHxAIQR-QAz6j1RMaz_J1A,Giovanni's of Santa Barbara,34.44053,-119.72906,3020 State St,Santa Barbara,3.5,0.6102941176470589,2.0,136
+XQY1_EorK7FMCffiftN0fA,Papa John's Pizza,34.44175,-119.82309,Calle Real Shopping Ctr,Goleta,2.5,0.21818181818181817,1.0,55
+XSL9RuLwRTyhNUwUo7WAPw,Starbucks,34.443573,-119.78884,4749 Calle Real,Santa Barbara,2.0,0.2222222222222222,,18
+XXsofYxziipczzc3OFDD5Q,Caffè,34.433514,-119.92064,8301 Hollister Ave,Santa Barbara,3.0,0.5,1.0,8
+XYxSB4DQ48O7J6AsnS-Ddg,State Street Wine Bistro,34.417362,-119.69595,516 State St,Santa Barbara,4.5,0.8181818181818182,3.0,22
+XgehM3pBZWuXi45J2dqRJQ,Green Table,34.417873,-119.7007,113 W De La Guerra St,Santa Barbara,4.5,0.8293413173652695,2.0,334
+XkZwD46WcsAlbpg1inwbLQ,American Ale,34.418087,-119.696365,14 E Cota St,Santa Barbara,4.0,0.8241206030150754,2.0,199
+XkveGZ8pr9TL5bZCqmzuhA,Hustle & Grind Coffee Company,34.419106,-119.69955,11 W De La Guerra St,Santa Barbara,4.5,0.84,1.0,50
+XleIcqVgh3iBeM4s-rdy6g,Javan's,34.41221,-119.85538,938 Embarcadero Del Nrte,Goleta,4.0,0.8387096774193549,1.0,31
+Xw_5QkLTyIEg6Hs-kXGNbg,Galanga Thai Restaurant,34.416782,-119.696106,507 State St,Santa Barbara,3.5,0.6447368421052632,2.0,304
+XwnkfMUiyH-OsJXbmbOK5g,Sushi Tyme,34.419727,-119.70028,819 State St,Santa Barbara,3.5,0.6111111111111112,2.0,162
+XyYsl2OyoMi6OMvzsdcVoQ,MIZZA,34.422806,-119.70359,1112 State St,Santa Barbara,4.0,0.7743589743589744,2.0,390
+Y-qMi8FQYC6-wq-4wBA54Q,Carrillo Dining Commons,34.40995,-119.852745,Ocean Rd,Isla Vista,4.0,0.8571428571428571,2.0,7
+Y0izXh4Dv1_YU68tn43Xiw,Handlebar Coffee Roasters,34.43642,-119.72555,2720 De La Vina St,Santa Barbara,4.5,0.8839285714285714,2.0,224
+Y57sylYCgq2VQJuBCnjPfA,Oku,34.413204,-119.68844,29 E Cabrillo Blvd,Santa Barbara,4.0,0.783410138248848,3.0,434
+YANEffRwcoMTLMfmeY1Y8A,Urkeb,34.41609,-119.69486,413 State St,Santa Barbara,4.5,0.7821782178217822,2.0,101
+YB689VFiOlzUTBRPiauDFA,Terraza Cafe,34.438713,-119.728645,3007 De La Vina St,Santa Barbara,3.0,0.4117647058823529,,17
+YGgGefpPTFhgthvQvMAGoQ,Lito's Take  Out,34.422413,-119.68931,514 E Haley St,Santa Barbara,4.0,0.8116438356164384,1.0,292
+YHOr_9eSbIGhcecc4Uow6Q,Casa Don Roge,34.399326,-119.51881,4928 Carpinteria Ave,Carpinteria,4.0,0.8571428571428571,1.0,35
+YL50DFkSKhVFyfKZgYQA8Q,Simply Pies,34.435364,-119.81232,5392 Hollister Ave,Goleta,4.0,0.8448275862068966,2.0,58
+YXKot5TH9MhC4khAn0JC3w,Altamiranos Restaurant,34.43612,-119.82759,5838 Hollister Ave,Goleta,4.0,0.7829457364341085,1.0,129
+YXaCcpETNtxrNNK6TbUTlw,Sachi Ramen And Robata Bar,34.418034,-119.69997,721 Chapala St,Santa Barbara,4.0,0.7567567567567568,2.0,333
+YgS10SCzw13uGiC0wTDiaQ,The Taj Cafe,34.42057,-119.70118,905 State St,Santa Barbara,2.5,0.3404255319148936,2.0,47
+YgbIbmfDlB-bZSsjuIfKwA,Jack's Bistro and Famous Bagels,34.421272,-119.677216,53 S Milpas St,Santa Barbara,3.5,0.65625,1.0,224
+YiSr-W5BBX6uXnhWPxk82Q,Hoffmann Brat Haus,34.419586,-119.69935,801 State St,Santa Barbara,4.0,0.7616822429906542,2.0,428
+YrNtBUOUOYwmRZ_UVwH8iQ,D'Angelo's Bakery,34.415127,-119.69483,25 W Gutierrez St,Santa Barbara,3.5,0.6818181818181818,2.0,440
+Yucf_GqN-tVJl7XF1JAhMQ,Dickey's Barbecue Pit,34.430664,-119.87216,"7060 Hollister Ave, Ste 105",Goleta,2.5,0.32,2.0,75
+YzcchXErwyb_8FL6bVPwEA,Peabody's,34.42107,-119.64473,1198 Coast Village Rd,Santa Barbara,3.5,0.64,2.0,25
+ZCURd9PiH4qdEjQfrIZzFg,Maggie's at State and A,34.423367,-119.704704,1201 State St,Santa Barbara,3.5,0.5740740740740741,3.0,54
+ZJ1rSNQ49v3nbG5qWgwojw,Mexican Fresh,34.401,-119.72258,"315 Meigs Rd, Ste F",Santa Barbara,3.5,0.5714285714285714,1.0,49
+ZJzlns_dFkapVajmdFHGuw,Embermill,34.422054,-119.70313,1031 State St,Santa Barbara,4.5,0.8317757009345794,2.0,214
+ZKi4F9BlA46rLvLyeIE3VA,Pacific Crêpes,34.419827,-119.69724,705 Anacapa St,Santa Barbara,3.5,0.7176470588235294,2.0,255
+ZTg2GBgQj1WwAO5ySsTAQw,Beach Bowl,34.398457,-119.51917,901 Linden Ave,Carpinteria,3.5,0.6964285714285714,2.0,56
+ZY4M_fKW8aSUpsUzeh5fuA,Elements Restaurant and Bar,34.425304,-119.7027,129 E Anapamu St,Santa Barbara,3.5,0.6976744186046512,3.0,43
+ZYqNIWch6Ik9wLZCa1hxkw,Tacos Pipeye,34.42387,-119.68222,217 N Milpas St,Santa Barbara,4.5,0.9142857142857143,1.0,175
+ZcbhsniFmXZFW8ccPvsSLA,Coffee Collaborative,34.413277,-119.85677,6560 Pardall Rd,Isla Vista,3.5,0.65,1.0,60
+ZeGBAsyE8qcJsnWtmGWeBQ,Kaptain's Firehouse BBQ,34.41309,-119.85555,6543 Pardall Rd,Isla Vista,3.5,0.5492957746478874,1.0,71
+ZmQHzv1pf0fbk-tm8lu0EA,Downey's,34.42429,-119.70618,1305 State St,Santa Barbara,4.5,0.8790322580645161,4.0,124
+Zqc8nrT3Z1IbQBckFuU3Fw,Matador Tapas Bar & Latin Steakhouse,34.419193,-119.69832,714 State St,Santa Barbara,4.0,0.5,2.0,8
+ZrxlfdFU_qpnIHI2DmoRxA,Mesa Pizza,34.400574,-119.72272,"315 Meigs Rd, Ste K",Santa Barbara,4.0,0.7777777777777778,2.0,180
+ZzI68qUPwySLG3pFeQxg6A,Sade Turkish Coffee & Delights,34.40374,-119.53398,"4189 Carpinteria Ave, Ste 1-2",Carpinteria,4.5,0.9545454545454546,,22
+_6p_j0UL7ST3b2nvHw82eA,REBAR COFFEE + KTCHN,34.41444,-119.69192,214 State St,Santa Barbara,4.0,0.754601226993865,2.0,163
+_P-0kP5DboEd5p0OqDorFA,Wine + Beer,34.423607,-119.707054,"38 W Victoria St, Shop 113",Santa Barbara,4.5,0.95,2.0,40
+_T8tOBDr3NKNxd0yl5GwjA,Starbucks,34.429523,-119.872444,7030 Marketplace Dr,Goleta,3.0,0.5210084033613446,2.0,119
+_Uyinj5wLMJ7x2cCfHO1Yg,Bristol Farms - Santa Barbara,34.438145,-119.74946,3855 State St,Santa Barbara,3.5,0.6875,,64
+_cWBP-lW9RETw77prVle1g,Bitterman's Deli,34.420135,-119.70085,5 W Canon Perdido St,Santa Barbara,3.5,0.6785714285714286,1.0,28
+_ecVi-tVoaKHKYxNkxFj7w,Dave's Dogs Grill,34.43777,-119.78972,149 S Turnpike Rd,Santa Barbara,4.5,0.8786279683377308,1.0,379
+_kJzi_k6LwtE3phJFxNOzA,Sorriso Italiano,34.41285,-119.857124,901 Embarcadero Del Mar,Isla Vista,4.0,0.7391304347826086,1.0,138
+_l05Dd6BKBAiJKX71bLq6g,Open Cup Coffee & Tea,34.419403,-119.69881,728 State St,Santa Barbara,4.0,0.7272727272727273,1.0,11
+_nSL2u-ZzX6kkAF2D2EZgQ,Roof Top Bistro & Bar,34.430996,-119.868546,6878 Hollister Ave,Goleta,3.5,0.6835443037974683,2.0,79
+_swrAjNgk60HIGLVzHiqmA,Khao Kaeng by Empty Bowl Gourmet Noodle Bar,34.42078,-119.64492,"1187 Coast Village Rd, Ste 9",Montecito,4.5,0.8679245283018868,2.0,53
+_tTKZJ89dS404ZEVnHa-Cw,Starbucks,34.441887,-119.83224,173 N Fairview Ave,Goleta,2.5,0.3684210526315789,1.0,76
+_urnEsYdKg1wt057-8yA9Q,Globe,34.418217,-119.69612,18 E Cota St,Santa Barbara,4.0,0.6428571428571429,2.0,56
+_v3DcLatG70adfYzWTd-CQ,Pacific Health Foods,34.398438,-119.51879,944 Linden Ave,Carpinteria,4.5,0.8969072164948454,2.0,97
+_vLfidpLDYHfZ_KnFZ75Lg,Super Cucas,34.412308,-119.855095,6527 Madrid Rd,Isla Vista,3.5,0.6837209302325581,1.0,215
+_ywevgEtI1SpZBtY3rILRg,Isabella Gourmet Foods,34.41926,-119.695786,602 Anacapa St,Santa Barbara,4.5,0.9411764705882353,2.0,17
+a1E2BPYnufFzb6YX2pplJg,Wahoo's Fish Tacos,34.416912,-119.69617,511 State St,Santa Barbara,3.5,0.6935483870967742,1.0,62
+a32M9H9nkkPGKTKB5W27NA,Enterprise Fish,34.41434,-119.69273,225 State St,Santa Barbara,3.5,0.7089487402258905,2.0,1151
+a9K3jxNUUe6jr1uh8FsakQ,The Patio Cafe Santa Barbara,34.438694,-119.72851,3007 De La Vina St,Santa Barbara,3.0,0.5454545454545454,2.0,66
+aD4ysR05o5-onOjYjJ8QiQ,Sam's To Go,34.4299,-119.867165,6831 Hollister Ave,Goleta,3.0,0.5185185185185185,1.0,27
+aFhPwy7OhyKah4cJY2QdEQ,Stonehouse Restaurant,34.446846,-119.62309,900 San Ysidro Ln,Santa Barbara,4.5,0.8497109826589595,4.0,346
+aOLFlIQibMg_lT2X4qKM2g,Dean: A Coffee Shop,34.43459,-119.83564,"6100 Hollister Ave, Unit 1",Goleta,4.5,0.8865979381443299,,97
+aOVpnuzdFEIp87NpGyNDkA,Itsuki,34.429916,-119.8775,"7127 Hollister Ave, Ste 30",Goleta,3.0,0.42528735632183906,2.0,261
+aQBWiMlM2nEIx3EIjLRGBg,Surf Dog,34.387215,-119.49918,The Bluffs Parking Lot,Carpinteria,5.0,0.9183673469387755,1.0,49
+aY_n9RSaD2Yw09jSFFePew,PizzaMan Dan's,34.396957,-119.521065,699 Linden Ave,Carpinteria,4.0,0.732824427480916,2.0,131
+acqDz7WDsCS3WiLxHVceOg,Café Lido,34.417877,-119.669395,1111 E Cabrillo Blvd,Santa Barbara,3.5,0.5833333333333334,,12
+agXGQ4DH4SqxtJxBHKjWIg,Muddy Waters Cafe,34.422306,-119.68952,508 E Haley St,Santa Barbara,4.0,0.8541666666666666,1.0,48
+agXY9uFaWAhIzwWsRZB6gQ,Flagstone Pantry,34.423725,-119.706825,"38 W Victoria St, Unit 108",Santa Barbara,4.5,0.8846153846153846,2.0,26
+apdwYbDYSOgD89eEa8yDcw,McDonald's,34.422268,-119.68023,29 N Milpas St,Santa Barbara,2.5,0.38095238095238093,1.0,42
+apmw_lkLdwWbeYiI9ysdJg,Bar 29,34.42229,-119.70534,1134 Chapala St,Santa Barbara,4.5,0.8981481481481481,2.0,108
+auh2m1mJ2ORJxpmPUJ9SYg,Ultimate Bagels,34.424255,-119.70507,1226 State St,Santa Barbara,4.0,0.6481481481481481,1.0,54
+b0TBL7gSg2mduoFDgFQHoA,El Taco Tequila Taqueria,34.418106,-119.69634,14 E Cota St,Santa Barbara,3.5,0.6470588235294118,2.0,34
+b1shfPbHpkeWtbGbz5iAtg,Rudy's Mexican Restaurant,34.440063,-119.74085,3613 State St,Santa Barbara,3.0,0.5106382978723404,1.0,141
+b2Za53CjptGyf9K0fFnrAg,Petrini's Italian Restaurant - Santa Barbara,34.439804,-119.72839,14 W Calle Laureles,Santa Barbara,4.0,0.7280334728033473,2.0,239
+b8jbsZHfrGZCVPjI9KXV_g,McDonald's,34.396816,-119.51236,1115 Casitas Pass Rd,Carpinteria,2.0,0.2571428571428571,1.0,70
+bBA62rVklEG2WUnvi8RtrQ,El  Sitio,34.43698,-119.725815,2830 De La Vina St,Santa  Barbara,4.0,0.7755102040816326,1.0,147
+bDoeXKSLBvj5R5OYRBNv-g,Mediterra Market and Cafe,34.43459,-119.81997,5575 Hollister Ave,Goleta,4.0,0.85,1.0,20
+bFWH7wlto7jjjwce5ZV--A,Home Plate Grill,34.43355,-119.884636,"7398 Calle Real, Ste C",Goleta,4.5,0.9079497907949791,2.0,239
+bLnC1_-Kd_Z5qhHNQXCUfQ,Choppa Poke,34.430393,-119.87222,"7000 Hollister Ave, Ste 102",Goleta,4.0,0.7679083094555874,2.0,349
+bPVPZeqMuYtU_yGCb4P-jg,Empty Bowl Gourmet Noodle Bar,34.423576,-119.70704,"38 W Victoria St, Ste 109",Santa Barbara,4.5,0.8095890410958904,2.0,730
+bRlpi6k7wTSHHEapcLz_KA,Chipotle Mexican Grill,34.429176,-119.86941,"270 Storke Rd, Ste F",Goleta,2.0,0.21505376344086022,1.0,186
+bVaRZDHkWdsHuARGxxpREw,Sushi Bar 29,34.42229,-119.70534,1134 Chapala St,Santa Barbara,4.5,0.8775510204081632,2.0,98
+bXrQejeR66IwebuhxPS7GA,Metropulos Fine Foods,34.416473,-119.68942,216 E Yanonali St,Santa Barbara,4.5,0.8885542168674698,2.0,332
+bbEXAEFr4RYHLlZ-HFssTA,The Original Habit Burger Grill,34.43557,-119.82471,5735 Hollister Ave,Goleta,4.0,0.8005952380952381,2.0,336
+bd0ew6pTvlP4f5KRfWK5jw,Square One,34.418095,-119.69638,14 E Cota St,Santa Barbara,4.0,0.7857142857142857,3.0,42
+bdfZdB2MTXlT6-RBjSIpQg,Pho Bistro,34.412933,-119.85553,903 Embarcadero Del Norte,Isla Vista,3.0,0.47643979057591623,1.0,191
+bjhCtlYHrkgA5Ku8l-rB3g,Our Daily Bread,34.435814,-119.725,2700 De La Vina St,Santa Barbara,3.5,0.6261682242990654,2.0,107
+bkCM8JR0ti4WHtG19DKgfA,The Pub,34.41511,-119.691826,224 Helena Ave,Santa Barbara,3.0,0.46153846153846156,2.0,13
+bvULUymFuaL_4Az8Vyxalg,Fosters Freeze,34.397038,-119.51646,5205 Carpinteria Ave,Carpinteria,2.5,0.4492753623188406,1.0,69
+c-W17u2jiFOD2H_d6uo-bQ,Area 5.1 Winery,34.41476,-119.690636,"137 Anacapa St, Ste B",Santa Barbara,4.5,0.8781512605042017,2.0,238
+c0p9TawJSQHchy5aL8NWgQ,Rosales Mexican Restaurant,34.42431,-119.68328,827 E Montecito St,Santa Barbara,4.5,0.8888888888888888,2.0,234
+c1oDGw0j9-Lxus_Xs7go8g,Itsuki Restaurant,34.441387,-119.75636,4020 Calle Real,Santa Barbara,4.0,0.8,2.0,70
+c1tH5Btm_f7SQ-6ju22wag,Pollofino's,34.429684,-119.86702,6831 Hollister Ave,Goleta,4.0,0.8359375,1.0,128
+c1xuic_qvUfSIr-if6nSUQ,Relais de Paris,34.41961,-119.69898,734 State St,Santa Barbara,4.0,0.7985611510791367,3.0,139
+c7GJVA-6lQxcH6QkrRiW0w,Hot Spots Espresso Company,34.413143,-119.69006,36 State St,Santa Barbara,3.0,0.4,1.0,35
+c8BFvdscjkhieg0C_rx6vg,The Palms,34.39729,-119.52068,701 Linden Ave,Carpinteria,3.5,0.6829268292682927,2.0,246
+cAbdvzqtFLaAAMFIyPf2AA,Holdren's Steaks & Seafood,34.417114,-119.695854,512 State St,Santa Barbara,4.0,0.7199281867145422,3.0,557
+cBZJKUdFNSKHLI27Efy-uQ,GoToCafe,34.43034,-119.886765,"7414 Hollister Ave, Ste B3",Goleta,4.5,0.8,2.0,5
+cCi63HyU5XtjCaCVw0qJCw,M Kitchen,34.41873,-119.69769,"634 State St, M. Special Brewing Company",Santa Barbara,3.0,0.4666666666666667,,15
+cJjzBIPfMmps5NhNowKPpA,Norton's Pastrami and Deli,34.418797,-119.6753,226 S Milpas St,Santa Barbara,4.0,0.7446808510638298,2.0,47
+cMd6d7T9ycU8DX0mVybNHA,Haggen Food & Pharmacy,34.43769,-119.79046,163 S Turnpike Rd,Goleta,1.5,0.1,4.0,10
+cOoTIQ0RcudE1R5aRVZzdw,The Garden Market,34.40643,-119.54728,3811 Santa Claus Ln,Carpinteria,3.5,0.7204301075268817,2.0,93
+cQDwJjslebJv5Co7gCm2Yw,Cafe Ana,34.42438,-119.70357,1201 Anacapa St,Santa Barbara,4.0,0.7934782608695652,2.0,92
+cVW9b_1bqsvTU1jhGNWUsw,Yoshinoya,34.415142,-119.84063,552 University Road,Santa Barbara,3.0,0.4444444444444444,1.0,9
+cZ6sHHLv7VSmuFSxP6sQLg,Lao Wang,34.413273,-119.85478,"6530 Pardall Rd, Ste B",Goleta,3.5,0.6666666666666666,2.0,147
+c_a38vt6v2tRq-VjdTZHZw,The Monarch,34.421432,-119.640526,1295 Coast Village Rd,Santa Barbara,4.0,0.7321428571428571,,56
+cbX2XHrun39yJBND451_oA,Goleta Bakery,34.436028,-119.826096,5784 Hollister Ave,Goleta,4.0,0.8461538461538461,1.0,26
+cbkrO0zra1OiNGvtjw2igQ,Wok On the Wild Side,34.413105,-119.85743,"901 Embarcadero Del Mar, Ste 100",Goleta,2.0,0.18095238095238095,2.0,105
+cpaMCrmG7WK10tJ4c_GXow,Sanba IM,34.42808,-119.87658,"Albertsons Supermarket, 7127 Hollister Ave",Goleta,4.0,0.75,1.0,24
+crlk8kaurC4zrPUTt7BevQ,Chubbies Hamburgers,34.437695,-119.72693,2908 De La Vina St,Santa Barbara,4.0,0.7905405405405406,1.0,148
+ctVn7wMvJX8f4Z9SnOnrHw,The Bistro,34.433342,-119.91838,8301 Hollister Ave,Santa Barbara,3.5,0.642570281124498,3.0,249
+ctelO_ItYaUjIzD_AxZByg,The Bak Door,34.43477,-119.820076,320 S Kellogg Ave,Goleta,3.5,0.6,1.0,5
+cyaDjqjhtRbpd5Og5dFoZg,Boondocks,34.440136,-119.77185,4444 Hollister Ave,Santa Barbara,2.5,0.4,1.0,5
+d-5kMts7CzenaPgDzesQDg,Domino's Pizza,34.412052,-119.85753,955 Embarcadero Del Mar,Goleta,2.5,0.27848101265822783,1.0,79
+d0E938M2_4kcuULUdnj-Xw,Brass Bear Brewing & Bistro,34.41413,-119.68869,"28 Anacapa St, Ste E",Santa Barbara,4.5,0.9381818181818182,2.0,275
+d0ybsdCs9S9DTDTxuwLbKg,La Tapatia,34.4359,-119.82552,5764 Hollister Ave,Goleta,3.0,0.41509433962264153,1.0,53
+d1sY9JkgkGt3_P2fWZ2eFw,Apero,34.417477,-119.69605,532 State St,Santa Barbara,4.5,0.8,2.0,15
+d35qSICZEJDIuGUIUIbkgw,Taco Bell,34.435993,-119.83009,5980 Hollister Avenue,Goleta,2.5,0.42424242424242425,1.0,33
+dDU-0EW4Asx-RnM-vULFQw,Lighthouse Coffee,34.401093,-119.7215,"1819 Cliff Dr, Unit C",Santa Barbara,4.5,0.8295454545454546,,88
+dQ6d9H7rnFSOSC_FXbJ_FQ,Blenders In the Grass,34.400574,-119.72272,"315 Meigs Rd, Ste J",Santa Barbara,4.0,0.7450980392156863,1.0,51
+dYNKHYBxA_SQZBrCKZi4JA,The Grilled Cheese Truck Stop,34.4116,-119.85512,"956 Embarcadero Del Norte, Ste C",Goleta,2.5,0.3103448275862069,1.0,29
+dbydQdzf0uEsvQ9y7SKT7w,Sandpiper Grill,34.427372,-119.905754,7925 Hollister Ave,Goleta,3.5,0.5454545454545454,1.0,11
+ddm-u31cWT7Uq097opQUuQ,XO Burger,34.415806,-119.6899,121 E Yanonali St,Santa Barbara,3.5,0.8,,5
+df_UStxBFDYNSd-ngoR1-w,Draughtsmen Aleworks,34.43225,-119.87608,53 Santa Felicia Dr,Goleta,4.5,0.9466666666666667,1.0,75
+dinxDxiWFUkEpxpIzaGHMQ,Casa Blanca Restaurant,34.415745,-119.693756,330 State St,Santa Barbara,3.5,0.5506607929515418,2.0,681
+dq4BvgEvM4vPOqjmIjAMBQ,Meat n' Potatoes,34.43982,-119.771866,4444 Hollister Ave,Goleta,4.0,0.7142857142857143,3.0,7
+dsNKRi0XlMm7JOWbVk0Nvw,Vicentas Mexican Cuisine,34.429455,-119.87018,6920 Market Place Dr,Goleta,4.0,0.75,2.0,140
+dutm97q2F4a6RV6YQ0uLHw,Crush Bar and Tap,34.42261,-119.70443,"1129 State St, Unit A",Santa Barbara,5.0,0.9705882352941176,2.0,34
+dv6tq79a0PhoFphStXkqcQ,Jamba Juice,34.4115,-119.849014,"University Center Bldg, Room 1180",Santa Barbara,3.0,0.5333333333333333,2.0,15
+dvs-RLII_zdcxfjoqOFJzw,Saigon Noodle House,34.429287,-119.86713,"6831 Hollister Ave, Ste L",Goleta,3.0,0.486404833836858,1.0,331
+e-iakFOQCVEEr0-ygBKPog,YoYumYum Frozen Yogurt,34.395733,-119.514114,1005 Casitas Pass Rd,Carpinteria,4.0,0.7380952380952381,1.0,42
+e0DU7_0mfalr-lnyUafiag,Via Vai Trattoria Pizzeria,34.436417,-119.633095,"1483 E Valley Rd, Ste 20",Montecito,3.5,0.6233766233766234,2.0,154
+e63pcbZaXxSY_YyhBol-bw,The Roundhouse,34.417187,-119.67669,633 E Cabrillo Blvd,Santa Barbara,2.5,0.3181818181818182,2.0,22
+e76uCbhmK8oqAtYAkxB2Qg,Armada Wine & Beer Merchant,34.423016,-119.70432,1129 A State St,Santa Barbara,4.5,0.9090909090909091,2.0,55
+e8IBUW8tO5XlmgD4fSMtqA,Taco Bell,34.442265,-119.83039,140 N. Fairview,Goleta,3.0,0.4222222222222222,1.0,45
+e8NRt-1C8eI85C59pKhJuA,Caffe Luxxe,34.42204,-119.651726,"1028 Coast Village Rd, Ste A",Santa Barbara,3.5,0.6346153846153846,,52
+eBxc95u_Gcs9bLST0UntOQ,Santa Barbara Chicken Ranch,34.435238,-119.72457,2618 De La Vina St,Santa Barbara,4.0,0.7467362924281984,2.0,383
+eCW_2UoyT2xxgcFGX8OyEw,The Good Bar,34.441628,-119.82101,5650 Calle Real,Goleta,4.0,0.7727272727272727,2.0,22
+eCnHSfwrco1Vs3m-iRcavw,Timber's Roadhouse,34.43307,-119.89955,10 Winchester Canyon Rd,Goleta,4.0,0.7096774193548387,,31
+eFn-8QlFGdkT_B-bWigtFQ,Rose Cafe,34.421555,-119.69012,424 E Haley St,Santa Barbara,4.0,0.7310924369747899,2.0,119
+eGI_WepIIjYahIrMVRknfw,Sizzling Lunch,34.410843,-119.85524,6533 Trigo Rd,Goleta,4.5,0.8214285714285714,2.0,84
+eHRzuUXA2jrR99ecioWU4g,Union Ale,34.41443,-119.691956,214 State St,Santa Barbara,3.5,0.6047619047619047,2.0,210
+eTVtHkrdoh8plErbmRhTfw,Oaxaca Fresh,34.39734,-119.520615,721 Linden Ave,Carpinteria,3.0,0.47701149425287354,2.0,174
+eUIsUpG6KAonYxGoExzy2Q,Costa Kitchen & Bar,34.41764,-119.66927,1111 E Cabrillo Blvd,Santa Barbara,5.0,1.0,,14
+eX7o_-s5TmDT-DMfTV4cmw,Luckys Steakhouse,34.421238,-119.64103,1279 Coast Village Rd,Montecito,4.0,0.729064039408867,4.0,406
+ebJav941naDgngDP2EIRHw,Panda Express,34.43904,-119.7492,3849 State St. Space I-58,Santa Barbara,2.5,0.27450980392156865,1.0,51
+edDmC1Zcr5SVczbKBfiXqw,Montecito Village Grocery,34.438244,-119.63368,1482 E Valley Rd,Santa Barbara,3.0,0.5555555555555556,3.0,27
+edJoBsse6nsF0BYh6pATAg,The Palace Grill,34.417995,-119.69631,8 E Cota St,Santa Barbara,4.5,0.8411458333333334,2.0,1536
+ejqpFQ0dwO7AZhxTO9fySg,Bossie's Kitchen,34.429947,-119.69079,901 N Milpas St,Santa Barbara,4.5,0.863013698630137,2.0,146
+elX9a3nvGMSweRaMWgSb0Q,Starbucks,34.417557,-119.696785,539 State St,Santa Barbara,3.5,0.5869565217391305,1.0,92
+eoH4nxBTSu6kf-41pWDwJQ,Nutbelly Pizzeria and Deli,34.398643,-119.51919,915 Linden Ave,Carpinteria,4.0,0.7192307692307692,2.0,260
+er6TqaBx6m2xpKJhqD74FQ,Rudy's Restaurant,34.44181,-119.82562,5764 Calle Real,Goleta,3.0,0.37209302325581395,1.0,43
+etqiTJ31Bl3Fuh3CWTSHxw,The Coffee Bean & Tea Leaf,34.420784,-119.64414,1209 Coast Village Rd,Santa Barbara,4.0,0.8,1.0,50
+eukRpR47MDH4XXfU_Dul9Q,Madam Lu,34.440643,-119.73927,3524 State St,Santa Barbara,3.5,0.5579710144927537,2.0,138
+f3eve2cxUIzyanWnHdMtFQ,Corazon Cocina,34.423607,-119.707054,"38 W Victoria, Unit 122",Santa Barbara,4.5,0.8891537544696066,2.0,839
+f7S0WFDy_J1TGahYhnoMLA,OPPI’Z Bistro And Natural Pizza,34.42231,-119.702545,1026 State St,Santa Barbara,4.5,0.8057142857142857,2.0,175
+f7sw_jTKAcFeLFJjNnHjUQ,Santa Ynez Burrito,34.411674,-119.85533,956 Embarcadero Del Norte Hwy,Goleta,3.0,0.625,1.0,8
+fAiPD2OIEm9wtS7uJqzu5Q,Natural Cafe,34.429462,-119.87124,6990 Market Pl Dr,Goleta,4.0,0.7794117647058824,2.0,136
+fApb6LKfOdy5u7MP0hsHKg,Kyoto,34.440666,-119.73385,3232 State St,Santa Barbara,3.5,0.7196969696969697,2.0,264
+fHUAs1ec568wu-a_mRq7Rw,Jack in the Box,34.440178,-119.74417,3747 State St,Santa Barbara,1.5,0.11320754716981132,1.0,53
+fI8StEUxDaZYWiMss8gS4Q,El Sitio,34.413128,-119.85869,6850 Pardall Rd,Isla Vista,4.0,0.8055555555555556,1.0,36
+fKrmWy4GFsrgdOYhN9pyZA,Trattoria Vittoria,34.42488,-119.70474,30 E Victoria St,Santa Barbara,4.0,0.7192982456140351,2.0,342
+fLfU-Gw7eWx-7kHQh2tH9A,The Barbecue Company,34.406517,-119.547485,3807 Santa Claus Ln,Carpinteria,3.0,0.5584415584415584,2.0,77
+fLk_N8vU25DNZmbU-70gkw,Chipotle Mexican Grill,34.41903,-119.69908,723 State St,Santa Barbara,3.5,0.6290322580645161,1.0,62
+fMWi5o0U30MK2JgvRl_blA,Mama Lu,34.42563,-119.68466,415 N Milpas St,Santa Barbara,3.0,0.5777777777777777,2.0,45
+fVUurZgbWXzp2QzDzJzmpA,Pickles & Swiss,34.4196,-119.70015,"811 State St, unit E",Santa Barbara,4.5,0.8579454253611557,2.0,1246
+fiQxkb1pfPpvrr0oYYYBcA,The Daisy Restaurant,34.423786,-119.705284,1221 State St,Santa Barbara,5.0,0.9215686274509803,2.0,102
+fiXeirZ9GpJxe7yRpuKiBg,Soul Cal Smokehouse,34.423496,-119.70698,38 W Victoria St,Santa Barbara,3.5,0.5544554455445545,2.0,101
+fnGZspqyamRremXor0sAyg,Frog Bar & Grill,34.44294,-119.880035,405 Glen Annie Rd,Santa Barbara,4.0,0.75,2.0,16
+fp7IHO1z53wYP4PzKSl11g,New China,34.43583,-119.8255,5764 Hollister Ave,Goleta,3.5,0.6458333333333334,1.0,48
+fzDcZVrT5XQmd1t_W0AguQ,Flaming Grill,34.413128,-119.85653,6558 Pardall Rd,Goleta,3.0,0.25,1.0,8
+g0lCOgLkkByZrhmwYzP5KA,Nuance,34.413517,-119.69121,119 State St,Santa Barbara,4.5,0.7710843373493976,3.0,83
+g5J9OJ5e8SgLYd2DL8_K9w,Disfruta,34.43556,-119.82614,5777 Hollister Ave,Goleta,4.5,0.9,,10
+g6VJ6y-AzDGQy0Gj91UvUw,Unbearable,34.416485,-119.696014,12 W Haley St,Santa Barbara,4.0,0.7222222222222222,,18
+g9MWxLxQdADqja0qN1HKkQ,Carp Kitchen & Grocery,34.399296,-119.51901,4945A Carpinteria Ave,Carpinteria,5.0,0.8823529411764706,2.0,17
+gLNf3zUydIKc_cvUll-6gw,August Ridge Vineyards,34.42325,-119.70327,5 E Figueroa St,Santa Barbara,5.0,0.9705882352941176,2.0,34
+gUvG-W-02lg5M1RY6n8bkA,Lilsy Wood Fired Pizza,34.437252,-119.726364,2840-B De La Vina St,Santa Barbara,4.0,0.782608695652174,,46
+gYrHa4CckDjgOQc5B-yTKA,Reds Bin 211,34.414658,-119.69156,211 Helena Ave,Santa Barbara,4.0,0.7570093457943925,2.0,107
+gebiRewfieSdtt17PTW6Zg,Hibachi Steak House & Sushi Bar,34.416985,-119.69556,502 State St,Santa Barbara,3.5,0.5936254980079682,2.0,502
+gg5jIrK0cQbb3rmZHrteUw,Jersey Mike's Subs,34.395763,-119.511696,1054 Casitas Pass Rd,Carpinteria,2.5,0.26666666666666666,,15
+ghLjxj4HoSHdflBEz2lIqA,Gelson's,34.439342,-119.735115,3305 State St,Santa Barbara,3.5,0.7217391304347827,3.0,115
+gjCxTVItFxk46rCZ-YaiFA,South Coast Deli- Chapala,34.425068,-119.70915,1436 Chapala St,Santa Barbara,4.5,0.8653295128939829,2.0,349
+gkqfm6mTim9Rwopwjayc8w,Five & 1/4,34.41981,-119.697266,705 Anacapa St,Santa Barbara,5.0,1.0,2.0,27
+grBPIq_eJCT_SGuhvMrUZQ,Blaze Pizza,34.44016,-119.75242,3925 State St,Santa Barbara,3.5,0.6225165562913907,1.0,151
+gsXBNWHWhHv_f9NcwpVajw,Lighthouse Coffee,34.41768,-119.699844,711 Chapala St,Santa Barbara,4.5,0.896551724137931,1.0,29
+h7felG8kSEuYpkYBhMwCmA,Q's Billiard Club & Sushi-a-go-go,34.41591,-119.69482,409 State St.,Santa Barbara,3.5,0.6206896551724138,2.0,29
+h8DlM-VbvCNzpsTqihgUAw,Jack in the Box,34.426296,-119.68568,501 N Milpas St,Santa Barbara,1.5,0.11627906976744186,1.0,43
+hDr_bt6MEwlGvGCCKzyzhg,Goleta Coffee Co and Loca Vivant Kitchen,34.437515,-119.79094,177 S Turnpike Rd,Santa Barbara,4.0,0.7447916666666666,1.0,192
+hEpRFnkUl4C6NVOVSMiTVg,Sunny Asian Restaurant,34.417606,-119.69641,532 State St,Santa Barbara,3.5,0.5531914893617021,2.0,47
+hJr6xw5Jn20ag2rHopI4eg,Deano's Pizzarama,34.40186,-119.7235,1950 Cliff Dr,Santa Barbara,4.0,0.7692307692307693,1.0,13
+hLUqElKTjOzpt_ZXkWVuiA,Montecito Cafe,34.42124,-119.640465,1295 Coast Village Rd,Santa Barbara,4.0,0.8037383177570093,2.0,107
+hPzPpfSjgQkpWCD7YjcY-A,Lilac Pâtisserie,34.421684,-119.7027,1017 State St,Santa Barbara,4.5,0.8479338842975207,2.0,605
+hRoAwkrCWaqjBuYs4i9EYw,Taqueria La Colmena,34.42389,-119.68221,217 Milpas St,Santa Barbara,4.0,0.7545454545454545,1.0,110
+hVKH5oED9NgGaZeIiF547A,Backyard Bowls,34.438923,-119.74924,"3849 State St, Ste I157",Santa Barbara,4.0,0.7853881278538812,1.0,219
+hYlAyz4RM1kE7ErPhPQ2xw,Rancho San Marcos Golf Course,34.546837,-119.875626,4600 Hwy 154,Santa Barbara,4.5,0.8787878787878788,,33
+hdCu74rz33m3EgDmdDn1SA,Dave’s Dogs,34.43025,-119.69041,900 N Milpas St,Santa Barbara,4.5,0.8867924528301887,1.0,53
+hfN0fllM3m2jykAgToRTlQ,Mezza Thyme,34.418224,-119.696014,20 E Cota St,Santa Barbara,5.0,1.0,,47
+hlb7WwqcCijqqbp8zye1dw,Noemi Pizza Romana,34.44069,-119.739685,3534 State St,Santa Barbara,4.5,0.8292682926829268,,41
+hoDYuaDkTNvqAZdxruZADQ,Epic Bowl,34.419983,-119.7001,819 B State St,Santa Barbara,3.5,0.5555555555555556,1.0,36
+hrEtM0WMgwhv19mzVnKiJQ,Magic Pita Cafe,34.41648,-119.69562,5 W Haley St,Santa Barbara,4.0,0.7037037037037037,1.0,27
+hsHeiukmYUWH9L7CDX5Zow,Overlook Cafe,34.42446,-119.8353,"Santa Barbara Airport, 500 Fowler Rd",Goleta,3.0,0.4,2.0,5
+hvynpnucDVWFpCPSruuaBQ,Pita Pit,34.411274,-119.85727,971 Embarcadero Del Mar,Isla Vista,3.5,0.6486486486486487,1.0,37
+hxghdsVS3nJr1Y_KMobfeg,Subway,34.436783,-119.8029,5146 Hollister Ave,Goleta,1.5,0.10526315789473684,1.0,19
+i2yCrMQx5soH0jMFG32vxQ,KFC,34.440784,-119.82341,5697 Calle Real,Goleta,3.0,0.4375,1.0,32
+i3pBufSYEgx3_nLxxRrtGg,Maeda Restaurant,34.423645,-119.70454,1208 State Street,Santa Barbara,3.5,0.6666666666666666,2.0,6
+i5C6RVgr03HSrgCl8oa1Fg,Patxi's Pizza,34.417114,-119.69624,515 State St,Santa Barbara,4.0,0.724,2.0,750
+i9ASBmmIJS3RjN_UP-TtKw,Starbucks,34.438885,-119.75245,3957 State St,Santa Barbara,3.0,0.475,2.0,40
+iAE5tMDs1XSudlEzG-Z3aA,Spice Avenue,34.422062,-119.702934,1027 State St,Santa Barbara,3.5,0.6074074074074074,2.0,135
+iFlEWAwE1MwcXREzgLNIsQ,Pick Up Stix,34.440773,-119.823555,5701 Calle Real,Goleta,3.5,0.75,1.0,8
+iHdrLu8deF5GceB0V1rPhA,Oliver's,34.421333,-119.64498,1198 Coast Village Rd,Santa Barbara,4.5,0.8660436137071651,3.0,321
+iJp9sq8UddLSrUtIieoD0A,Good Cup,34.401196,-119.72152,"1819 Cliff Dr, Ste C",Santa Barbara,4.0,0.7567567567567568,1.0,111
+iMTjejk6apJKzCukZnDw5A,Jeannine's Bakery & Restaurant,34.421043,-119.64219,1253 Coast Village Rd,Montecito,4.5,0.8461538461538461,2.0,663
+iQ_JNYzwvhSsToR4EHl4cA,Le Macaron French Pastries,34.419846,-119.70019,819 A State St,Santa Barbara,4.0,0.7115384615384616,2.0,52
+iT78kOB6Ja3BJQdYipPa5g,Los Arroyos Mexican Restaurant & Take Out,34.44177,-119.82539,5764 Calle Real,Goleta,3.5,0.6363636363636364,2.0,88
+iXkQGJF88zOeXtHMjBmeZg,Miramar Beach Bar,34.420715,-119.62546,1773 S Jameson Ln,Montecito,3.5,0.574468085106383,,47
+icGg8xgDJVufg-xptMrDGw,Denny's,34.440704,-119.74091,3614 State St,Santa Barbara,2.5,0.36477987421383645,2.0,159
+idi-W3_au-lXyJQmHTmhAg,Chilangos,34.41685,-119.69581,503 State St,Santa Barbara,3.5,0.8,1.0,5
+ifjluUv4VASwmFqEp8cWlQ,Marty's Pizza,34.436237,-119.72615,2733 De La Vina St,Santa Barbara,4.0,0.6923076923076923,2.0,65
+iuTj4Se42VUto09Stkiq4A,Teavana,34.419037,-119.69995,651 Paseo Nuevo Mall,Santa Barbara,3.5,0.65,3.0,20
+j-lxie7nEh3UeUTpiqekkQ,Presto Pasta,34.42428,-119.683304,827 E Montecito St,Santa Barbara,3.0,0.625,1.0,8
+j1yb8y-jFwpG_hW9AH3PrQ,Santa Barbara Cider Company,34.434746,-119.82582,"325 Rutherford St, Ste D",Goleta,5.0,0.9578947368421052,2.0,95
+j3Ml_qEFnDOaH5miNzG6xw,Rose Cafe No 2,34.40162,-119.72105,1816 Cliff Dr,Santa Barbara,3.5,0.6436781609195402,2.0,174
+j3rAeZ9rnUwEDEQJQ7OWDQ,Aladdin Cafe,34.41225,-119.855286,938 Embarcadero Del Norte,Isla Vista,4.0,0.8269230769230769,2.0,156
+j6TDQvbRoMszGR0hyaVxvw,McDonald's,34.429028,-119.870125,6900 Marketplace Dr,Goleta,2.5,0.3157894736842105,1.0,57
+j8c8WFqySY1eybnkJfgjSg,The Revere Room,34.420933,-119.62864,1759 S Jameson Ln,Montecito,4.0,0.6818181818181818,,22
+jI9wCmBu77tExISLsVurOQ,Pressed Juicery,34.417095,-119.69568,506 State St,Santa Barbara,4.0,0.75,2.0,16
+jKocMyXjEqgb9dL9S5vrEA,Yankee Noodle,34.41456,-119.691826,214 State St,Santa Barbara,4.0,0.6857142857142857,2.0,105
+jMAQupx06hHjie54wV2yNQ,Ruth's Chris Steak House,34.439323,-119.74753,3815 State St,Santa Barbara,4.5,0.8666666666666667,3.0,15
+jMlE4wvspc0J-oN-SYUjQw,Glass House-Cocktail Garden,34.418503,-119.69745,628 State St,Santa Barbara,4.5,0.9152542372881356,2.0,59
+jR3sTUWCPuOCWpdm8Pn-wQ,Sun Sushi,34.440193,-119.741516,3631 State St,Santa Barbara,4.5,0.8387096774193549,2.0,279
+jW4a3W9-UkFxpglHvo_Kqg,Meun Fan Thai Cafe,34.40117,-119.721504,1819 Cliff Dr,Santa Barbara,4.0,0.6915422885572139,2.0,201
+jWgZRpdHy8csA1sUz1auSw,Daniel's Bakery and Mexican Food,34.436024,-119.72548,2714 De La Vina St,Santa Barbara,3.5,0.5652173913043478,1.0,23
+jZncFsMQdrq268OHq_Q6uw,Super Cuca's Taqueria,34.402527,-119.72441,"2030 Cliff Dr, Ste 1A",Santa Barbara,4.0,0.7339449541284404,1.0,109
+j_m8zce-jSRQn5JmC633GQ,Test Pilot,34.414684,-119.69153,211 Helena Ave,Santa Barbara,4.5,0.8656126482213439,2.0,253
+jfRq1KtjEGyPoMo9HZVw2Q,The Set,34.416973,-119.67708,633 E Cabrillo Blvd,Santa Barbara,3.5,0.59375,2.0,32
+jh40gx3wcYX0NL_i2Dip-A,Sal's Pizza,34.430252,-119.690315,900 N Milpas St,Santa Barbara,3.5,0.7023809523809523,2.0,84
+jrSC1bwN2lz9dVBrNTejSg,Jack's Bistro & Famous Bagels,34.398598,-119.51752,5050 Carpinteria Ave,Carpinteria,3.5,0.6066350710900474,2.0,211
+jshnKTsnoXLSez5XD1qo7Q,McDonald's,34.440872,-119.75305,3940 State St,Santa Barbara,2.5,0.26785714285714285,1.0,56
+jssubXBNkiSJIhbKuDtmpQ,Sushi Teri House,34.41855,-119.7059,1013 Bath St,Santa Barbara,3.5,0.5560975609756098,2.0,205
+jtECV91z0BVPyeu90wnCjQ,Cajun Kitchen Cafe,34.398174,-119.51976,865 Linden Ave,Carpinteria,4.0,0.7311827956989247,2.0,93
+jtgBkAQuchDYgkdsebzLsQ,Old Town Coffee,34.435753,-119.82838,5877 Hollister Ave,Goleta,4.0,0.79375,2.0,320
+ju4YP8SLdR_BmWr_-Xh83Q,Phamous Cafe,34.42824,-119.87641,"7127 Hollister Ave, Ste 25",Goleta,4.0,0.7142857142857143,1.0,231
+k27OsQ3Bwpkr_cZkS2BO2A,Yen Ching Restaurant,34.437622,-119.72623,2840 De La Vina St,Santa Barbara,2.5,0.44680851063829785,2.0,47
+k6Ptrc94R-Mk549pDEVTFA,The Natural Cafe,34.434864,-119.74607,361 Hitchcock Way,Santa Barbara,4.0,0.7575757575757576,2.0,165
+kAGknILVe6xCv9a2uc5JHw,Subway,34.396137,-119.51427,1009 Casitas Pass Rd,Carpinteria,2.0,0.2,1.0,25
+kHOXo-IZSpixpctmHsGlyA,The Beach Grill at Padaro,34.406864,-119.54855,3765 Santa Claus Ln,Carpinteria,4.0,0.9375,2.0,16
+kV1u9p8AEV7ItPlgXVODxA,Thai Kitchen,34.440247,-119.76699,"4317 State St, Ste D",Santa Barbara,3.5,0.7272727272727273,,11
+kZtl_NJjUnlIQgzFrBhXyQ,Ichiban,34.401787,-119.72084,1812 Cliff Dr,Santa Barbara,3.5,0.6794871794871795,2.0,234
+kdowTW3-5Qcr8je9LgItKQ,Little Dom's Seafood,34.396732,-119.52063,686 Linden Ave,Carpinteria,4.0,0.67,,100
+kfK0iQyhLIN3gOIzbLYwFw,Ruby's Cafe Santa Barbara,34.419518,-119.69907,734 State St,Santa Barbara,3.5,0.7083333333333334,2.0,24
+krTxH1a9kzWgwvt3PVH8pQ,Zookers Cafe,34.395546,-119.51391,5404 Carpinteria Ave,Carpinteria,4.5,0.8449848024316109,2.0,329
+kwqXOtLCbNjgvwuMj4H1AQ,Montecito Gourmet by Village Cheese & Wine,34.436554,-119.633194,"1485 E Valley Rd, Ste 14",Santa Barbara,4.5,0.9428571428571428,1.0,70
+kwtKZ3fzM5jlR8Z7KIA17g,Backstage Dueling Piano Bar,34.41593,-119.69484,409 State St,Santa Barbara,5.0,0.94,,50
+kxxexMsFL4xJLIafhXXFlw,Esau's Cafe,34.418003,-119.70005,721 Chapala St,Santa Barbara,4.0,0.7592592592592593,2.0,162
+l7NDxnGzb6z2_H08rtfS0w,La Hacienda Mexican Restaurant,34.43506,-119.82645,298 Pine Ave,Goleta,4.0,0.819672131147541,2.0,61
+lBIIzOvyq4z6MDRmkrjpyw,Lao Ma Tou,34.416927,-119.69615,511 State St,Santa Barbara,3.5,0.6352941176470588,2.0,85
+lNkxXDcNoHBpWDNPoZesYw,Caruso's,34.420532,-119.62811,1759 S Jameson Ln,Montecito,4.0,0.7252747252747253,4.0,91
+lTVHJAvtFQbQb6cPstEXyA,China Bowl & State Street Cafe,34.423565,-119.69254,440 E Ortega St,Santa Barbara,2.0,0.2698412698412698,2.0,63
+lXgITG2Ji6mhAPOmw4TRng,Romanti-Ezer,34.417618,-119.699425,701 Chapala St,Santa Barbara,3.5,0.6746575342465754,1.0,292
+lZ44dxn1TCzJaVBa8Ze8DQ,Sushi Teri,34.4417,-119.82456,5746 Calle Real,Goleta,3.0,0.4542124542124542,2.0,273
+lbHEB5BIm-3GfpvdzSwFLw,Billies,34.42083,-119.69819,"413 State St, Cross St Gutierrez",Santa Barbara,4.0,0.875,1.0,8
+lkwj0-9Sc_anMVNlnuqYAA,Mojo Coffee,34.428288,-119.87667,"7127 Hollister Ave, Ste 18",Goleta,4.5,0.75,1.0,12
+lmKb382_WPMU4svBenUwHA,Gandolfos New York Deli,34.419353,-119.69844,718 State St,Santa Barbara,2.5,0.3684210526315789,1.0,38
+lmQjsnT_IK_OOdsbghiojw,Miro,34.42875,-119.86864,"Bacara Resort & Spa, 8301 Hollister Ave",Santa Barbara,3.5,0.7,3.0,50
+lnGHZ_pEJNGT9pcGQ467Ew,Treehouse Restaurant,34.440792,-119.74916,3860 State St,Santa Barbara,3.0,0.4807692307692308,2.0,52
+lq7dE9c10OvRfd_edJoyMg,Due Lune Cucina,34.412193,-119.68959,1 State St,Santa Barbara,4.0,0.7341772151898734,2.0,79
+lqwbnNd_SXzkIK_pkU2FkA,D'Vine,34.418064,-119.70295,205 W Canon Perdido St,Santa Barbara,4.0,0.7692307692307693,1.0,26
+lu2UpRHLBZfvLG_caNEHKQ,The Natural Cafe,34.417183,-119.69578,508 State St,Santa Barbara,4.0,0.8402777777777778,2.0,576
+m-EfDi7UBwdiEBm7NXqq3w,Pizza My Heart,34.41099,-119.85528,6533 Trigo Rd,Isla Vista,4.0,0.8026315789473685,1.0,152
+m2iS4YYmcq6pFpaGCtO-Iw,Cafe Int'l,34.411335,-119.85769,6578 Trigo Rd,Isla Vista,3.5,0.7142857142857143,1.0,14
+m4kvY0viCwxqRtgOycnKVQ,Mony's Mexican Food,34.41549,-119.69112,217 E Anacapa St,Santa Barbara,4.5,0.9158163265306123,1.0,784
+m4xrhESFLaA7PiddXeg2aw,Pierre Lafond Wine Bistro,34.417362,-119.69595,516 State St,Santa Barbara,3.5,0.7526315789473684,2.0,190
+mAe2vv24uxf6MlR4-yXSSg,Uncle Chen Restaurant,34.39639,-119.51383,1025 Casitas Pass Rd,Carpinteria,4.0,0.6830985915492958,2.0,142
+mAqgsZBTN-wsShMpkz2o9g,Cantwell's Market & Deli,34.426754,-119.7095,1533 State St,Santa Barbara,3.0,0.6,2.0,145
+mHmIoIGOfpidrS1fYQ9PbQ,State Street Coffee,34.412193,-119.68959,1 State St,Santa Barbara,3.5,0.5698924731182796,1.0,93
+mMuvlDGcJrokNFd4ob9tcw,Feast: The Cafe at Field + Fort,34.419365,-119.59129,2580 Lillie Ave,Summerland,4.0,0.7058823529411765,,34
+mNmUN0HghVFeAYTJ5GwxoA,IHOP,34.39606,-119.51262,1114 Casitas Pass Rd,Carpinteria,2.5,0.38,2.0,50
+mQ9CsjWobwak1PMvZTSPQg,Jersey Mike's Subs,34.42343,-119.70527,1213 State St,Santa Barbara,3.5,0.5714285714285714,1.0,28
+mYofSuxrIrPS2Gjsu-ZI4w,Eller's Donut House,34.422394,-119.67944,"22 N Milpas St, Ste B",Santa Barbara,4.5,0.9166666666666666,1.0,48
+mZ-pJSdAVrBa7ioXVzE7-Q,Marbella,34.417652,-119.66912,1111 E Cabrillo Blvd,Santa Barbara,3.5,0.5454545454545454,2.0,22
+me_-zWgGZATKrljrJ-jvKA,Pasta House,34.413292,-119.855934,6546 Pardall Rd,Goleta,3.0,0.38461538461538464,1.0,13
+mjMJxBpW_Pg1b4duNPJsTA,Tri Tip Company,34.41456,-119.691826,214 State St,Santa Barbara,4.0,0.7368421052631579,2.0,19
+n-l92t6SSJn_hqtpaJXdwA,Dogtown,34.413467,-119.85523,888 Embarcadero Del N,Isla Vista,4.0,0.6666666666666666,1.0,18
+n0Z10UAJO187H8Zp8gl-rw,Arlington Tavern,34.42351,-119.706314,21 W Victoria Street,Santa Barbara,4.0,0.7586206896551724,2.0,145
+n67s7eDowWHlfhVtCElxGQ,Belcampo Meat Co Restaurant,34.423595,-119.70663,"38 W Victoria St, Ste 115",Santa Barbara,4.0,0.6857142857142857,2.0,35
+n6reYUBVF9buglcojgB0FQ,Harbor Market & Deli,34.403988,-119.693794,"125 Harbor Way, Ste 8",Santa Barbara,2.0,0.3333333333333333,1.0,6
+nAZEMdurfbWLxl9dryfgeA,Wake Cup,34.412926,-119.85734,"901 Embarcadero del Mar, Ste 101",Isla Vista,3.5,0.6166666666666667,1.0,120
+nB0dV8yPv29F3-CFMPG8cw,Joe's Cafe,34.4179,-119.69644,536 State St,Santa Barbara,3.5,0.6315086782376502,2.0,749
+nMn4CTJQPXqpgLltYQrxMA,Cajé Coffee Roasters - Haley St,34.42145,-119.69043,416 E Haley St,Santa Barbara,4.5,0.9218106995884774,2.0,243
+nTZuJSfwCoNOyA1yS3rbOQ,The Silver Bough,34.421246,-119.6404,1295 Coast Village Rd,Santa Barbara,4.5,0.8571428571428571,,7
+nYPzsOjvida-ne7swSPHpA,Santo Mezcal,34.413456,-119.69132,119 State St,Santa Barbara,4.5,0.811377245508982,2.0,1002
+n_RyzuCAiR4yW2JLkl0Jng,Cafe Shell,34.422863,-119.703514,1112 State St,Santa Barbara,2.5,0.6190476190476191,2.0,21
+n_fADQa8T0dgLd-D8ABEhQ,Bevmo,34.429646,-119.87397,7070 Marketplace Dr,Goleta,4.0,0.6190476190476191,2.0,21
+ng12rnK6ZGFddlC15c6Pqg,Haggen Food & Pharmacy,34.402477,-119.72368,2010 Cliff Dr,Santa Barbara,1.5,0.1111111111111111,,9
+nhOMsw22-rz9kXSKwBZYAQ,Miracle At The Funk Zone,34.414444,-119.690674,"131 Anacapa St, Ste B",Santa Barbara,4.0,0.75,,8
+nkLla0nBTUPL6yj-zX6eaw,Cafe del Sol,34.42209,-119.657295,30 Los Patos Way,Santa Barbara,3.5,0.7222222222222222,2.0,36
+nnn78cplvQGZSMVblpI5gQ,Mandarin Palace,34.439102,-119.75267,3955 State St,Santa Barbara,3.0,0.5341880341880342,2.0,234
+noiUCN8A9Vdm9pUbWX6K-w,Tydes Restaurant,34.41746,-119.64253,1260 Channel Dr,Santa Barbara,4.0,0.7457627118644068,3.0,59
+nqsrL6BuIevb285dbdXjjA,Subway,34.4406,-119.82681,"5801 Calle Real, Ste C",Goleta,2.5,0.2,1.0,10
+o0AG9SfwVaZ00cURT7Q-Ag,Ruby's Diner,34.41895,-119.69974,601 Paseo Nuevo,Santa Barbara,3.5,0.6,2.0,5
+o4IiNbNybcy-L4vzTSoDJw,Ca' Dario,34.425392,-119.70481,37 E Victoria St,Santa Barbara,4.0,0.7046109510086456,2.0,694
+o7NjFfP5ENPBLXsSnBcrlg,The French Table,34.425373,-119.7027,129 E Anapamu St,Santa Barbara,3.5,0.6404494382022472,2.0,89
+o9dB3ptlB9qdiOvJzMeSLw,The Nugget Bar and Grill,34.441154,-119.822395,5687 Calle Real,Goleta,3.5,0.5846994535519126,2.0,183
+oGDGlUbOjHxmmCh8ZYcDCg,The Lark,34.41488,-119.69028,"131 Anacapa St, Ste A",Santa Barbara,4.0,0.8008962868117798,3.0,1562
+oH1xQrw8SBPhUQUlqjNZPQ,El Rincon Bohemio-Goleta,34.43505,-119.826355,298 Pine Ave,Goleta,3.5,0.6111111111111112,2.0,18
+oJwMmSZKJOnMboZ_z67MZw,Revolver,34.41842,-119.716,1429 San Andres St,Santa Barbara,4.5,0.7894736842105263,2.0,95
+oS02owt-XB2RtDbogYyn-A,The Coffee Bean & Tea Leaf,34.440105,-119.72934,3052 De La Vina,Santa Barbara,3.5,0.62,1.0,50
+oTcezJoCe30NrwiNFsoLXQ,The Little Door - Santa Barbara,34.425323,-119.70273,129 E Anapamu St,Santa Barbara,4.5,0.8297872340425532,3.0,141
+oYireVavpwflbyWes2BsqQ,Pueblo Pollo,34.44058,-119.72799,2984 State St,Santa Barbara,2.5,0.2,,5
+od_MWVpghkvSsl1HKasM9A,Blenders In the Grass,34.438644,-119.7518,3973 State St,Santa Barbara,4.0,0.6491228070175439,1.0,57
+odpuyU1jGDhhQ54d3dG3sQ,China King,34.441227,-119.828384,"5915 Calle Real, Ste B",Goleta,3.5,0.6268656716417911,2.0,201
+oinV9xrSkR3b_T8sK1nsqg,Bibi Ji,34.419533,-119.699135,734 State St,Santa Barbara,3.5,0.6566037735849056,3.0,265
+okc-iCgWvKGa1DfQSOh1Ig,Milpas Taqueria,34.425034,-119.682785,316 N Milpas St,Santa Barbara,4.0,0.9,1.0,10
+oktohqIGhMQxOP7h5ugHlg,Julienne,34.42255,-119.69828,138 E Canon Perdido St,Santa Barbara,4.0,0.7352941176470589,3.0,306
+ol6ATB97MdIuhm6yAGOeMQ,Lucky Llama Coffee,34.398083,-119.51688,5100 Carpinteria Ave,Carpinteria,4.5,0.8732673267326733,1.0,505
+onLwomlGswMhhmOEAeAVEg,The Spot,34.395508,-119.5229,389 Linden Ave,Carpinteria,3.5,0.7249357326478149,1.0,389
+opcGJ-lCNTLhRRuGxVkCnw,Brasserie Solera,34.421124,-119.690636,406 E Haley St,Santa Barbara,4.0,0.8181818181818182,,22
+oq4-qHT6EJeR81GBDq1OVg,Italian Grocery & Deli,34.424274,-119.69467,415 E De La Guerra St,Santa Barbara,4.0,0.7346938775510204,1.0,49
+p2kC-cD22QAQzIGD8ZuqFA,Peet's Coffee,34.44024,-119.75165,3905 State St,Santa Barbara,4.0,0.6666666666666666,1.0,75
+p5rXRkSJtAKcWd4GY71avQ,The Mex Authentic,34.41609,-119.69486,413 State St,Santa Barbara,4.5,0.8839779005524862,2.0,181
+p6yHZaiijFq4b4P3sYSRjA,Merci Montecito,34.42216,-119.65175,1028 Coast Village Rd,Montecito,4.5,0.8529411764705882,,34
+p73i2GDzPRZJbYBa8qtpSQ,IV Drip,34.41288,-119.855606,905 Embarcadero Del Norte,Isla Vista,4.0,0.8571428571428571,1.0,147
+pC0vDDpl_2ue3HGAmGpMSg,Ridley-Tree House Restaurant,34.419342,-119.665436,500 Ninos Dr,Santa Barbara,3.0,0.4,,5
+pKSB4wXLiS8rd1cAEgD8oA,Shaker Mill,34.41644,-119.69477,418 State St,Santa Barbara,4.5,0.85,,80
+pQ7eCSOtLI3CaZX-TEvX4A,Whale Tail Deli,34.42287,-119.70344,"1114 State St, Ste 18",Santa Barbara,4.0,1.0,1.0,5
+pQh2GzkAnbLKiDqEpxcylQ,Barbieri & Kempe: Wine,34.42304,-119.70334,"1114 State St, Unit 26",Santa Barbara,5.0,0.9090909090909091,,11
+pUeTnGsnVi-H8RJ6prFFgw,Little Caesars Pizza,34.421818,-119.67975,21 N Milpas St,Santa Barbara,2.0,0.23076923076923078,1.0,26
+pWDE_rueENu_f5HKA_AsWw,Dune Coffee Roasters - Storke,34.42954,-119.86927,250 A Storke Rd,Goleta,4.0,0.8404907975460123,1.0,163
+psZB8nX22WvadV3iUShUBg,Wendy's,34.435986,-119.82424,5724 Hollister,Goleta,3.0,0.37142857142857144,1.0,35
+pwblP3G6LkVT03I4z9kb0A,Mad Dogs,34.416916,-119.69588,505 State St,Santa Barbara,3.0,0.6567164179104478,1.0,67
+pyFEy1qXkmYJDHxVvpK7cA,New Si Chuan Garden,34.43773,-119.726326,"2840 De La Vina St, Ste C",Santa Barbara,4.0,0.7105263157894737,2.0,76
+q-1ICFSqs2MwDGfe5tX-SQ,Yellow Belly,34.434853,-119.72473,2611 De La Vina St,Santa Barbara,4.0,0.8361581920903954,2.0,354
+q0DRuEAxE5i57xNSTrDP4Q,Naan Stop,34.411648,-119.85691,966 Embarcadero Del Mar,Isla Vista,3.5,0.668693009118541,1.0,329
+q36uZc2hQml10YGHazJaoQ,Secret Bao,34.424477,-119.70351,1201 Anacapa St,Santa Barbara,4.5,0.9205298013245033,,151
+q3z5nfCo6HmXBPgJ4OXrtg,Paradise Store & Grill,34.536606,-119.85089,1 Paradise Rd,Santa Barbara,4.0,0.8148148148148148,1.0,27
+q75UQjNm6AEK4XNnkDLxTQ,The Project -- Corazón Cocina & Taproom,34.414555,-119.69187,214 State St,Santa Barbara,4.0,0.6746987951807228,2.0,166
+qJqTXdv2ukMDUYGb-oAG-w,El Pollo Loco,34.441666,-119.82576,5796 Calle Real,Goleta,2.0,0.16666666666666666,1.0,30
+qM2gfO-cqpDzxmIX-XzuWA,Plow & Angel,34.446804,-119.6231,900 San Ysidro Ln,Santa Barbara,4.0,0.7125,3.0,80
+qUH2FppY7RL96F5tXzA0hQ,Dune Coffee Roasters - State Street,34.42237,-119.70352,1101 State St,Santa Barbara,4.0,0.8460342146189735,2.0,643
+qVitsouI4aBiYx1_Fjn0Pg,Foxtail Kitchen & Bar,34.418076,-119.69622,14 E Cota St,Santa Barbara,4.0,0.7728937728937729,2.0,273
+qcWH6YUyPFXUYka3rV8m8w,Hanamura Cantonese Dim Sum,34.412926,-119.85734,"901 Embarcadero Del Mar, Ste 104",Isla Vista,2.5,0.3170731707317073,,41
+qdCGZDlBuetCWcV9rrU05Q,Del Valle Grill,34.435966,-119.82488,5746 Hollister Ave,Goleta,4.0,0.7631578947368421,1.0,38
+qdpdUjdkEUpzYDdce2yZng,Plaza Deli,34.436707,-119.74871,140 S Hope Ave,Santa Barbara,4.0,0.7959183673469388,1.0,196
+qmOn3S_BzihpLP2aMG9QSg,Old Kings Road,34.41774,-119.69632,532 State St,Santa Barbara,4.0,0.7682926829268293,1.0,82
+qnv_h-O1DzaHIL1sKrI-Yg,La Carreta,34.428364,-119.86907,"290 Storke Rd, Ste D",Goleta,4.0,0.717948717948718,1.0,39
+qsc66GLioJicWLYn7VG9LQ,Spa Café,34.433285,-119.916435,8301 Hollister Ave,Goleta,3.5,0.625,3.0,8
+qvXw3V4_9Pu4E7Qoi7-cKA,Fala Bar,34.423607,-119.707054,"38 W Victoria St, Ste 108",Santa Barbara,4.5,0.9154929577464789,2.0,71
+qx2YTFXfVDwQUfOeWCFfbw,Jersey Mike's Subs,34.439865,-119.735886,3325 State St,Santa Barbara,3.0,0.46808510638297873,1.0,47
+qyLw23TAfWNJMSuIJBpc8A,Costco Food Court,34.42779,-119.87479,7095 Market Pl Dr,Goleta,4.0,0.7384615384615385,1.0,65
+qyXcWGL5-bU_uV2VKxqzTw,The Habit,34.419147,-119.67595,216 S Milpas St,Santa Barbara,4.0,0.7023809523809523,1.0,168
+r2IhvKZQ_wLR5mLBnPOilg,The Honor Bar,34.421043,-119.6419,"1255 Coast Village Rd, Ste 101",Santa Barbara,4.5,0.8321678321678322,2.0,572
+r5sQtvsO4OVJgEH5H3uEAg,Starbucks,34.424065,-119.70583,1235 State St,Santa Barbara,2.5,0.410958904109589,1.0,73
+r8tU21scBflMxWiBESPtRQ,Shang Hai,34.43001,-119.68983,830 N Milpas St,Santa Barbara,4.5,0.8509615384615384,2.0,208
+r926yelr_EJAKQCjdD6AWA,State & Fig,34.423042,-119.70321,"1114 State St, Ste 18",Santa Barbara,4.0,0.7784090909090909,2.0,528
+rH80UXr5YBv4um7phwwwMw,Crushcakes & Cafe,34.410843,-119.85524,"6533 Trigo Rd, Ste 105",Isla Vista,3.5,0.6607142857142857,1.0,56
+rPVmM0aJbC6lU_mnDiZ2Rw,Tee-Off Restaurant and Lounge,34.44006,-119.741356,3627 State St,Santa Barbara,4.0,0.7410714285714286,3.0,224
+rU8HgGMR8Qd8_SkvKANdEA,iGrill Korean BBQ,34.440624,-119.7324,3132 State St,Santa Barbara,2.5,0.32857142857142857,2.0,70
+rUePoREIOze59D3fd6B6ew,Domino's Pizza,34.43567,-119.80978,"185 S Patterson Ave, Ste G",Goleta,2.5,0.30612244897959184,1.0,49
+r_UPGh9GHMyBhPVMKVxRuw,Cajé Coffee Roasters,34.419598,-119.70015,811A State St,Santa Barbara,4.5,0.9166666666666666,,36
+rh6O8NtKJUhqZ0G2Pkpj2Q,Yume Sushi Japanese Restaurant,34.41557,-119.69607,428 Chapala St,Santa Barbara,4.0,0.7995049504950495,2.0,404
+rsEy48n_jB0I-Mofec1NJA,Highway Karaoke and Fresh Tea,34.42809,-119.87659,"7127 Hollister Ave, Ste 23, University Plaza Shopping Ctr",Goleta,4.0,0.7314814814814815,2.0,108
+s-iUpeKVCuPd5m4OJ3HixQ,Whiskey Richards,34.41642,-119.69557,435 State St,Santa Barbara,4.0,0.7926829268292683,1.0,82
+s27GlS3WCN7b4dxTpainrg,Twin Cups,34.442917,-119.81027,5329 Calle Real,Santa Barbara,4.0,0.75,1.0,8
+s4k1P9FHfPUzw3dqXRp7eA,LOKUM Turkish Delight & Baklava,34.421738,-119.70249,1019 State St,Santa Barbara,4.5,0.8723404255319149,2.0,235
+sCJEbsv0KEsx_IifiFjGDQ,CHOMP on the Rocks,34.40399,-119.6938,"113 Harbor Way, Ste 180",Santa Barbara,3.5,0.6428571428571429,,28
+sNyHfboSOs-ESN76cYFfTA,Santorini Greek Island Grill,34.411907,-119.84262,494 Ucen Rd,Isla Vista,4.5,0.7714285714285715,1.0,35
+sQFk2gZFUCmLhfYX0ufPbA,Kahuna Grill,34.419113,-119.69974,12 De La Guerra Pl,Santa Barbara,3.5,0.7662337662337663,1.0,77
+sXaIwcg_nV79tPMenha6hw,Cantina,34.411724,-119.856834,"966 Embarcadero Del Mar, Ste C",Isla Vista,4.5,0.8,1.0,120
+sc-MRSa8K0BTE5m3tmgrQw,Clementine's Steak House,34.40145,-119.524345,4631 Carpinteria Ave,Carpinteria,4.0,0.8263888888888888,2.0,288
+scH9yupjqMr-XP3bzJGY0A,Wildwood Kitchen,34.42123,-119.690544,410 E Haley St,Santa Barbara,4.0,0.7377777777777778,2.0,225
+sdzD-6O7eKIYgF9WzOuasg,Max's Restaurant & Cucina,34.440643,-119.73877,3514 State St,Santa Barbara,4.0,0.7828947368421053,2.0,152
+sj2o49ZCq2iJlZxDNrHDaA,Institution Ale Company,34.4174,-119.69589,516 State St,Santa Barbara,4.5,0.8387096774193549,2.0,155
+sjNVeNqhDjEFHoOybnt2ug,Meun Fan Thai Cafe,34.441505,-119.82302,5664 Calle Real,Goleta,3.5,0.6392405063291139,2.0,158
+sjWf71VmU5HIwqX8RGCLJw,Riviera Bar,34.42186,-119.703964,20 W Figueroa St,Santa Barbara,4.5,0.8181818181818182,2.0,22
+sk0IM8koYo1o9-k_rpkmxQ,Taqueria Santa Barbara,34.42343,-119.70527,"1213 State St, Ste A",Santa Barbara,4.5,0.8282828282828283,,99
+skY6r8WAkYqpV7_TxNm23w,Boathouse at Hendry's Beach,34.40326,-119.74375,2981 Cliff Dr,Santa Barbara,4.0,0.7801391035548686,2.0,2588
+soaZ7_oU7xcphlw6gpWblg,Starbucks,34.40233,-119.72339,1990 Cliff Dr,Santa Barbara,3.0,0.4897959183673469,1.0,49
+sor6oj-nuslOcSx7di4urA,Santa Barbara Fish Market,34.403748,-119.69356,"117 Harbor Way, Unit A",Santa Barbara,4.0,0.7470588235294118,2.0,340
+spm1KEE-5jAJVTE0ldpzFA,Sweet creams,34.430218,-119.68752,1000 1/2 E De La Guerra St,Santa Barbara,4.0,0.8333333333333334,,6
+ss7TePuqCeqJXhVtsKTwow,One Piece,34.41287,-119.85659,6555 Pardall Rd,Goleta,1.5,0.2,,15
+ssZSQ7HzLFBbm41gWubXKQ,Costa Terraza,34.424675,-119.83624,500 Fowler Rd,Santa Barbara,3.0,0.58,2.0,50
+svKDkmALJNcToJxEsU_bpw,Barcliff & Bair,34.42271,-119.70328,1112 State St,Santa Barbara,4.0,0.8571428571428571,2.0,7
+syuKX2pH3JJhOOppzNI6SA,Yoichi's,34.427166,-119.70248,230 E Victoria St,Santa Barbara,4.5,0.9015544041450777,4.0,193
+tA1IXs5GeNAqnJgaD4ajZA,Rusty's Pizza Parlor,34.441826,-119.82868,5934 Calle Real,Goleta,3.5,0.5434782608695652,2.0,46
+tGQytMbOXDdZS_OSK9hkBw,Louie's California Bistro,34.4234,-119.70917,1404 De La Vina St,Santa Barbara,4.0,0.8145695364238411,2.0,151
+tS47dXDlx9t-6B_F56cKUA,Chipotle Mexican Grill,34.439503,-119.74916,"3851 State St, Ste A",Santa Barbara,2.0,0.20588235294117646,1.0,102
+tSmUxIto8yAqijDgsjLBRQ,South Coast Deli - Santa Barbara,34.440678,-119.7397,3534 State St,Santa Barbara,4.0,0.7,,10
+tZnPqmwGcLjYeBdwyvhazg,'O' Bar + Kitchen,34.434,-119.91985,8301 Hollister Ave,Santa Barbara,4.0,0.75,3.0,28
+tf6S06LD09IFDHUpOPqPaw,East Beach Tacos,34.418888,-119.67541,226 S Milpas St,Santa Barbara,4.5,0.9077277970011534,2.0,867
+thlyktt2c7v1DyOpSVSibw,Scarlett Begonia,34.42353,-119.70626,21 W Victoria St,Santa Barbara,4.0,0.7958740499457112,2.0,921
+tiSIiacOzflrMMwJEXVFIA,Dunkin',34.440285,-119.74577,3771 State St,Santa Barbara,3.0,0.4270833333333333,1.0,96
+tjIIpbimdbi9Lrb-DoIzKg,Kaiju,34.412926,-119.85734,901 Embarcadero Del Mar,Isla Vista,4.0,0.6417910447761194,2.0,67
+tm87DWqehpt79ZInFVmv1w,Mesa Burger - Montecito,34.4208,-119.64414,1209 Coast Village Rd,Montecito,4.0,0.6964285714285714,,56
+to6wzDW0qBkrY6zttmngZg,HeliCafe,34.427673,-119.885284,278 Ellwood Beach Dr,Goleta,5.0,0.8333333333333334,1.0,6
+tthy48ZIX_wfY8Dy0Dvg6w,Bouchon,34.423985,-119.70586,9 W Victoria St,Santa Barbara,4.5,0.8386012104909213,3.0,1487
+tyt3pz0x3ZB8GXsSx1a9Aw,Roy,34.421074,-119.70196,7 W Carrillo St,Santa Barbara,4.0,0.7265625,2.0,256
+u3uB0GD7cVf5NC-AFHdwnQ,Golden Line Coffee Bar,34.41954,-119.69636,"618 Anacapa St, Ste A, Villa Wine Bar",Santa Barbara,5.0,1.0,,10
+u9oG6CVhS9dJR5ZHS5q23A,The Little Things Bakery,34.402153,-119.7249,2018 Cliff Dr,Santa Barbara,4.5,0.9029850746268657,2.0,134
+uEv1I-0r82Krj4eEysjC4A,Red Kettle Coffee,34.421562,-119.601204,"2275 Ortega Hill Rd, Ste A",Summerland,4.5,0.9354838709677419,2.0,124
+uFF40n9pOqHK1ciajdoSEw,Tony's Restaurant,34.396988,-119.521034,699 Linden Ave,Carpinteria,3.0,0.5138888888888888,2.0,72
+uGo0TCVNOcDQxMArUU0Jrw,Cajun Kitchen Cafe,34.43,-119.86715,"6831 Hollister Ave, Ste A",Goleta,4.0,0.8129370629370629,2.0,572
+uI15YInpDsGBUZcNfm_TfQ,Borrello's Pizza & Pastaria,34.406307,-119.54767,3807 Santa Claus Ln,Carpinteria,4.0,0.764367816091954,2.0,174
+uJc9lKaxLNBZch866x4_pA,Marketplace Cafe,34.419712,-119.701,17 W Canon Perdido St,Santa Barbara,4.0,0.6981132075471698,2.0,53
+uLRQINpcDXof3b3QowTzfg,Fresco Cafe North,34.441826,-119.82913,5940 Calle Real,Goleta,3.5,0.6804123711340206,2.0,97
+uO39--k_hrCFgZh-Bl8m8A,Taqueria Cuernavaca,34.418934,-119.70424,201 W Carrillo St,Santa Barbara,4.5,0.9154589371980676,2.0,414
+uPaVoR6XHk12KT9KTr1WFw,ASIE,34.416927,-119.69615,511 State St,Santa Barbara,3.0,0.4503311258278146,,151
+uQSCNdPI0dC_sPsOh1U8NQ,McDonald's,34.401882,-119.72235,1906 Cliff Dr,Santa Barbara,2.0,0.19047619047619047,1.0,42
+uQcKo8m34OULhySxwRaOAg,Nicoletti's Cafe,34.411575,-119.84409,Ucen Rd,Isla Vista,3.5,0.5555555555555556,1.0,9
+uRz7uwSoU5n0uzBac_UcxQ,Dish Cafe,34.441216,-119.82316,5722 Calle Real,Goleta,4.0,0.6,2.0,10
+uXxrl2LRH2mB1uw0GJF4GA,Indo-China Market,34.429916,-119.86718,"6831 Hollister Ave, Ste C",Goleta,3.5,0.7183098591549296,2.0,71
+uZYBF0YTU_iKq4_L_PDtMQ,Zaytoon,34.423023,-119.69819,209 E Canon Perdido St,Santa Barbara,4.0,0.8222409435551812,2.0,1187
+ugkzb_3jAcK0RZLxIeK7gA,Asian Cafe,34.435806,-119.828285,5869 Hollister Ave,Goleta,4.0,0.6,1.0,5
+uozdxwCZUHPubziu76Y2Ag,Farmer Boy,34.440044,-119.73734,3427 State St,Santa Barbara,2.5,0.36363636363636365,1.0,33
+upxQiiUF-6NM9jOJCxS_hg,Hennings Cake Boutique,34.4218,-119.70419,28 W Figueroa St,Santa Barbara,4.0,0.875,2.0,8
+uqsJ4HJWaPuQMc55ahwiDA,Paloma Restaurant & Tequila Bar,34.44174,-119.82556,5764 Calle Real,Goleta,4.0,0.7320261437908496,2.0,153
+urEO2v7ydkJ-j9tUUmXpZQ,Starbucks,34.427788,-119.87626,7127 Hollister Ave,Goleta,1.5,0.0,,7
+uriD7RFuHhLJeDdKaf0nFA,Pizza Guru,34.44069,-119.73968,3534 State St,Santa Barbara,4.0,0.6710526315789473,2.0,304
+ut45DX7-QaOWLzYRlBSbGA,Blue Agave,34.418285,-119.69608,20 E Cota St,Santa Barbara,3.5,0.6666666666666666,2.0,156
+uvb3NcpqBEaCrrcyfNF-wA,Starbucks,34.394985,-119.513115,5436 Carpinteria Rd,Carpinteria,2.5,0.34146341463414637,2.0,82
+v4AMcIZ--hXZuJIg3luUgg,Tamira,34.422062,-119.702934,1027 State St,Santa Barbara,4.5,0.8833124215809285,2.0,797
+v4lz71o76wWD8H15NsbZGA,Figueroa Mountain Brewing Co.,34.414627,-119.69079,"137 Anacapa St, Ste F",Santa Barbara,4.0,0.7945205479452054,1.0,438
+v5M6gYtiaGG5zuvAVSxNTA,Pizza by the Slice,34.41995,-119.69915,4 De La Guerra Pl,Santa Barbara,2.5,0.6,1.0,5
+v5jxpGnKbx3vVxs28dgokQ,Saigon Vietnamese Restaurant,34.439514,-119.75163,3987 State Street,Santa Barbara,3.0,0.45408163265306123,2.0,196
+v7dKKlpLH36GQTIX5qIReQ,Phoevermore,34.396202,-119.51404,1017 Casitas Pass Rd,Carpinteria,4.0,0.7321428571428571,2.0,112
+vC2qm1y3Au5czBtbhc-DNw,Sushi Teri,34.398525,-119.51848,970 Linden Ave,Carpinteria,3.0,0.5352941176470588,2.0,170
+vDBfhX1XI4uRWBCQQNRsUg,TAP Thai Cuisine,34.434875,-119.72464,2611 De La Vina St,Santa Barbara,4.0,0.777027027027027,2.0,148
+vDYkWElzs38G4vzgLqwX-A,Jimmy John's,34.412926,-119.85735,901 Embarcadero Del Mar,Isla Vista,3.5,0.65,1.0,20
+vLT1KtrA9bWvjFOg-0xVIg,Pieology Pizzeria,34.430454,-119.872345,"7000 Hollister Ave, Ste F",Goleta,3.5,0.572463768115942,1.0,138
+vNRTLUP22o1X3sMURoiB9A,Taqueria Rincon Alteno,34.40519,-119.52958,4414 Via Real,Carpinteria,4.0,0.711340206185567,1.0,97
+vTXNVK73GOvVb3js4w8SLg,Domino's Pizza,34.440575,-119.72841,3006 State St,Santa Barbara,2.5,0.2682926829268293,1.0,41
+vZG0BDPGDJxMGiXcGoVU6w,SB Munchiez,34.439705,-119.770836,4427 Hollister Ave,Santa Barbara,4.0,0.6631016042780749,2.0,187
+v_8DrVtUIHE0o62Ps926Yg,Wecook,34.412994,-119.85748,"901 Embarcadero Del Mar, Ste 100",Goleta,3.0,0.35714285714285715,2.0,42
+vgDl4_ZjoLLIU2ZPL83GIg,Mosaic Locale,34.42292,-119.70442,1131 State St,Santa Barbara,4.0,0.8421052631578947,2.0,19
+vhWlxyLEWAbNOMtQ42yzFg,Norton's Pastrami & Deli,34.421993,-119.70382,18 W Figueroa St,Santa Barbara,4.5,0.8383233532934131,2.0,501
+vi5xjfEhV6rnXrC_GbdhnA,El Rincon Bohemio,34.439423,-119.761665,"4141 State St, Ste F1",Santa Barbara,3.5,0.625,2.0,88
+vj6AetpADpHOYtMRZsXX3g,Los Agaves,34.43745,-119.72739,2911 De La Vina St,Santa Barbara,4.0,0.7949336550060314,2.0,829
+vmq2cm0Ayol4toVsL4dZfA,Blenders In the Grass,34.413277,-119.85677,"6560 Pardall Rd, Ste A",Isla Vista,4.5,0.8549222797927462,1.0,193
+vsrryxBR2Jykl71qa1H6SQ,Caffe Primo,34.417362,-119.69595,516 State St,Santa Barbara,4.0,0.6942148760330579,2.0,121
+vyNMRa4U9gnrCzqR707GZA,Back Door Deli,34.444157,-119.78065,315 Camino Del Remedio,Santa Barbara,4.0,0.8333333333333334,1.0,6
+vyxxsn2l6ELF2Yoxr6BWcw,Westmont Dining Commons,34.450363,-119.66155,955 La Paz Rd,Santa Barbara,3.0,0.7142857142857143,,7
+vyyr3G874jpRYSQo2KPZow,Cristino's Bakery,34.432217,-119.8481,170 Aero Camino,Goleta,5.0,0.9583333333333334,1.0,120
+w1l5vu31SJgPLTp6nlLWEg,Le Petit Bistro,34.417446,-119.69692,532 State St,Santa Barbara,2.0,0.375,,8
+w4P_EBFH6MdfbUwM-xJQdQ,China City Restaurant,34.44116,-119.82219,5688 Calle Real,Goleta,3.5,0.6666666666666666,2.0,9
+w79qtK0PpeDWrnY7E-uTRg,Taco Bell,34.40234,-119.721924,1840 Cliff Dr,Santa Barbara,3.5,0.5,1.0,28
+w8AxfAjNq7wU5jHmpLSpNg,Oreana Winery,34.415066,-119.69105,205 Anacapa St,Santa Barbara,3.5,0.7160493827160493,2.0,243
+w8fA94jzTNiGAIZz87y9Cw,Baja Fresh,34.428288,-119.87667,"7127 Hollister Ave, Ste 30",Goleta,3.0,0.6666666666666666,1.0,6
+wEWy_NbtwcgNY2dKEmnACA,Rocks,34.419537,-119.699615,801 State St,Santa Barbara,2.5,0.25,3.0,8
+wFES5bGDiPANW13hNHnXOQ,Sakana Sushi Bar & Japanese,34.422264,-119.65029,"1046 Coast Village Rd, Ste K",Santa Barbara,4.0,0.8134715025906736,3.0,386
+wFNDV56dxETK8lpJKdCbCQ,Chino's Rock & Tacos,34.413315,-119.854774,6530 Pardall Rd,Isla Vista,3.0,0.5652173913043478,1.0,23
+wJiaLWAxfqDeFsmE2cI8tg,Lazy Acres Market - Santa Barbara,34.40024,-119.72167,302 Meigs Rd,Santa Barbara,3.5,0.6753731343283582,3.0,268
+wK2IixmZUOEFGz1QZqR99Q,Lovejoy's Pickle Room,34.42216,-119.698616,126 E Canon Perdido,Santa Barbara,4.0,0.8289473684210527,2.0,76
+wKOD2ZWMpiJcdSswRXVuRA,L&L Hawaiian Barbeque,34.428406,-119.87654,"7127 Hollister Ave, Ste 21",Goleta,3.5,0.6666666666666666,2.0,150
+wMZAnrfwV-qHiV5zdTSrzw,The Creekside Restaurant & Bar,34.44006,-119.77179,4444 Hollister Ave,Santa Barbara,4.0,0.7450980392156863,2.0,306
+wO4IO1uTN65jkYdaBJCL8A,Rusty's Pizza Parlors,34.4127,-119.6889,15 E Cabrillo Blvd,Santa Barbara,3.0,0.4942528735632184,1.0,87
+wUHUyTrOpUcTVTQpyZFo8w,McDonald's,34.423607,-119.70514,1213 State St,Santa Barbara,2.0,0.29411764705882354,1.0,34
+wX4ap0Qy5ZK6Hy2iKvBqXA,"The Pasta Shoppe, LLC",34.423595,-119.70663,38 W Victoria St,Santa Barbara,4.0,0.7777777777777778,2.0,54
+wb9P0ipW4ysbgNA9jIl3bg,The Nugget,34.42171,-119.59953,2318 Lillie Ave,Summerland,4.0,0.7182320441988951,2.0,181
+wfjqxgLSsLtyzswzQBziSw,Panino,34.422695,-119.697975,834 Santa Barbara St,Santa Barbara,4.0,0.8273809523809523,2.0,168
+wmEZ3OqLuD1Z6b3mJSl1yg,Xo Coffee & Tea Bar,34.435226,-119.820404,"5599 Hollister Ave, Unit B",Goleta,4.0,0.7321428571428571,1.0,56
+wrtx446YNQoQa5U7UI6j5w,Chad’s,34.41716,-119.69902,625 Chapala St,Santa Barbara,3.5,0.6666666666666666,3.0,24
+ws0mjFrkanX_sXoUVRh8Uw,Jitters Coffee,34.4195,-119.69871,728 State St,Santa Barbara,3.5,0.765625,2.0,64
+wupvqueqdEZXQxv14sa9vw,Rincon Brewery,34.398373,-119.518005,5065 Carpinteria Ave,Carpinteria,4.0,0.7739872068230277,2.0,469
+wuzoQhym6ll3fjAiVgIJbw,Good Cup,34.421093,-119.701065,918 State St,Santa Barbara,3.5,0.6846846846846847,1.0,111
+wvD7TOuE-qUhkyXoi8K8hA,Taqueria El Bajio,34.423237,-119.68131,129 N Milpas St,Santa Barbara,4.0,0.758893280632411,1.0,253
+wxsOj_q1XOye3ug45Hh5nQ,Jungle George Grill,34.44123,-119.82316,5722 Calle Real,Goleta,3.5,0.6842105263157895,2.0,19
+x1YPj22nR3b0S_fDVWTGZw,Vons Chicken,34.41201,-119.85754,"955 Embarcadero Del Mar, Unit F",Isla Vista,4.0,0.7424242424242424,,66
+x2_m8MqR9zEiKCiQqAcadw,PokiRito,34.411938,-119.85481,6530 Seville Rd,Goleta,4.0,0.7592592592592593,2.0,54
+x3D4pyClaewoT1H2Jzcmjg,Kyle's Protein Grill,34.430454,-119.872345,7000 Hollister Ave,Goleta,4.0,0.5555555555555556,2.0,9
+xCbzGlxwX6QrS9t9uRcflQ,Piano Riviera Lounge,34.425323,-119.7027,129 E Anapamu St,Santa Barbara,3.5,0.5625,2.0,16
+xGaYXbXGwagUKPNEaVqbWw,Eller's Doughnut House & Bakery,34.440247,-119.76699,"4317 State St, Ste A",Santa Barbara,3.0,0.4533333333333333,2.0,75
+xRapA2lG7mjJ6eOqHmxe-A,Blackbird,34.41328,-119.68989,36 State St,Santa Barbara,4.0,0.7388535031847133,3.0,157
+xUd0QOyVzx9SQhWulcOPAw,Book Ends Cafe,34.41887,-119.6957,602 Anacapa St,Santa Barbara,5.0,0.9682539682539683,1.0,63
+xUkr5K9vgjzvLCZBYFZ3Vg,Si Senor Taco's,34.422745,-119.68779,418 N Salsipuedes St,Santa Barbara,4.5,0.875,1.0,8
+xVtO6a4dqKQQzMXkSPL80A,Presidio Market,34.426468,-119.70324,1236 Santa Barbara St,Santa Barbara,4.0,0.7272727272727273,1.0,77
+xWJjVW8-XqswB-5VugAr7w,Luigi's Pizza & Pasta,34.440804,-119.82368,5711 Calle Real,Goleta,3.0,0.5,1.0,6
+xdEND5C5s4FqCqgf0p7EBg,Carl's Jr,34.44177,-119.82619,5820 Calle Real,Goleta,3.0,0.3793103448275862,1.0,29
+xkS_mRHVHuX0ko6kVIyBdA,Masala Spice Indian Cuisine,34.441666,-119.82576,5796 Calle Real,Goleta,4.0,0.7421875,2.0,256
+xkYNvZlraS1JGleICGhE1w,Kyle's Kitchen,34.430527,-119.87224,7000 Hollister Ave,Goleta,3.5,0.6742424242424242,2.0,132
+xv_nZ8E7DFiKDjFi9syKsQ,El Pollo Loco,34.44058,-119.72799,2984 State St,Santa Barbara,2.5,0.3,1.0,60
+xwSWtJcQkzTF6HNm_IMgcg,Rusty's Pizza Parlor,34.429043,-119.86936,270 Storke Rd,Goleta,2.5,0.3854166666666667,2.0,96
+y1ZPi7c6sSkWdE1p2vUo-Q,PizzaRev,34.419243,-119.69999,12 W. De La Guerra St,Santa Barbara,4.0,0.7364864864864865,1.0,148
+y4x_wAQvUxvTR8iV-JP4Jg,On The Alley,34.403748,-119.69356,117 Harbor Way,Santa Barbara,4.0,0.812133072407045,2.0,511
+y8RbDyDJd-zGcgThqIZWDg,Zizzo's Brew Pub,34.431168,-119.87406,7060 Hollister Ave,Goleta,4.0,0.6111111111111112,1.0,36
+yE8r8JXplgnr4XxRivkdLw,Chef Karim's Restaurant,34.423622,-119.70549,"1221 State St, Ste 2",Santa Barbara,4.0,0.8214285714285714,3.0,28
+yEmEDomLUofVtbZoUeFV5g,The Daily Grind Coffee & Tea Station,34.428658,-119.71732,2001 De La Vina St,Santa Barbara,4.0,0.7206349206349206,1.0,315
+yHtS6dj20tl3ht32w6K6Qw,Stateside Restaurant & Lounge,34.423042,-119.70321,1114 State St,Santa Barbara,2.5,0.2727272727272727,2.0,11
+yIAgFdYQY3UdfDn-qO0K7g,Arts & Letters Cafe,34.423817,-119.7043,7 E Anapamu St,Santa Barbara,4.5,0.927536231884058,2.0,69
+yL1yC5OOawjSamAb9Wjm5A,Lemon & Coriander,34.435432,-119.82803,231 Magnolia Ave,Goleta,5.0,0.9565217391304348,2.0,23
+yLqFm4epPkbkPpan9gmEjA,Folded Hills Montecito Tasting Room,34.4217,-119.64007,1294 Coast Village Rd,Montecito,4.0,0.7647058823529411,,17
+yM7eA2uuH3Ch7OYVj3PKSw,Wabi Sabi,34.42369,-119.707245,"38 W Victoria St, Ste 119",Santa Barbara,4.5,0.7816091954022989,2.0,87
+yPSejq3_erxo9zdVYTBnZA,Los Agaves,34.427494,-119.68662,600 N Milpas St,Santa Barbara,4.5,0.8711751092825919,2.0,3889
+y_s6hHqKycP4L_pV0JlLjg,Haggen Food & Pharmacy,34.397278,-119.518814,850 Linden Avenue,Carpinteria,1.5,0.14285714285714285,3.0,14
+ycbmvmBYk4w_ZmdrPL0tBQ,The Cruisery,34.416748,-119.69577,501 State St,Santa Barbara,4.0,0.7319034852546917,2.0,373
+ygZyTUWS4dbVL8d6vAiN4A,Taqueria Rincon Alteno,34.41846,-119.693985,115 E Haley St,Santa Barbara,4.0,0.782608695652174,1.0,69
+yghgUguk26YykduF52CDdg,Chamomile Cafe & Bakery,34.398643,-119.51919,915 Linden Ave,Carpinteria,3.0,0.8461538461538461,2.0,13
+yqJuEIGZpA9ILqCuBCWDkQ,The Savoy,34.41591,-119.69482,409 State St,Santa Barbara,3.5,0.6,2.0,60
+yuHv4P8RUG8rWKnx50azWA,Alchemy Cafe,34.415752,-119.696365,35 W Haley St,Santa Barbara,3.0,0.5833333333333334,2.0,12
+yw3vRR7XLIjEnlhMnVzR7w,Kai Sushi Shabu-Shabu,34.41976,-119.69898,738 State St,Santa Barbara,2.5,0.4385245901639344,2.0,244
+ywXa1pDqHPe9tOPx0yJFUg,Otaco,34.413273,-119.85478,6530 Pardall Rd,Goleta,3.0,0.5254237288135594,1.0,59
+yy6suHtRjIg3RwsNt5vstA,Sandpiper Golf Club,34.430733,-119.90722,7925 Hollister Ave,Goleta,3.5,0.5617977528089888,,89
+z-9_8ot2TnKL9DX4k3MYMQ,Palazzio,34.422295,-119.702545,1026 State St,Santa Barbara,3.0,0.5887323943661972,2.0,355
+z-O652VzhRqME3ev9LqH2Q,McMaster's Steak & Hoagie,34.412926,-119.85506,910 Embarcadero Del Norte,Isla Vista,4.5,0.8833333333333333,1.0,60
+z31te0YMSegTdktp3qYqGw,Empress Palace,34.4265,-119.734474,2251 Las Positas Rd,Santa Barbara,3.0,0.4925373134328358,2.0,201
+z5N7vgaNSBpjKT_gbY53sw,Spudnuts Donuts,34.435917,-119.82378,"5718 Hollister Ave, Ste 101",Goleta,3.5,0.5344827586206896,1.0,58
+z6I4QVP1M1HXETgwD92XHg,Olio E Limone Ristorante,34.422997,-119.70452,"11 W Victoria St, Ste 17",Santa Barbara,4.0,0.728744939271255,3.0,494
+z9-8KvMAlVK46De-G3sNJQ,Blenders In The Grass,34.41931,-119.69852,720 State St,Santa Barbara,4.0,0.8215767634854771,1.0,241
+zE8kXF0_2Twh4AhcewlFGw,Tsukemono,34.422024,-119.69878,126 E Canon Perdido St,Santa Barbara,4.0,0.6470588235294118,2.0,17
+zJpZ-uQ_F0XVgK1u98uWSg,Gloria's Gourmet Kitchen,34.414604,-119.71009,631 W Carrillo St,Santa Barbara,4.5,0.8461538461538461,,13
+zNbRWVCKNe6gBShmnuAQNw,Ice Milk Company,34.411293,-119.85727,971 Embarcadero Del Mar,Goleta,3.5,0.6379310344827587,1.0,116
+zV71Cfo4_jnkpr5_KH2HWw,The Zia Cafe,34.41774,-119.69632,532 State St,Santa Barbara,3.0,0.5555555555555556,2.0,9
+zVxDd79gdZcfz-O14QBCrA,Snack Shack,34.41956,-119.69953,801 State St,Santa Barbara,3.5,0.8333333333333334,,12
+zWwGjQlUEiLS7hCXDkBGzg,Greek House Cafe,34.41647,-119.69567,5 W Haley St,Santa Barbara,4.0,0.775,1.0,40
+zYTQOpgMSMaFNkcCAvJR3Q,Arturo's Taqueria,34.418797,-119.6753,226 S Milpas St,Santa Barbara,3.5,0.8333333333333334,1.0,6
+zZrDoiQIUmiVkifJx0h_KA,Old Town Coffee Downtown,34.423058,-119.70451,"1131 State St, Inside Mosaic Locale",Santa Barbara,4.5,0.75,,8
+zeAfmYy9b1gfUJLRBHm6vQ,Presto Pasta,34.43706,-119.725685,2830 De La Vina St,Santa Barbara,4.0,0.720164609053498,2.0,243
+ziXR7sUrbKRCNeDqfjibUg,Rudy's Restaurant No 1,34.411312,-119.69629,305 W Montecito St,Santa Barbara,4.0,0.7148148148148148,1.0,270
+zpuFEeAhrNzXPkOlBf5Kog,Outback Steakhouse,34.44172,-119.82389,5690 Calle Real,Goleta,3.0,0.4051724137931034,2.0,116
+zu4p6IZLSVn2Noto-vcwzw,East Beach Grill,34.41702,-119.668976,1118 E Cabrillo Blvd,Santa Barbara,3.5,0.7192982456140351,2.0,171
+zxW8zECvT_SqejieMMjb5A,Chilango's Mexican Restaurant,34.41679,-119.69589,503 State St,Santa Barbara,3.5,0.6875,1.0,16

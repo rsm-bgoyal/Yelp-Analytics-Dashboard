@@ -1,0 +1,24 @@
+cd ~/g/MGTA452/Project/streamlitproject
+
+cat > .gitignore << 'EOF'
+# Ignore large raw data
+finaldata.csv
+cleandata.csv
+*.parquet
+
+# Ignore Jupyter outputs
+*.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Ignore any massive CSVs (bigger than 100 MB)
+data/finaldata.csv
+data/cleandata.csv
+
+# Allow: smaller aggregated CSVs
+!data/*.csv
+
+# Ignore everything in data except CSVs
+data/*
+!data/*.csv
+EOF

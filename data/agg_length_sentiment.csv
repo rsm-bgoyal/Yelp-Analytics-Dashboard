@@ -1,0 +1,3 @@
+sentiment,mean_length,median_length,std_length
+Negative,640.436418450407,475.0,563.2815410227136
+Positive,445.8998512882587,324.0,398.03771526941335
