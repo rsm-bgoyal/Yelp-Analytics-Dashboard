@@ -1092,7 +1092,7 @@ elif page == "Cuisine Analysis":
             )
             fig.update_layout(
                 title="Top Cuisines by Average Rating",
-                height=400,
+                height=450,
                 xaxis_title="Cuisine",
                 yaxis_title="Avg Rating",
             )
