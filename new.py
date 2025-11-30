@@ -1292,22 +1292,22 @@ elif page == "Map Explorer":
             for _, row in filtered_map.iterrows():
                 if color_by == "Rating":
                     color = (
-                        "green"
+                        "#93c5fd"  # blue for high
                         if row["business_stars"] >= 4
-                        else "orange"
+                        else "#fbbf24"  # yellow for medium
                         if row["business_stars"] >= 3
-                        else "red"
+                        else "#fda4af"  # pink for low
                     )
                 elif color_by == "Sentiment":
                     color = (
-                        "green"
+                        "#93c5fd"  # blue for high
                         if row["avg_sentiment"] >= 0.7
-                        else "orange"
+                        else "#fbbf24"  # yellow for medium
                         if row["avg_sentiment"] >= 0.4
-                        else "red"
+                        else "#fda4af"  # pink for low
                     )
                 else:
-                    colors_map = {1: "green", 2: "blue", 3: "orange", 4: "red"}
+                    colors_map = {1: "#fda4af", 2: "#f9a8d4", 3: "#a78bfa", 4: "#93c5fd"}
                     color = (
                         colors_map.get(int(row["price_tier"]), "gray")
                         if pd.notna(row["price_tier"])
@@ -1329,7 +1329,7 @@ elif page == "Map Explorer":
             display_insight(
                 f"Showing <strong>{len(filtered_map):,}</strong> restaurants. "
                 f"Size = review volume; Color = {color_by.lower()}. "
-                f"Green = high performance, Red = needs attention.",
+                f"Blue = high performance, Pink = needs attention.",
                 "🗺️",
             )
         else:
@@ -1348,7 +1348,7 @@ elif page == "Map Explorer":
                 x="city",
                 y="positive_sentiment_pct",
                 color="avg_rating",
-                color_continuous_scale="RdYlGn",
+                color_continuous_scale=[[0, '#fda4af'], [0.5, '#fbbf24'], [1, '#93c5fd']],
                 title="City Sentiment & Rating",
                 text="positive_sentiment_pct",
             )
@@ -1370,7 +1370,7 @@ elif page == "Map Explorer":
                 size="review_count",
                 color="positive_sentiment_pct",
                 hover_name="city",
-                color_continuous_scale="RdYlGn",
+                color_continuous_scale=[[0, '#fda4af'], [0.5, '#fbbf24'], [1, '#93c5fd']],
                 title="City: Price vs Rating",
                 size_max=50,
             )
@@ -1434,12 +1434,12 @@ elif page == "Sentiment Analysis":
                     title={"text": "Sentiment-Rating Correlation"},
                     gauge={
                         "axis": {"range": [0, 1]},
-                        "bar": {"color": "#667eea"},
+                        "bar": {"color": "#a78bfa"},
                         "steps": [
-                            {"range": [0, 0.3], "color": "#ef553b"},
-                            {"range": [0.3, 0.5], "color": "#ffa15a"},
-                            {"range": [0.5, 0.7], "color": "#ab63fa"},
-                            {"range": [0.7, 1], "color": "#00cc96"},
+                            {"range": [0, 0.3], "color": "#fda4af"},
+                            {"range": [0.3, 0.5], "color": "#f9a8d4"},
+                            {"range": [0.5, 0.7], "color": "#c4b5fd"},
+                            {"range": [0.7, 1], "color": "#93c5fd"},
                         ],
                     },
                 )
@@ -1473,9 +1473,9 @@ elif page == "Sentiment Analysis":
                     "avg_sentiment": "Avg Sentiment",
                 },
                 color="price_tier",
-                color_discrete_sequence=px.colors.qualitative.Set2,
+                color_continuous_scale=[[0, '#fda4af'], [0.5, '#a78bfa'], [1, '#93c5fd']],
             )
-            fig.update_layout(height=350)
+            fig.update_layout(height=350, showlegend=False)
             st.plotly_chart(fig, use_container_width=True)
 
             display_insight(
@@ -1497,7 +1497,7 @@ elif page == "Sentiment Analysis":
                     error_y=dict(
                         type="data", array=rating_sentiment["std_sentiment"] * 100
                     ),
-                    marker=dict(color=["#ef553b", "#ffa15a", "#ab63fa", "#00cc96"]),
+                    marker=dict(color=["#fda4af", "#f9a8d4", "#a78bfa", "#93c5fd"]),
                 )
             )
             fig.update_layout(
@@ -1531,7 +1531,7 @@ elif page == "Sentiment Analysis":
                 title="Average Review Length by Sentiment",
                 labels={"sentiment": "Sentiment", "mean_length": "Avg Length (chars)"},
                 color="sentiment",
-                color_discrete_map={"Positive": "#00cc96", "Negative": "#ef553b"},
+                color_discrete_map={"Positive": "#93c5fd", "Negative": "#fda4af"},
             )
             fig.update_layout(height=400)
             st.plotly_chart(fig, use_container_width=True)
@@ -1562,9 +1562,10 @@ elif page == "Sentiment Analysis":
             title="Sentiment by Cuisine Type",
             text="positive_pct",
             color="positive_pct",
-            color_continuous_scale="RdYlGn",
+            color_continuous_scale=[[0, '#fda4af'], [0.5, '#fbbf24'], [1, '#93c5fd']],
         )
         fig.update_traces(texttemplate="%{text:.1f}%", textposition="outside")
+        fig.update_layout(showlegend=False)
         st.plotly_chart(fig, use_container_width=True)
 
         display_insight(
@@ -1715,20 +1716,20 @@ elif page == "Value & Outliers":
             color="avg_sentiment",
             hover_data=["name", "city"],
             title="Rating vs Price (bubble size = review count)",
-            color_continuous_scale="RdYlGn",
+            color_continuous_scale=[[0, '#fda4af'], [0.5, '#fbbf24'], [1, '#93c5fd']],
             size_max=50,
             labels={"median_price": "Price Tier", "dataset_avg_rating": "Avg Rating"},
         )
         fig.add_hline(
             y=restaurant_value["dataset_avg_rating"].mean(),
             line_dash="dash",
-            line_color="gray",
+            line_color="#a78bfa",
             annotation_text="Avg Rating",
         )
         fig.add_vline(
             x=restaurant_value["median_price"].median(),
             line_dash="dash",
-            line_color="gray",
+            line_color="#a78bfa",
             annotation_text="Median Price",
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -1763,7 +1764,7 @@ elif page == "Value & Outliers":
             x="value_score",
             nbins=30,
             title="Value Score Distribution",
-            color_discrete_sequence=["#667eea"],
+            color_discrete_sequence=["#a78bfa"],
         )
         st.plotly_chart(fig, use_container_width=True)
 
@@ -1772,8 +1773,6 @@ elif page == "Value & Outliers":
             f"Restaurants above average offer competitive value.",
             "⭐",
         )
-
-
 # ============ END OF PART 4 ============
 # ============ PAGE: ADVANCED INSIGHTS ============
 elif page == "Advanced Insights":
