@@ -10,3 +10,5 @@ wordcloud
 scipy
 nltk
 pyarrow
+statsmodels
+scikit-learn
