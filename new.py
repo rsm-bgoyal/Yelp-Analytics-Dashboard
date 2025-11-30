@@ -943,7 +943,7 @@ elif page == "Exploratory Analysis":
             )
             fig.update_layout(
                 title="Rating Distribution with Mean Line",
-                height=400,
+                height=450,
                 xaxis_title="Star Rating",
                 yaxis_title="Frequency",
             )
