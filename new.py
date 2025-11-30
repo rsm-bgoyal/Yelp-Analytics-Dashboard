@@ -1816,9 +1816,9 @@ elif page == "Advanced Insights":
                     "review_count": "Number of Reviews",
                     "avg_rating": "Avg Rating",
                 },
-                color_discrete_sequence=["#667eea"],
+                color_discrete_sequence=["#a78bfa"],
                 trendline="ols",
-                trendline_color_override="red",
+                trendline_color_override="#fda4af",
             )
             st.plotly_chart(fig, use_container_width=True)
 
@@ -1864,10 +1864,11 @@ elif page == "Advanced Insights":
             title="Sentiment-Rating Correlation by Price Tier",
             text="correlation",
             color="correlation",
-            color_continuous_scale="RdBu",
+            color_continuous_scale=[[0, '#fda4af'], [0.5, '#c4b5fd'], [1, '#93c5fd']],
             labels={"price_tier": "Price Tier ($)", "correlation": "Correlation"},
         )
         fig.update_traces(texttemplate="%{text:.3f}", textposition="outside")
+        fig.update_layout(showlegend=False)
         st.plotly_chart(fig, use_container_width=True)
 
         highest = price_consistency.loc[price_consistency["correlation"].idxmax()]
@@ -1892,7 +1893,7 @@ elif page == "Advanced Insights":
                 size="review_count",
                 title="Rating Volatility vs Average Rating",
                 labels={"avg_rating": "Average Rating", "rating_std": "Rating Std Dev"},
-                color_discrete_sequence=["#667eea"],
+                color_discrete_sequence=["#a78bfa"],
                 size_max=50,
             )
             st.plotly_chart(fig, use_container_width=True)
@@ -1924,8 +1925,9 @@ elif page == "Advanced Insights":
                 x=hourly["hour"],
                 y=hourly["avg_stars"],
                 name="Avg Rating",
-                line=dict(color="#667eea", width=3),
+                line=dict(color="#a78bfa", width=3),
                 mode="lines+markers",
+                marker=dict(size=8)
             ),
             secondary_y=False,
         )
@@ -1934,7 +1936,7 @@ elif page == "Advanced Insights":
                 x=hourly["hour"],
                 y=hourly["review_count"],
                 name="Review Count",
-                marker=dict(color="rgba(102, 126, 234, 0.3)"),
+                marker=dict(color="rgba(147, 197, 253, 0.3)"),
             ),
             secondary_y=True,
         )
@@ -1966,10 +1968,11 @@ elif page == "Advanced Insights":
             y="rank_score",
             text="rank_score",
             color="avg_rating",
-            color_continuous_scale="Viridis",
+            color_continuous_scale=[[0, '#fda4af'], [0.5, '#a78bfa'], [1, '#93c5fd']],
             title="Top Cuisines - Composite Score (Rating 40% + Sentiment 30% + Popularity 30%)",
         )
         fig.update_traces(texttemplate="%{text:.3f}", textposition="outside")
+        fig.update_layout(showlegend=False)
         st.plotly_chart(fig, use_container_width=True)
 
         top = cuisine_ranking.iloc[0]
@@ -2086,7 +2089,7 @@ elif page == "Comparisons":
                 y=[rest1_name, rest2_name],
                 barmode="group",
                 title="Restaurant Comparison",
-                color_discrete_map={rest1_name: "#667eea", rest2_name: "#ef553b"},
+                color_discrete_map={rest1_name: "#a78bfa", rest2_name: "#fda4af"},
             )
             st.plotly_chart(fig, use_container_width=True)
 
@@ -2121,8 +2124,8 @@ elif page == "Comparisons":
                 theta=radar_data['Metric'],
                 fill='toself',
                 name=rest1_name,
-                line_color='#667eea',
-                fillcolor='rgba(102, 126, 234, 0.2)'
+                line_color='#a78bfa',
+                fillcolor='rgba(167, 139, 250, 0.2)'
             ))
             
             fig_radar.add_trace(go.Scatterpolar(
@@ -2130,8 +2133,8 @@ elif page == "Comparisons":
                 theta=radar_data['Metric'],
                 fill='toself',
                 name=rest2_name,
-                line_color='#ef553b',
-                fillcolor='rgba(239, 85, 59, 0.2)'
+                line_color='#fda4af',
+                fillcolor='rgba(253, 164, 175, 0.2)'
             ))
             
             fig_radar.update_layout(
@@ -2212,7 +2215,7 @@ elif page == "Comparisons":
                 y=[rest1_data['avg_rating']],
                 mode='markers+text',
                 name=rest1_name,
-                marker=dict(size=15, color='#667eea', line=dict(width=2, color='white')),
+                marker=dict(size=15, color='#a78bfa', line=dict(width=2, color='white')),
                 text=[rest1_name],
                 textposition='top center',
                 hovertemplate='<b>%{text}</b><br>Reviews: %{x}<br>Rating: %{y:.2f}★<extra></extra>'
@@ -2224,7 +2227,7 @@ elif page == "Comparisons":
                 y=[rest2_data['avg_rating']],
                 mode='markers+text',
                 name=rest2_name,
-                marker=dict(size=15, color='#ef553b', line=dict(width=2, color='white')),
+                marker=dict(size=15, color='#fda4af', line=dict(width=2, color='white')),
                 text=[rest2_name],
                 textposition='top center',
                 hovertemplate='<b>%{text}</b><br>Reviews: %{x}<br>Rating: %{y:.2f}★<extra></extra>'
@@ -2264,7 +2267,7 @@ elif page == "Comparisons":
                 name='Positive Sentiment',
                 x=sentiment_data['Restaurant'],
                 y=sentiment_data['Positive Sentiment'],
-                marker_color='#48bb78',
+                marker_color='#93c5fd',
                 text=sentiment_data['Positive Sentiment'].apply(lambda x: f'{x:.1f}%'),
                 textposition='inside'
             ))
@@ -2273,7 +2276,7 @@ elif page == "Comparisons":
                 name='Negative Sentiment',
                 x=sentiment_data['Restaurant'],
                 y=sentiment_data['Negative Sentiment'],
-                marker_color='#f56565',
+                marker_color='#fda4af',
                 text=sentiment_data['Negative Sentiment'].apply(lambda x: f'{x:.1f}%'),
                 textposition='inside'
             ))
@@ -2407,6 +2410,4 @@ elif page == "Data Table":
             )
     else:
         st.warning("Main data file not found. Please run preprocessing script.")
-
-
 # ============ END OF PART 5 ============
