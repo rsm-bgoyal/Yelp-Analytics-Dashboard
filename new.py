@@ -728,6 +728,7 @@ elif page == "Time & Trends":
                     mode="lines+markers",
                     name="Avg Rating",
                     line=dict(color="#667eea", width=2),
+                    marker=dict(size=6)
                 )
             )
             fig.add_trace(
@@ -772,8 +773,9 @@ elif page == "Time & Trends":
                 x="week",
                 y="review_count",
                 title="Weekly Review Volume",
-                color_discrete_sequence=["#764ba2"],
+                color_discrete_sequence=["#667eea"],
             )
+            fig.update_layout(height=450)
             st.plotly_chart(fig, use_container_width=True)
 
             avg_vol = weekly_data["review_count"].mean()
@@ -801,7 +803,7 @@ elif page == "Time & Trends":
                     mode="markers",
                     name="Daily",
                     opacity=0.4,
-                    marker=dict(color="#667eea"),
+                    marker=dict(color="#667eea", size=4),
                 )
             )
             fig.add_trace(
@@ -810,7 +812,7 @@ elif page == "Time & Trends":
                     y=daily_sentiment["rolling_avg"],
                     mode="lines",
                     name="7-day MA",
-                    line=dict(color="#ef553b", width=3),
+                    line=dict(color="#43e97b", width=3),
                 )
             )
             fig.update_layout(
@@ -840,6 +842,7 @@ elif page == "Time & Trends":
                     mode="lines+markers",
                     name="Avg Rating",
                     line=dict(color="#667eea", width=3),
+                    marker=dict(size=8)
                 ),
                 secondary_y=False,
             )
@@ -853,6 +856,8 @@ elif page == "Time & Trends":
                 secondary_y=True,
             )
             fig.update_layout(title="Seasonal Pattern by Month", height=400)
+            fig.update_yaxes(title_text="Avg Rating", secondary_y=False)
+            fig.update_yaxes(title_text="Review Count", secondary_y=True)
             st.plotly_chart(fig, use_container_width=True)
 
             best_month = seasonal.loc[seasonal["avg_stars"].idxmax(), "month_name"]
@@ -868,14 +873,18 @@ elif page == "Time & Trends":
     with col5:
         st.markdown("<h3>📅 Rating by Day of Week</h3>", unsafe_allow_html=True)
         if len(day_stats) > 0:
+            # Create gradient color mapping
+            day_stats_sorted = day_stats.sort_values("avg_stars")
+            
             fig = px.bar(
                 day_stats,
                 x="day_of_week",
                 y="avg_stars",
                 title="Average Rating by Day",
                 color="avg_stars",
-                color_continuous_scale="Viridis",
+                color_continuous_scale=[[0, '#f5576c'], [0.5, '#667eea'], [1, '#43e97b']],
             )
+            fig.update_layout(height=400, showlegend=False)
             st.plotly_chart(fig, use_container_width=True)
 
             best_day = day_stats.loc[day_stats["avg_stars"].idxmax(), "day_of_week"]
@@ -892,8 +901,9 @@ elif page == "Time & Trends":
                 x="day_of_week",
                 y="review_count",
                 title="Review Count by Day",
-                color_discrete_sequence=["#ffa15a"],
+                color_discrete_sequence=["#4facfe"],
             )
+            fig.update_layout(height=400)
             st.plotly_chart(fig, use_container_width=True)
 
             busiest = day_stats.loc[day_stats["review_count"].idxmax(), "day_of_week"]
@@ -901,8 +911,6 @@ elif page == "Time & Trends":
                 f"Busiest day: <strong>{busiest}</strong> ({day_stats['review_count'].max():,} reviews).",
                 "🗓️",
             )
-
-
 # ============ END OF PART 2 ============
 # ============ PAGE: EXPLORATORY ANALYSIS ============
 elif page == "Exploratory Analysis":
