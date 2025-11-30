@@ -45,9 +45,7 @@ Remaining category strings are cleaned to remove non-food tokens.
 - Generated sentiment labels  
 - Created exploratory variables  
 - Downcasted numeric types for memory efficiency  
-- Saved a cleaned, GitHub-safe dataset (`cleandata.csv`)
+- Saved a cleaned, GitHub-safe dataset
 
----
 
-## 🏗 Project Structure
 
