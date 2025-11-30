@@ -562,6 +562,7 @@ if page == "Overview":
                     name="Avg Rating",
                     mode="lines+markers",
                     line=dict(color="#667eea", width=3),
+                    marker=dict(size=6)
                 ),
                 secondary_y=False,
             )
@@ -598,15 +599,21 @@ if page == "Overview":
     with col2:
         st.markdown("<h3>⭐ Rating Distribution</h3>", unsafe_allow_html=True)
         if len(rating_dist) > 0:
+            # Create color gradient from purple to blue matching the theme
+            colors_gradient = ['#764ba2', '#667eea', '#667eea', '#4facfe', '#43e97b']
+            rating_dist_sorted = rating_dist.sort_values('stars')
+            
             fig = px.bar(
-                rating_dist,
+                rating_dist_sorted,
                 x="stars",
                 y="count",
                 title="Rating Distribution",
                 labels={"stars": "Star Rating", "count": "Count"},
-                color_discrete_sequence=["#667eea"],
+                color="stars",
+                color_continuous_scale=[[0, '#764ba2'], [0.5, '#667eea'], [1, '#43e97b']]
             )
-            fig.update_layout(height=400)
+            fig.update_layout(height=400, showlegend=False)
+            fig.update_traces(marker=dict(line=dict(width=0)))
             st.plotly_chart(fig, use_container_width=True)
 
             mode_rating = rating_dist.loc[rating_dist["count"].idxmax(), "stars"]
@@ -627,8 +634,10 @@ if page == "Overview":
                 values="count",
                 names="sentiment",
                 title="Overall Sentiment",
-                color_discrete_map={"Positive": "#00cc96", "Negative": "#ef553b"},
+                color_discrete_map={"Positive": "#43e97b", "Negative": "#f5576c"},
+                hole=0.4
             )
+            fig.update_traces(textposition='inside', textinfo='percent+label')
             st.plotly_chart(fig, use_container_width=True)
 
             pos_row = sentiment_dist[sentiment_dist["sentiment"] == "Positive"]
@@ -646,19 +655,29 @@ if page == "Overview":
     with col4:
         st.markdown("<h3>🎯 Rating Categories</h3>", unsafe_allow_html=True)
         if len(rating_cat) > 0:
+            # Sort categories in logical order
+            category_order = ["Poor", "Average", "Good", "Excellent"]
+            rating_cat['rating_category'] = pd.Categorical(
+                rating_cat['rating_category'], 
+                categories=category_order, 
+                ordered=True
+            )
+            rating_cat_sorted = rating_cat.sort_values('rating_category')
+            
             fig = px.bar(
-                rating_cat,
+                rating_cat_sorted,
                 x="rating_category",
                 y="count",
                 title="Rating Category Distribution",
                 color="rating_category",
                 color_discrete_map={
-                    "Poor": "#ef553b",
-                    "Average": "#ffa15a",
-                    "Good": "#ab63fa",
-                    "Excellent": "#00cc96",
+                    "Poor": "#f5576c",
+                    "Average": "#fa709a",
+                    "Good": "#667eea",
+                    "Excellent": "#43e97b",
                 },
             )
+            fig.update_layout(showlegend=False, height=400)
             st.plotly_chart(fig, use_container_width=True)
 
             total = rating_cat["count"].sum()
@@ -671,8 +690,6 @@ if page == "Overview":
                 f"Focus on converting 'Good' to 'Excellent' for growth.",
                 "🎯",
             )
-
-
 # ============ PAGE: TIME & TRENDS ============
 elif page == "Time & Trends":
     st.markdown(
