@@ -785,7 +785,7 @@ if page == "Overview":
                 f"Focus on converting 'Good' to 'Excellent' for growth.",
                 "🎯",
             )
-# ============ PAGE: TIME & TRENDS ============
+# ============ PAGE: TIME & TRENDS (FIXED VERSION) ============
 elif page == "Time & Trends":
     st.markdown(
         """
@@ -803,12 +803,119 @@ elif page == "Time & Trends":
     with st.expander("🔍 **Filter Data**", expanded=False):
         filters = create_simple_filter("time", show_city=True, show_price=True)
 
-    # Load pre-aggregated data
-    weekly_data = load_aggregated_data("agg_weekly_rating.csv")
-    daily_sentiment = load_aggregated_data("agg_daily_sentiment.csv")
-    seasonal = load_aggregated_data("agg_seasonal.csv")
-    day_stats = load_aggregated_data("agg_day_of_week.csv")
-    hourly = load_aggregated_data("agg_hourly.csv")
+    # Load main data and apply filters
+    main_data = load_main_data()
+    
+    if len(main_data) > 0:
+        # Apply filters to main data
+        filtered_data = apply_filters_to_df(
+            main_data,
+            filters,
+            city_col="city",
+            rating_col="stars",
+            price_col="price_tier",
+            sentiment_col="sentiment_text",
+        )
+        
+        if len(filtered_data) > 0:
+            # Ensure date column is datetime
+            if 'date' not in filtered_data.columns and 'date' in filtered_data.columns:
+                filtered_data['date'] = pd.to_datetime(filtered_data['date'])
+            
+            # Recalculate weekly data from filtered data
+            if 'week' in filtered_data.columns:
+                weekly_data = (
+                    filtered_data.groupby("week")
+                    .agg({
+                        "stars": ["mean", "std", "count"]
+                    })
+                    .reset_index()
+                )
+                weekly_data.columns = ["week", "avg_stars", "std_stars", "review_count"]
+            else:
+                weekly_data = pd.DataFrame()
+            
+            # Recalculate daily sentiment from filtered data
+            if 'date' in filtered_data.columns:
+                filtered_data['date'] = pd.to_datetime(filtered_data['date'])
+                daily_sentiment = (
+                    filtered_data.groupby(filtered_data['date'].dt.date)
+                    .agg({
+                        "sentiment_label": "mean"
+                    })
+                    .reset_index()
+                )
+                daily_sentiment.columns = ["date", "avg_sentiment"]
+            else:
+                daily_sentiment = pd.DataFrame()
+            
+            # Recalculate seasonal data from filtered data
+            if 'month_name' in filtered_data.columns:
+                seasonal = (
+                    filtered_data.groupby("month_name")
+                    .agg({
+                        "stars": ["mean", "count"]
+                    })
+                    .reset_index()
+                )
+                seasonal.columns = ["month_name", "avg_stars", "review_count"]
+                
+                # Sort by month order
+                month_order = ['January', 'February', 'March', 'April', 'May', 'June',
+                              'July', 'August', 'September', 'October', 'November', 'December']
+                seasonal['month_name'] = pd.Categorical(seasonal['month_name'], 
+                                                        categories=month_order, 
+                                                        ordered=True)
+                seasonal = seasonal.sort_values('month_name')
+            else:
+                seasonal = pd.DataFrame()
+            
+            # Recalculate day of week stats from filtered data
+            if 'day_of_week' in filtered_data.columns:
+                day_stats = (
+                    filtered_data.groupby("day_of_week")
+                    .agg({
+                        "stars": ["mean", "count"]
+                    })
+                    .reset_index()
+                )
+                day_stats.columns = ["day_of_week", "avg_stars", "review_count"]
+                
+                # Sort by day order
+                day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+                day_stats['day_of_week'] = pd.Categorical(day_stats['day_of_week'], 
+                                                          categories=day_order, 
+                                                          ordered=True)
+                day_stats = day_stats.sort_values('day_of_week')
+            else:
+                day_stats = pd.DataFrame()
+            
+            # Recalculate hourly data from filtered data
+            if 'hour' in filtered_data.columns:
+                hourly = (
+                    filtered_data.groupby("hour")
+                    .agg({
+                        "stars": ["mean", "count"]
+                    })
+                    .reset_index()
+                )
+                hourly.columns = ["hour", "avg_stars", "review_count"]
+            else:
+                hourly = pd.DataFrame()
+        else:
+            # No data after filtering
+            weekly_data = pd.DataFrame()
+            daily_sentiment = pd.DataFrame()
+            seasonal = pd.DataFrame()
+            day_stats = pd.DataFrame()
+            hourly = pd.DataFrame()
+    else:
+        # Fallback to pre-aggregated data if main_data not available
+        weekly_data = load_aggregated_data("agg_weekly_rating.csv")
+        daily_sentiment = load_aggregated_data("agg_daily_sentiment.csv")
+        seasonal = load_aggregated_data("agg_seasonal.csv")
+        day_stats = load_aggregated_data("agg_day_of_week.csv")
+        hourly = load_aggregated_data("agg_hourly.csv")
 
     col1, col2 = st.columns(2)
 
@@ -859,6 +966,8 @@ elif page == "Time & Trends":
                 f"{'Wide bands = inconsistent experiences.' if volatility == 'high' else 'Narrow bands = reliable quality.'}",
                 "📊",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col2:
         st.markdown("<h3>📈 Weekly Review Volume</h3>", unsafe_allow_html=True)
@@ -879,6 +988,8 @@ elif page == "Time & Trends":
                 f"Volume spikes may indicate promotions or viral moments.",
                 "📈",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     col3, col4 = st.columns(2)
 
@@ -925,6 +1036,8 @@ elif page == "Time & Trends":
                 f"Moving average smooths daily noise to reveal true trends.",
                 "💭",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col4:
         st.markdown("<h3>🌍 Seasonal Patterns</h3>", unsafe_allow_html=True)
@@ -961,6 +1074,8 @@ elif page == "Time & Trends":
                 f"Plan promotions during historically weaker months.",
                 "🌍",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     # Day of Week Analysis
     col5, col6 = st.columns(2)
@@ -985,6 +1100,8 @@ elif page == "Time & Trends":
                 f"Best day: <strong>{best_day}</strong> ({day_stats['avg_stars'].max():.2f}★).",
                 "📅",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col6:
         st.markdown("<h3>🗓️ Volume by Day of Week</h3>", unsafe_allow_html=True)
@@ -1006,7 +1123,9 @@ elif page == "Time & Trends":
                 f"Busiest day: <strong>{busiest}</strong> ({day_stats['review_count'].max():,} reviews).",
                 "🗓️",
             )
-# ============ END OF PART 2 ============
+        else:
+            st.info("No data available for the selected filters.")
+# ============ END OF TIME & TRENDS PAGE ============
 # ============ PAGE: EXPLORATORY ANALYSIS ============
 elif page == "Exploratory Analysis":
     st.markdown(
