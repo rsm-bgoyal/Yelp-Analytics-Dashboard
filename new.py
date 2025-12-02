@@ -1,7 +1,3 @@
-# Force cache clear on first run
-if 'cache_cleared' not in st.session_state:
-    st.cache_data.clear()
-    st.session_state.cache_cleared = True
 import os
 
 os.environ["MPLCONFIGDIR"] = "/tmp/matplotlib"
@@ -28,7 +24,11 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
+# Force cache clear on first run
+if 'cache_cleared' not in st.session_state:
+    st.cache_data.clear()
+    st.session_state.cache_cleared = True
+    
 # Custom CSS with beautiful light styling
 st.markdown(
     """
