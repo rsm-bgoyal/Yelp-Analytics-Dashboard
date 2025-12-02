@@ -1126,7 +1126,7 @@ elif page == "Time & Trends":
         else:
             st.info("No data available for the selected filters.")
 # ============ END OF TIME & TRENDS PAGE ============
-# ============ PAGE: EXPLORATORY ANALYSIS ============
+# ============ PAGE: EXPLORATORY ANALYSIS (FIXED VERSION) ============
 elif page == "Exploratory Analysis":
     st.markdown(
         """
@@ -1144,22 +1144,117 @@ elif page == "Exploratory Analysis":
     with st.expander("🔍 **Filter Data**", expanded=False):
         filters = create_simple_filter("eda", show_city=True, show_price=True)
 
-    # Load pre-aggregated data
-    kpis = load_kpis()
-    rating_dist = load_aggregated_data("agg_rating_distribution.csv")
-    price_stats = load_aggregated_data("agg_price_stats.csv")
-    price_city = load_aggregated_data("agg_price_by_city.csv")
-    restaurant_summary = load_aggregated_data("agg_restaurant_summary.csv")
-
-    # Apply filters to restaurant summary
-    if len(restaurant_summary) > 0:
-        restaurant_summary = apply_filters_to_df(
-            restaurant_summary,
+    # Load main data and apply filters
+    main_data = load_main_data()
+    
+    if len(main_data) > 0:
+        # Apply filters to main data
+        filtered_data = apply_filters_to_df(
+            main_data,
             filters,
             city_col="city",
-            rating_col="avg_rating",
-            price_col="median_price",
+            rating_col="stars",
+            price_col="price_tier",
+            sentiment_col="sentiment_text",
         )
+        
+        if len(filtered_data) > 0:
+            # Recalculate KPIs from filtered data
+            total_rest = filtered_data["business_id"].nunique()
+            total_rev = len(filtered_data)
+            avg_rat = filtered_data["stars"].mean()
+            median_rat = filtered_data["stars"].median()
+            pos_pct = (filtered_data["sentiment_label"].sum() / len(filtered_data) * 100)
+            corr = filtered_data[["stars", "sentiment_label"]].corr().iloc[0, 1]
+            unique_cities = filtered_data["city"].nunique()
+            
+            kpis = pd.DataFrame([{
+                "total_restaurants": total_rest,
+                "total_reviews": total_rev,
+                "avg_rating": avg_rat,
+                "median_rating": median_rat,
+                "positive_pct": pos_pct,
+                "correlation": corr,
+                "unique_cities": unique_cities,
+            }])
+            
+            # Recalculate rating distribution
+            rating_dist = (
+                filtered_data.groupby("stars")
+                .size()
+                .reset_index(name="count")
+            )
+            
+            # Recalculate price stats
+            if filtered_data["price_tier"].notna().any():
+                price_stats = (
+                    filtered_data.groupby("price_tier")
+                    .agg({
+                        "stars": ["mean", "std", "count"]
+                    })
+                    .reset_index()
+                )
+                price_stats.columns = ["price_tier", "avg_stars", "std_stars", "review_count"]
+            else:
+                price_stats = pd.DataFrame()
+            
+            # Recalculate price by city
+            if filtered_data["price_tier"].notna().any():
+                price_city = (
+                    filtered_data.groupby(["city", "price_tier"])
+                    .size()
+                    .reset_index(name="count")
+                )
+                # Keep only top cities by total count
+                top_cities = price_city.groupby("city")["count"].sum().nlargest(10).index
+                price_city = price_city[price_city["city"].isin(top_cities)]
+            else:
+                price_city = pd.DataFrame()
+            
+            # Recalculate restaurant summary
+            restaurant_summary = (
+                filtered_data.groupby(["business_id", "name", "city"])
+                .agg({
+                    "stars": "mean",
+                    "sentiment_label": "mean",
+                    "price_tier": "median",
+                    "review_id": "count",
+                    "business_stars": "first",
+                })
+                .reset_index()
+            )
+            restaurant_summary.columns = [
+                "business_id", "name", "city", "avg_rating", 
+                "positive_sentiment_pct", "median_price", 
+                "reviews_in_dataset", "yelp_rating"
+            ]
+            restaurant_summary["positive_sentiment_pct"] *= 100
+            restaurant_summary = restaurant_summary.sort_values("avg_rating", ascending=False)
+            
+        else:
+            # No data after filtering
+            kpis = pd.DataFrame()
+            rating_dist = pd.DataFrame()
+            price_stats = pd.DataFrame()
+            price_city = pd.DataFrame()
+            restaurant_summary = pd.DataFrame()
+    else:
+        # Fallback to pre-aggregated data
+        kpis = load_kpis()
+        rating_dist = load_aggregated_data("agg_rating_distribution.csv")
+        price_stats = load_aggregated_data("agg_price_stats.csv")
+        price_city = load_aggregated_data("agg_price_by_city.csv")
+        restaurant_summary = load_aggregated_data("agg_restaurant_summary.csv")
+        
+        # Apply filters to restaurant summary if available
+        if len(restaurant_summary) > 0:
+            restaurant_summary = apply_filters_to_df(
+                restaurant_summary,
+                filters,
+                city_col="city",
+                rating_col="avg_rating",
+                price_col="median_price",
+            )
 
     col1, col2 = st.columns(2)
 
@@ -1194,6 +1289,8 @@ elif page == "Exploratory Analysis":
                 f"Ratings above the pink line exceed average performance.",
                 "📊",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col2:
         st.markdown("<h3>💰 Rating by Price Tier</h3>", unsafe_allow_html=True)
@@ -1217,6 +1314,8 @@ elif page == "Exploratory Analysis":
                 f"Error bars show rating consistency within each tier.",
                 "💰",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     # Price Statistics
     if len(price_stats) > 0:
@@ -1239,10 +1338,6 @@ elif page == "Exploratory Analysis":
     # Price Mix by City
     st.markdown("<h3>🏙️ Price Tier Mix by City</h3>", unsafe_allow_html=True)
     if len(price_city) > 0:
-        # Apply city filter
-        if "city" in filters and filters["city"] != "All":
-            price_city = price_city[price_city["city"] == filters["city"]]
-
         fig = px.bar(
             price_city,
             x="city",
@@ -1259,6 +1354,8 @@ elif page == "Exploratory Analysis":
             f"Homogeneous markets may have gaps in the dining landscape.",
             "🏙️",
         )
+    else:
+        st.info("No data available for the selected filters.")
 
     # Top Performing Restaurants
     st.markdown("<h3>🏆 Top Performing Restaurants</h3>", unsafe_allow_html=True)
@@ -1277,16 +1374,17 @@ elif page == "Exploratory Analysis":
             use_container_width=True,
         )
 
-        if len(restaurant_summary) > 0:
-            top = restaurant_summary.iloc[0]
-            display_insight(
-                f"Top performer: <strong>{top['name']}</strong> in {top['city']} "
-                f"({top['avg_rating']:.2f}★, {top['positive_sentiment_pct']:.1f}% positive).",
-                "🏆",
-            )
+        top = restaurant_summary.iloc[0]
+        display_insight(
+            f"Top performer: <strong>{top['name']}</strong> in {top['city']} "
+            f"({top['avg_rating']:.2f}★, {top['positive_sentiment_pct']:.1f}% positive).",
+            "🏆",
+        )
+    else:
+        st.info("No restaurants match the selected filters.")
 
 
-# ============ PAGE: CUISINE ANALYSIS ============
+# ============ PAGE: CUISINE ANALYSIS (FIXED VERSION) ============
 elif page == "Cuisine Analysis":
     st.markdown(
         """
@@ -1304,12 +1402,109 @@ elif page == "Cuisine Analysis":
     with st.expander("🔍 **Filter Data**", expanded=False):
         filters = create_simple_filter("cuisine", show_city=True, show_price=True)
 
-    # Load pre-aggregated data
-    cuisine_rating = load_aggregated_data("agg_cuisine_rating.csv")
-    cuisine_count = load_aggregated_data("agg_cuisine_count.csv")
-    heatmap_data = load_aggregated_data("agg_cuisine_price_heatmap.csv")
-    cuisine_sentiment = load_aggregated_data("agg_cuisine_sentiment.csv")
-    cuisine_trends = load_aggregated_data("agg_cuisine_trends.csv")
+    # Load main data and apply filters
+    main_data = load_main_data()
+    
+    if len(main_data) > 0:
+        # Apply filters to main data
+        filtered_data = apply_filters_to_df(
+            main_data,
+            filters,
+            city_col="city",
+            rating_col="stars",
+            price_col="price_tier",
+            sentiment_col="sentiment_text",
+        )
+        
+        if len(filtered_data) > 0 and 'categories' in filtered_data.columns:
+            # Explode categories to individual cuisines
+            filtered_data['cuisine_list'] = filtered_data['categories'].str.split(',')
+            df_cuisine_exploded = filtered_data.explode('cuisine_list')
+            df_cuisine_exploded['cuisine_list'] = df_cuisine_exploded['cuisine_list'].str.strip()
+            
+            # Filter out generic terms
+            exclude_terms = ['Restaurants', 'Food', 'Event Planning & Services']
+            df_cuisine_exploded = df_cuisine_exploded[
+                ~df_cuisine_exploded['cuisine_list'].isin(exclude_terms)
+            ]
+            
+            # Recalculate cuisine rating
+            cuisine_rating = (
+                df_cuisine_exploded.groupby("cuisine_list")
+                .agg({
+                    "stars": ["mean", "std", "count"]
+                })
+                .reset_index()
+            )
+            cuisine_rating.columns = ["cuisine", "avg_rating", "std_rating", "count"]
+            cuisine_rating = cuisine_rating[cuisine_rating["count"] >= 10]  # Min 10 reviews
+            cuisine_rating = cuisine_rating.sort_values("avg_rating", ascending=False)
+            
+            # Recalculate cuisine count
+            cuisine_count = (
+                df_cuisine_exploded.groupby("cuisine_list")
+                .size()
+                .reset_index(name="count")
+                .sort_values("count", ascending=False)
+            )
+            cuisine_count.columns = ["cuisine", "count"]
+            
+            # Recalculate heatmap data (cuisine × price tier)
+            if df_cuisine_exploded["price_tier"].notna().any():
+                heatmap_data = (
+                    df_cuisine_exploded.groupby(["cuisine_list", "price_tier"])
+                    .agg({"stars": "mean"})
+                    .reset_index()
+                )
+                heatmap_data.columns = ["cuisine", "price_tier", "avg_rating"]
+                # Keep only top cuisines
+                top_cuisines = cuisine_count.head(15)["cuisine"].tolist()
+                heatmap_data = heatmap_data[heatmap_data["cuisine"].isin(top_cuisines)]
+            else:
+                heatmap_data = pd.DataFrame()
+            
+            # Recalculate cuisine sentiment
+            cuisine_sentiment = (
+                df_cuisine_exploded.groupby("cuisine_list")
+                .agg({
+                    "sentiment_label": lambda x: (x.sum() / len(x)) * 100
+                })
+                .reset_index()
+            )
+            cuisine_sentiment.columns = ["cuisine", "positive_pct"]
+            cuisine_sentiment = cuisine_sentiment.sort_values("positive_pct", ascending=False)
+            
+            # Recalculate cuisine trends over time
+            if 'year_month' in df_cuisine_exploded.columns:
+                # Get top 5 cuisines by volume
+                top_5_cuisines = cuisine_count.head(5)["cuisine"].tolist()
+                cuisine_trends_data = df_cuisine_exploded[
+                    df_cuisine_exploded["cuisine_list"].isin(top_5_cuisines)
+                ]
+                
+                cuisine_trends = (
+                    cuisine_trends_data.groupby(["year_month", "cuisine_list"])
+                    .agg({"stars": "mean"})
+                    .reset_index()
+                )
+                cuisine_trends.columns = ["year_month", "cuisine", "avg_rating"]
+            else:
+                cuisine_trends = pd.DataFrame()
+            
+        else:
+            # No data after filtering
+            cuisine_rating = pd.DataFrame()
+            cuisine_count = pd.DataFrame()
+            heatmap_data = pd.DataFrame()
+            cuisine_sentiment = pd.DataFrame()
+            cuisine_trends = pd.DataFrame()
+    else:
+        # Fallback to pre-aggregated data
+        cuisine_rating = load_aggregated_data("agg_cuisine_rating.csv")
+        cuisine_count = load_aggregated_data("agg_cuisine_count.csv")
+        heatmap_data = load_aggregated_data("agg_cuisine_price_heatmap.csv")
+        cuisine_sentiment = load_aggregated_data("agg_cuisine_sentiment.csv")
+        cuisine_trends = load_aggregated_data("agg_cuisine_trends.csv")
 
     col1, col2 = st.columns(2)
 
@@ -1344,6 +1539,8 @@ elif page == "Cuisine Analysis":
                 f"Small error bars = consistent quality; large bars = hit-or-miss.",
                 "🏆",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col2:
         st.markdown("<h3>📊 Top Cuisines by Volume</h3>", unsafe_allow_html=True)
@@ -1367,6 +1564,8 @@ elif page == "Cuisine Analysis":
                 f"<strong>{top_3_pct:.1f}%</strong> of reviews.",
                 "📊",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     # Heatmap
     st.markdown("<h3>🔥 Cuisine × Price Tier Heatmap</h3>", unsafe_allow_html=True)
@@ -1391,6 +1590,8 @@ elif page == "Cuisine Analysis":
             f"Blue = value winners; Pink = expectation gaps.",
             "🔥",
         )
+    else:
+        st.info("No data available for the selected filters.")
 
     # Sentiment by Cuisine
     col3, col4 = st.columns(2)
@@ -1416,6 +1617,8 @@ elif page == "Cuisine Analysis":
                 f"Most positive: <strong>{top_15.iloc[0]['cuisine']}</strong> ({top_15.iloc[0]['positive_pct']:.1f}%).",
                 "😊",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col4:
         st.markdown("<h3>📈 Cuisine Trends Over Time</h3>", unsafe_allow_html=True)
@@ -1441,6 +1644,8 @@ elif page == "Cuisine Analysis":
                 f"diverging = widening quality gaps.",
                 "📈",
             )
+        else:
+            st.info("No data available for the selected filters.")
 # ============ PAGE: MAP EXPLORER ============
 elif page == "Map Explorer":
     st.markdown(
