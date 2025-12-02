@@ -2483,7 +2483,7 @@ elif page == "Value & Outliers":
         )
     else:
         st.info("No data available for the selected filters.")
-# ============ PAGE: ADVANCED INSIGHTS ============
+# ============ PAGE: ADVANCED INSIGHTS (FIXED VERSION) ============
 elif page == "Advanced Insights":
     st.markdown(
         """
@@ -2501,12 +2501,133 @@ elif page == "Advanced Insights":
     with st.expander("🔍 **Filter Data**", expanded=False):
         filters = create_simple_filter("advanced", show_city=True, show_price=True)
 
-    # Load pre-aggregated data
-    rest_review_stats = load_aggregated_data("agg_rest_review_stats.csv")
-    price_consistency = load_aggregated_data("agg_price_consistency.csv")
-    rest_volatility = load_aggregated_data("agg_rest_volatility.csv")
-    hourly = load_aggregated_data("agg_hourly.csv")
-    cuisine_ranking = load_aggregated_data("agg_cuisine_ranking.csv")
+    # Load main data and apply filters
+    main_data = load_main_data()
+    
+    if len(main_data) > 0:
+        # Apply filters
+        filtered_data = apply_filters_to_df(
+            main_data,
+            filters,
+            city_col="city",
+            rating_col="stars",
+            price_col="price_tier",
+            sentiment_col="sentiment_text",
+        )
+        
+        if len(filtered_data) > 0:
+            # Recalculate restaurant review stats
+            rest_review_stats = (
+                filtered_data.groupby("business_id")
+                .agg({
+                    "review_id": "count",
+                    "stars": "mean",
+                    "sentiment_label": "mean"
+                })
+                .reset_index()
+            )
+            rest_review_stats.columns = [
+                "business_id", "review_count", "avg_rating", "avg_sentiment"
+            ]
+            
+            # Recalculate price consistency
+            if filtered_data["price_tier"].notna().any():
+                price_consistency = []
+                for tier in filtered_data["price_tier"].dropna().unique():
+                    tier_data = filtered_data[filtered_data["price_tier"] == tier]
+                    if len(tier_data) > 1:
+                        corr = tier_data[["stars", "sentiment_label"]].corr().iloc[0, 1]
+                        price_consistency.append({"price_tier": tier, "correlation": corr})
+                price_consistency = pd.DataFrame(price_consistency).sort_values("price_tier")
+            else:
+                price_consistency = pd.DataFrame()
+            
+            # Recalculate restaurant volatility
+            rest_volatility = (
+                filtered_data.groupby("business_id")
+                .agg({
+                    "stars": ["mean", "std"],
+                    "review_id": "count"
+                })
+                .reset_index()
+            )
+            rest_volatility.columns = ["business_id", "avg_rating", "rating_std", "review_count"]
+            rest_volatility = rest_volatility[rest_volatility["review_count"] >= 5]
+            
+            # Recalculate hourly patterns
+            if 'hour' in filtered_data.columns:
+                hourly = (
+                    filtered_data.groupby("hour")
+                    .agg({
+                        "stars": "mean",
+                        "review_id": "count"
+                    })
+                    .reset_index()
+                )
+                hourly.columns = ["hour", "avg_stars", "review_count"]
+            else:
+                hourly = pd.DataFrame()
+            
+            # Recalculate cuisine ranking
+            if 'categories' in filtered_data.columns:
+                filtered_data['cuisine_list'] = filtered_data['categories'].str.split(',')
+                df_cuisine_exploded = filtered_data.explode('cuisine_list')
+                df_cuisine_exploded['cuisine_list'] = df_cuisine_exploded['cuisine_list'].str.strip()
+                
+                # Filter out non-cuisines
+                non_cuisine_terms = [
+                    'nutritionist', 'weight loss', 'health & medical',
+                    'grocery', 'farmers market', 'specialty food',
+                    'butcher', 'seafood markets', 'restaurants', 'food',
+                ]
+                df_cuisine_exploded = df_cuisine_exploded[
+                    ~df_cuisine_exploded['cuisine_list'].str.lower().apply(
+                        lambda x: any(term in str(x).lower() for term in non_cuisine_terms)
+                    )
+                ]
+                
+                cuisine_ranking = (
+                    df_cuisine_exploded.groupby("cuisine_list")
+                    .agg({
+                        "stars": "mean",
+                        "sentiment_label": lambda x: (x.sum() / len(x)) * 100,
+                        "review_id": "count",
+                        "price_tier": "median"
+                    })
+                    .reset_index()
+                )
+                cuisine_ranking.columns = [
+                    "cuisine", "avg_rating", "positive_sentiment", "review_count", "median_price"
+                ]
+                cuisine_ranking = cuisine_ranking[cuisine_ranking["review_count"] >= 10]
+                
+                if len(cuisine_ranking) > 0:
+                    cuisine_ranking["rank_score"] = (
+                        (cuisine_ranking["avg_rating"] / cuisine_ranking["avg_rating"].max()) * 0.4
+                        + (cuisine_ranking["positive_sentiment"] / 100) * 0.3
+                        + (cuisine_ranking["review_count"] / cuisine_ranking["review_count"].max()) * 0.3
+                    )
+                    cuisine_ranking = cuisine_ranking.sort_values("rank_score", ascending=False)
+            else:
+                cuisine_ranking = pd.DataFrame()
+                
+        else:
+            rest_review_stats = pd.DataFrame()
+            price_consistency = pd.DataFrame()
+            rest_volatility = pd.DataFrame()
+            hourly = pd.DataFrame()
+            cuisine_ranking = pd.DataFrame()
+    else:
+        # Fallback to pre-aggregated data
+        rest_review_stats = load_aggregated_data("agg_rest_review_stats.csv")
+        price_consistency = load_aggregated_data("agg_price_consistency.csv")
+        rest_volatility = load_aggregated_data("agg_rest_volatility.csv")
+        hourly = load_aggregated_data("agg_hourly.csv")
+        cuisine_ranking = load_aggregated_data("agg_cuisine_ranking.csv")
+        
+        # Apply filters to pre-aggregated data
+        if len(cuisine_ranking) > 0:
+            cuisine_ranking = filter_out_non_cuisines(cuisine_ranking, 'cuisine')
 
     # 1. Review Volume vs Rating
     st.markdown(
@@ -2530,6 +2651,8 @@ elif page == "Advanced Insights":
                 trendline_color_override="#fda4af",
             )
             st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("No data available for the selected filters.")
 
     with col2:
         if len(rest_review_stats) > 0:
@@ -2552,6 +2675,8 @@ elif page == "Advanced Insights":
                 f"{'Popular restaurants tend to have better ratings—success breeds success.' if corr_rating > 0 else 'High volume restaurants face more scrutiny.'}",
                 "📈",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     st.divider()
 
@@ -2560,12 +2685,6 @@ elif page == "Advanced Insights":
         "<h3>2️⃣ Sentiment Consistency by Price Tier</h3>", unsafe_allow_html=True
     )
     if len(price_consistency) > 0:
-        # Apply price filter
-        if "price_tiers" in filters and filters["price_tiers"]:
-            price_consistency = price_consistency[
-                price_consistency["price_tier"].isin(filters["price_tiers"])
-            ]
-
         fig = px.bar(
             price_consistency,
             x="price_tier",
@@ -2586,6 +2705,8 @@ elif page == "Advanced Insights":
             f"Higher correlation = review text matches star ratings more closely.",
             "🔗",
         )
+    else:
+        st.info("No data available for the selected filters.")
 
     st.divider()
 
@@ -2612,6 +2733,8 @@ elif page == "Advanced Insights":
                 f"Low volatility + high rating (bottom-right) = reliably excellent.",
                 "📊",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col2:
         st.markdown("<h4>🔴 Most Volatile Restaurants</h4>", unsafe_allow_html=True)
@@ -2622,6 +2745,8 @@ elif page == "Advanced Insights":
             high_vol["rating_std"] = high_vol["rating_std"].round(2)
             high_vol["avg_rating"] = high_vol["avg_rating"].round(2)
             st.dataframe(high_vol.reset_index(drop=True), use_container_width=True)
+        else:
+            st.info("No data available for the selected filters.")
 
     st.divider()
 
@@ -2662,6 +2787,8 @@ elif page == "Advanced Insights":
             f"Peak hours may have service strain.",
             "⏰",
         )
+    else:
+        st.info("No data available for the selected filters.")
 
     st.divider()
 
@@ -2690,8 +2817,11 @@ elif page == "Advanced Insights":
             f"Composite score balances quality, perception, and demand.",
             "🏆",
         )
+    else:
+        st.info("No data available for the selected filters.")
 
-# ============ PAGE: COMPARISONS (ENHANCED) ============
+
+# ============ PAGE: COMPARISONS (FIXED VERSION) ============
 elif page == "Comparisons":
     st.markdown(
         """
@@ -2709,19 +2839,60 @@ elif page == "Comparisons":
     with st.expander("🔍 **Filter Restaurant Selection**", expanded=False):
         filters = create_simple_filter("compare", show_city=True, show_price=True)
 
-    # Load data
-    restaurant_list = load_aggregated_data("agg_restaurant_list.csv")
-    restaurant_detailed = load_aggregated_data("agg_restaurant_detailed.csv")
-
-    # Apply filters to restaurant list
-    if len(restaurant_list) > 0:
-        restaurant_list = apply_filters_to_df(
-            restaurant_list,
+    # Load main data and apply filters
+    main_data = load_main_data()
+    
+    if len(main_data) > 0:
+        # Apply filters
+        filtered_data = apply_filters_to_df(
+            main_data,
             filters,
             city_col="city",
-            rating_col="avg_rating",
-            price_col="median_price",
+            rating_col="stars",
+            price_col="price_tier",
+            sentiment_col="sentiment_text",
         )
+        
+        if len(filtered_data) > 0:
+            # Create restaurant list
+            restaurant_list = (
+                filtered_data[["business_id", "name", "city"]]
+                .drop_duplicates()
+                .sort_values("name")
+            )
+            
+            # Create restaurant detailed stats
+            restaurant_detailed = (
+                filtered_data.groupby(["business_id", "name", "city"])
+                .agg({
+                    "stars": ["mean", "std", "count"],
+                    "sentiment_label": "mean",
+                    "price_tier": "median"
+                })
+                .reset_index()
+            )
+            restaurant_detailed.columns = [
+                "business_id", "name", "city",
+                "avg_rating", "std_rating", "review_count",
+                "avg_sentiment", "median_price"
+            ]
+        else:
+            restaurant_list = pd.DataFrame()
+            restaurant_detailed = pd.DataFrame()
+    else:
+        # Fallback to pre-aggregated data
+        restaurant_list = load_aggregated_data("agg_restaurant_list.csv")
+        restaurant_detailed = load_aggregated_data("agg_restaurant_detailed.csv")
+        
+        # Apply filters
+        if len(restaurant_list) > 0:
+            restaurant_list = apply_filters_to_df(
+                restaurant_list,
+                filters,
+                city_col="city",
+                rating_col="avg_rating" if "avg_rating" in restaurant_list.columns else "stars",
+                price_col="median_price" if "median_price" in restaurant_list.columns else "price_tier",
+            )
 
     if len(restaurant_list) > 0 and len(restaurant_detailed) > 0:
         st.markdown("#### Select Two Restaurants to Compare")
@@ -2813,16 +2984,16 @@ elif page == "Comparisons":
             radar_data = pd.DataFrame({
                 'Metric': ['Rating', 'Sentiment', 'Popularity', 'Value'],
                 rest1_name: [
-                    rest1_data['avg_rating'] / 5 * 100,  # Normalize to 100
+                    rest1_data['avg_rating'] / 5 * 100,
                     rest1_data['avg_sentiment'] * 100,
                     min(rest1_data['review_count'] / max_reviews * 100, 100) if max_reviews > 0 else 0,
-                    (6 - rest1_data['median_price']) / 5 * 100  # Inverse (lower price = higher value)
+                    (6 - rest1_data['median_price']) / 5 * 100 if pd.notna(rest1_data['median_price']) else 50
                 ],
                 rest2_name: [
                     rest2_data['avg_rating'] / 5 * 100,
                     rest2_data['avg_sentiment'] * 100,
                     min(rest2_data['review_count'] / max_reviews * 100, 100) if max_reviews > 0 else 0,
-                    (6 - rest2_data['median_price']) / 5 * 100
+                    (6 - rest2_data['median_price']) / 5 * 100 if pd.notna(rest2_data['median_price']) else 50
                 ]
             })
             
@@ -2871,7 +3042,8 @@ elif page == "Comparisons":
                 st.metric("Average Rating", f"{rest1_data['avg_rating']:.2f}★")
                 st.metric("Positive Sentiment", f"{rest1_data['avg_sentiment'] * 100:.1f}%")
                 st.metric("Total Reviews", f"{rest1_data['review_count']:,}")
-                st.metric("Price Tier", "💰" * int(rest1_data['median_price']))
+                price_display = "💰" * int(rest1_data['median_price']) if pd.notna(rest1_data['median_price']) else "N/A"
+                st.metric("Price Tier", price_display)
                 
             with col2:
                 st.markdown(f"### 🏪 {rest2_name}")
@@ -2894,7 +3066,8 @@ elif page == "Comparisons":
                     f"{rest2_data['review_count']:,}",
                     delta=f"{review_diff:+,}"
                 )
-                st.metric("Price Tier", "💰" * int(rest2_data['median_price']))
+                price_display = "💰" * int(rest2_data['median_price']) if pd.notna(rest2_data['median_price']) else "N/A"
+                st.metric("Price Tier", price_display)
 
             st.divider()
 
@@ -2904,7 +3077,7 @@ elif page == "Comparisons":
             # Load all restaurants for context
             all_restaurants = restaurant_detailed.copy()
             
-            # Create scatter plot with all restaurants in gray, highlight selected two
+            # Create scatter plot
             fig_matrix = go.Figure()
             
             # Add all restaurants as background
@@ -3002,8 +3175,9 @@ elif page == "Comparisons":
 
     else:
         st.warning("No restaurants match the current filters. Please adjust filters.")
-        
-# ============ PAGE: DATA TABLE ============
+
+
+# ============ PAGE: DATA TABLE (FIXED VERSION) ============
 elif page == "Data Table":
     st.markdown(
         """
@@ -3021,6 +3195,11 @@ elif page == "Data Table":
     main_data = load_main_data()
 
     if len(main_data) > 0:
+        # Normalize city names (fix spacing)
+        main_data['city'] = main_data['city'].apply(
+            lambda x: ' '.join(str(x).split()) if pd.notna(x) else x
+        )
+        
         st.markdown("#### 🔍 Filter Data")
         col1, col2, col3, col4 = st.columns(4)
 
@@ -3119,4 +3298,3 @@ elif page == "Data Table":
             )
     else:
         st.warning("Main data file not found. Please run preprocessing script.")
-# ============ END OF PART 5 ============
