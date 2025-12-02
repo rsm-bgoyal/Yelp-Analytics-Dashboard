@@ -1719,7 +1719,8 @@ elif page == "Cuisine Analysis":
         else:
             st.info("No data available for the selected filters.")
 
-# ============ PAGE: MAP EXPLORER ============
+
+# ============ PAGE: MAP EXPLORER (FIXED VERSION) ============
 elif page == "Map Explorer":
     st.markdown(
         """
@@ -1733,10 +1734,18 @@ elif page == "Map Explorer":
         unsafe_allow_html=True,
     )
 
-    # Load pre-aggregated data
-    map_data = load_aggregated_data("agg_map_data.csv")
-    city_stats = load_aggregated_data("agg_city_stats.csv")
-
+    # Load main data and apply filters
+    main_data = load_main_data()
+    
+    if len(main_data) > 0:
+        # Normalize city names (fix spacing issues)
+        main_data['city'] = main_data['city'].apply(lambda x: ' '.join(str(x).split()) if pd.notna(x) else x)
+        
+        # Get unique cities for filter
+        unique_cities = ["All"] + sorted(main_data["city"].dropna().unique().tolist())
+    else:
+        unique_cities = ["All"]
+        
     # Filters
     st.markdown("#### 🔍 Map Filters")
     col1, col2, col3, col4 = st.columns(4)
@@ -1746,12 +1755,7 @@ elif page == "Map Explorer":
             "🎨 Color by:", ["Rating", "Sentiment", "Price"], key="map_color"
         )
     with col2:
-        cities = (
-            ["All"] + sorted(map_data["city"].dropna().unique().tolist())
-            if len(map_data) > 0
-            else ["All"]
-        )
-        filter_city = st.selectbox("🏙️ City:", cities, key="map_city")
+        filter_city = st.selectbox("🏙️ City:", unique_cities, key="map_city")
     with col3:
         min_reviews = st.slider("📊 Min Reviews:", 0, 100, 0, key="map_reviews")
     with col4:
@@ -1761,74 +1765,129 @@ elif page == "Map Explorer":
 
     st.markdown("---")
 
-    # Filter map data
-    if len(map_data) > 0:
-        filtered_map = map_data.copy()
+    # Filter and aggregate map data
+    if len(main_data) > 0:
+        filtered_data = main_data.copy()
+        
+        # Apply city filter
         if filter_city != "All":
-            filtered_map = filtered_map[filtered_map["city"] == filter_city]
-        filtered_map = filtered_map[filtered_map["review_count"] >= min_reviews]
-        filtered_map = filtered_map[
-            (filtered_map["business_stars"] >= min_rating)
-            & (filtered_map["business_stars"] <= max_rating)
+            filtered_data = filtered_data[filtered_data["city"] == filter_city]
+        
+        # Aggregate by business
+        map_data = (
+            filtered_data.groupby(["business_id", "name", "city", "address", "latitude", "longitude"])
+            .agg({
+                "stars": "mean",
+                "review_id": "count",
+                "business_stars": "first",
+                "sentiment_label": "mean",
+                "price_tier": "median",
+            })
+            .reset_index()
+        )
+        map_data.columns = [
+            "business_id", "name", "city", "address", "latitude", "longitude",
+            "avg_rating", "review_count", "business_stars", "avg_sentiment", "price_tier"
         ]
+        
+        # Apply additional filters
+        map_data = map_data[map_data["review_count"] >= min_reviews]
+        map_data = map_data[
+            (map_data["business_stars"] >= min_rating)
+            & (map_data["business_stars"] <= max_rating)
+        ]
+        
+        # Recalculate city stats
+        city_stats = (
+            filtered_data.groupby("city")
+            .agg({
+                "stars": "mean",
+                "sentiment_label": lambda x: (x.sum() / len(x)) * 100,
+                "review_id": "count",
+                "price_tier": "median",
+            })
+            .reset_index()
+        )
+        city_stats.columns = ["city", "avg_rating", "positive_sentiment_pct", "review_count", "median_price"]
+        city_stats = city_stats.sort_values("positive_sentiment_pct", ascending=False)
+    else:
+        # Fallback to pre-aggregated data
+        map_data = load_aggregated_data("agg_map_data.csv")
+        city_stats = load_aggregated_data("agg_city_stats.csv")
+        
+        # Fix spacing in pre-aggregated data
+        if len(map_data) > 0:
+            map_data['city'] = map_data['city'].apply(lambda x: ' '.join(str(x).split()) if pd.notna(x) else x)
+        if len(city_stats) > 0:
+            city_stats['city'] = city_stats['city'].apply(lambda x: ' '.join(str(x).split()) if pd.notna(x) else x)
+        
+        # Apply filters to pre-aggregated data
+        if len(map_data) > 0:
+            if filter_city != "All":
+                map_data = map_data[map_data["city"] == filter_city]
+            map_data = map_data[map_data["review_count"] >= min_reviews]
+            map_data = map_data[
+                (map_data["business_stars"] >= min_rating)
+                & (map_data["business_stars"] <= max_rating)
+            ]
 
-        st.markdown(f"**📊 Showing {len(filtered_map):,} restaurants**")
+    st.markdown(f"**📊 Showing {len(map_data):,} restaurants**")
 
-        # Create map
-        if len(filtered_map) > 0:
-            m = folium.Map(
-                location=[
-                    filtered_map["latitude"].mean(),
-                    filtered_map["longitude"].mean(),
-                ],
-                zoom_start=11,
-            )
+    # Create map
+    if len(map_data) > 0:
+        m = folium.Map(
+            location=[
+                map_data["latitude"].mean(),
+                map_data["longitude"].mean(),
+            ],
+            zoom_start=11,
+        )
 
-            for _, row in filtered_map.iterrows():
-                if color_by == "Rating":
-                    color = (
-                        "#93c5fd"  # blue for high
-                        if row["business_stars"] >= 4
-                        else "#fbbf24"  # yellow for medium
-                        if row["business_stars"] >= 3
-                        else "#fda4af"  # pink for low
-                    )
-                elif color_by == "Sentiment":
-                    color = (
-                        "#93c5fd"  # blue for high
-                        if row["avg_sentiment"] >= 0.7
-                        else "#fbbf24"  # yellow for medium
-                        if row["avg_sentiment"] >= 0.4
-                        else "#fda4af"  # pink for low
-                    )
-                else:
-                    colors_map = {1: "#fda4af", 2: "#f9a8d4", 3: "#a78bfa", 4: "#93c5fd"}
-                    color = (
-                        colors_map.get(int(row["price_tier"]), "gray")
-                        if pd.notna(row["price_tier"])
-                        else "gray"
-                    )
+        for _, row in map_data.iterrows():
+            if color_by == "Rating":
+                color = (
+                    "#93c5fd"  # blue for high
+                    if row["business_stars"] >= 4
+                    else "#fbbf24"  # yellow for medium
+                    if row["business_stars"] >= 3
+                    else "#fda4af"  # pink for low
+                )
+            elif color_by == "Sentiment":
+                color = (
+                    "#93c5fd"  # blue for high
+                    if row["avg_sentiment"] >= 0.7
+                    else "#fbbf24"  # yellow for medium
+                    if row["avg_sentiment"] >= 0.4
+                    else "#fda4af"  # pink for low
+                )
+            else:
+                colors_map = {1: "#fda4af", 2: "#f9a8d4", 3: "#a78bfa", 4: "#93c5fd"}
+                color = (
+                    colors_map.get(int(row["price_tier"]), "gray")
+                    if pd.notna(row["price_tier"])
+                    else "gray"
+                )
 
-                folium.CircleMarker(
-                    location=[row["latitude"], row["longitude"]],
-                    radius=min(max(5, row["review_count"] / 20), 15),
-                    popup=f"<b>{row['name']}</b><br>{row['address']}<br>Rating: {row['business_stars']:.1f} | Reviews: {row['review_count']}<br>Sentiment: {row['avg_sentiment']:.1%}",
-                    color=color,
-                    fill=True,
-                    fillOpacity=0.7,
-                    weight=2,
-                ).add_to(m)
+            folium.CircleMarker(
+                location=[row["latitude"], row["longitude"]],
+                radius=min(max(5, row["review_count"] / 20), 15),
+                popup=f"<b>{row['name']}</b><br>{row['address']}<br>Rating: {row['business_stars']:.1f} | Reviews: {row['review_count']}<br>Sentiment: {row['avg_sentiment']:.1%}",
+                color=color,
+                fill=True,
+                fillOpacity=0.7,
+                weight=2,
+            ).add_to(m)
 
-            st_folium(m, width=None, height=500, use_container_width=True)
+        st_folium(m, width=None, height=500, use_container_width=True)
 
-            display_insight(
-                f"Showing <strong>{len(filtered_map):,}</strong> restaurants. "
-                f"Size = review volume; Color = {color_by.lower()}. "
-                f"Blue = high performance, Pink = needs attention.",
-                "🗺️",
-            )
-        else:
-            st.warning("No restaurants match the current filters.")
+        display_insight(
+            f"Showing <strong>{len(map_data):,}</strong> restaurants. "
+            f"Size = review volume; Color = {color_by.lower()}. "
+            f"Blue = high performance, Pink = needs attention.",
+            "🗺️",
+        )
+    else:
+        st.warning("No restaurants match the current filters.")
 
     st.divider()
 
@@ -1855,6 +1914,8 @@ elif page == "Map Explorer":
                 f"Top city: <strong>{best['city']}</strong> ({best['positive_sentiment_pct']:.1f}% positive).",
                 "🏙️",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col2:
         if len(city_stats) > 0:
@@ -1876,10 +1937,11 @@ elif page == "Map Explorer":
                 f"Top-right = premium high-quality markets.",
                 "📍",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
 
-# ============ END OF PART 3 ============
-# ============ PAGE: SENTIMENT ANALYSIS ============
+# ============ PAGE: SENTIMENT ANALYSIS (FIXED VERSION) ============
 elif page == "Sentiment Analysis":
     st.markdown(
         """
@@ -1897,12 +1959,120 @@ elif page == "Sentiment Analysis":
     with st.expander("🔍 **Filter Data**", expanded=False):
         filters = create_simple_filter("sentiment", show_city=True, show_price=True)
 
-    # Load pre-aggregated data
-    kpis = load_kpis()
-    rating_sentiment = load_aggregated_data("agg_rating_sentiment.csv")
-    length_sentiment = load_aggregated_data("agg_length_sentiment.csv")
-    sentiment_price = load_aggregated_data("agg_sentiment_price.csv")
-    cuisine_sentiment = load_aggregated_data("agg_cuisine_sentiment.csv")
+    # Load main data and apply filters
+    main_data = load_main_data()
+    
+    if len(main_data) > 0:
+        # Apply filters
+        filtered_data = apply_filters_to_df(
+            main_data,
+            filters,
+            city_col="city",
+            rating_col="stars",
+            price_col="price_tier",
+            sentiment_col="sentiment_text",
+        )
+        
+        if len(filtered_data) > 0:
+            # Recalculate KPIs
+            corr = filtered_data[["stars", "sentiment_label"]].corr().iloc[0, 1]
+            kpis = pd.DataFrame([{"correlation": corr}])
+            
+            # Recalculate rating sentiment
+            if 'rating_category' in filtered_data.columns:
+                rating_sentiment = (
+                    filtered_data.groupby("rating_category")
+                    .agg({
+                        "sentiment_label": ["mean", "std"]
+                    })
+                    .reset_index()
+                )
+                rating_sentiment.columns = ["rating_category", "avg_sentiment", "std_sentiment"]
+                
+                # Sort by rating category
+                category_order = ["Poor", "Average", "Good", "Excellent"]
+                rating_sentiment['rating_category'] = pd.Categorical(
+                    rating_sentiment['rating_category'], 
+                    categories=category_order, 
+                    ordered=True
+                )
+                rating_sentiment = rating_sentiment.sort_values('rating_category')
+            else:
+                rating_sentiment = pd.DataFrame()
+            
+            # Recalculate length sentiment
+            if 'review_length' in filtered_data.columns and 'sentiment_text' in filtered_data.columns:
+                length_sentiment = (
+                    filtered_data.groupby("sentiment_text")
+                    .agg({
+                        "review_length": ["mean", "std"]
+                    })
+                    .reset_index()
+                )
+                length_sentiment.columns = ["sentiment", "mean_length", "std_length"]
+            else:
+                length_sentiment = pd.DataFrame()
+            
+            # Recalculate sentiment by price
+            if filtered_data["price_tier"].notna().any():
+                sentiment_price = (
+                    filtered_data.groupby("price_tier")
+                    .agg({
+                        "sentiment_label": ["mean", "std", "count"]
+                    })
+                    .reset_index()
+                )
+                sentiment_price.columns = ["price_tier", "avg_sentiment", "std_sentiment", "count"]
+            else:
+                sentiment_price = pd.DataFrame()
+            
+            # Recalculate cuisine sentiment (using filter from earlier)
+            if 'categories' in filtered_data.columns:
+                filtered_data['cuisine_list'] = filtered_data['categories'].str.split(',')
+                df_cuisine_exploded = filtered_data.explode('cuisine_list')
+                df_cuisine_exploded['cuisine_list'] = df_cuisine_exploded['cuisine_list'].str.strip()
+                
+                # Filter out non-cuisines
+                non_cuisine_terms = [
+                    'nutritionist', 'weight loss', 'health & medical',
+                    'grocery', 'farmers market', 'specialty food',
+                    'butcher', 'seafood markets', 'restaurants', 'food',
+                ]
+                df_cuisine_exploded = df_cuisine_exploded[
+                    ~df_cuisine_exploded['cuisine_list'].str.lower().apply(
+                        lambda x: any(term in str(x).lower() for term in non_cuisine_terms)
+                    )
+                ]
+                
+                cuisine_sentiment = (
+                    df_cuisine_exploded.groupby("cuisine_list")
+                    .agg({
+                        "sentiment_label": lambda x: (x.sum() / len(x)) * 100
+                    })
+                    .reset_index()
+                )
+                cuisine_sentiment.columns = ["cuisine", "positive_pct"]
+                cuisine_sentiment = cuisine_sentiment.sort_values("positive_pct", ascending=False)
+            else:
+                cuisine_sentiment = pd.DataFrame()
+                
+        else:
+            kpis = pd.DataFrame()
+            rating_sentiment = pd.DataFrame()
+            length_sentiment = pd.DataFrame()
+            sentiment_price = pd.DataFrame()
+            cuisine_sentiment = pd.DataFrame()
+    else:
+        # Fallback to pre-aggregated data
+        kpis = load_kpis()
+        rating_sentiment = load_aggregated_data("agg_rating_sentiment.csv")
+        length_sentiment = load_aggregated_data("agg_length_sentiment.csv")
+        sentiment_price = load_aggregated_data("agg_sentiment_price.csv")
+        cuisine_sentiment = load_aggregated_data("agg_cuisine_sentiment.csv")
+        
+        # Apply filters to cuisine sentiment
+        if len(cuisine_sentiment) > 0:
+            cuisine_sentiment = filter_out_non_cuisines(cuisine_sentiment, 'cuisine')
 
     col1, col2 = st.columns(2)
 
@@ -1947,16 +2117,12 @@ elif page == "Sentiment Analysis":
                 f"{'Strong alignment = authentic reviews.' if corr > 0.5 else 'Weak alignment may indicate mixed opinions.'}",
                 "✅",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col2:
         st.markdown("<h3>💰 Sentiment by Price Tier</h3>", unsafe_allow_html=True)
         if len(sentiment_price) > 0:
-            # Apply price filter
-            if "price_tiers" in filters and filters["price_tiers"]:
-                sentiment_price = sentiment_price[
-                    sentiment_price["price_tier"].isin(filters["price_tiers"])
-                ]
-
             fig = px.bar(
                 sentiment_price,
                 x="price_tier",
@@ -1978,6 +2144,8 @@ elif page == "Sentiment Analysis":
                 f"when paying more.",
                 "💰",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     col3, col4 = st.columns(2)
 
@@ -2008,16 +2176,12 @@ elif page == "Sentiment Analysis":
                 f"Mismatches suggest complex customer opinions.",
                 "📊",
             )
+        else:
+            st.info("No data available for the selected filters.")
 
     with col4:
         st.markdown("<h3>📝 Review Length by Sentiment</h3>", unsafe_allow_html=True)
         if len(length_sentiment) > 0:
-            # Apply sentiment filter
-            if "sentiment" in filters and filters["sentiment"]:
-                length_sentiment = length_sentiment[
-                    length_sentiment["sentiment"].isin(filters["sentiment"])
-                ]
-
             fig = px.bar(
                 length_sentiment,
                 x="sentiment",
@@ -2044,6 +2208,8 @@ elif page == "Sentiment Analysis":
                     f"{'Dissatisfied customers write detailed complaints.' if longer == 'Negative' else 'Happy customers share enthusiastic experiences.'}",
                     "📝",
                 )
+        else:
+            st.info("No data available for the selected filters.")
 
     st.divider()
 
@@ -2069,9 +2235,11 @@ elif page == "Sentiment Analysis":
             f"Low sentiment cuisines may have service or quality gaps.",
             "🍜",
         )
+    else:
+        st.info("No data available for the selected filters.")
 
 
-# ============ PAGE: VALUE & OUTLIERS ============
+# ============ PAGE: VALUE & OUTLIERS (FIXED VERSION) ============
 elif page == "Value & Outliers":
     st.markdown(
         """
@@ -2085,22 +2253,61 @@ elif page == "Value & Outliers":
         unsafe_allow_html=True,
     )
 
-    # Load pre-aggregated data
-    restaurant_value = load_aggregated_data("agg_restaurant_value.csv")
-
     # Filters
     with st.expander("🔍 **Filter Data**", expanded=False):
         filters = create_simple_filter("value", show_city=True, show_price=True)
 
-    # Apply filters to restaurant value data
-    if len(restaurant_value) > 0:
-        restaurant_value = apply_filters_to_df(
-            restaurant_value,
+    # Load main data and apply filters
+    main_data = load_main_data()
+    
+    if len(main_data) > 0:
+        # Apply filters
+        filtered_data = apply_filters_to_df(
+            main_data,
             filters,
             city_col="city",
-            rating_col="dataset_avg_rating",
-            price_col="median_price",
+            rating_col="stars",
+            price_col="price_tier",
+            sentiment_col="sentiment_text",
         )
+        
+        if len(filtered_data) > 0:
+            # Recalculate restaurant value
+            restaurant_value = (
+                filtered_data.groupby(["business_id", "name", "city", "address"])
+                .agg({
+                    "stars": "mean",
+                    "business_stars": "first",
+                    "price_tier": "median",
+                    "review_id": "count",
+                    "sentiment_label": "mean",
+                })
+                .reset_index()
+            )
+            restaurant_value.columns = [
+                "business_id", "name", "city", "address",
+                "dataset_avg_rating", "yelp_rating", "median_price",
+                "dataset_reviews", "avg_sentiment"
+            ]
+            restaurant_value = restaurant_value.dropna(subset=["median_price"])
+            restaurant_value["value_score"] = (
+                restaurant_value["dataset_avg_rating"] / restaurant_value["median_price"]
+            )
+        else:
+            restaurant_value = pd.DataFrame()
+    else:
+        # Fallback to pre-aggregated data
+        restaurant_value = load_aggregated_data("agg_restaurant_value.csv")
+        
+        # Apply filters to restaurant value data
+        if len(restaurant_value) > 0:
+            restaurant_value = apply_filters_to_df(
+                restaurant_value,
+                filters,
+                city_col="city",
+                rating_col="dataset_avg_rating",
+                price_col="median_price",
+            )
 
     col1, col2 = st.columns(2)
 
@@ -2149,6 +2356,8 @@ elif page == "Value & Outliers":
                 )
             else:
                 st.info("No hidden gems found. Try adjusting filters.")
+        else:
+            st.info("No data available for the selected filters.")
 
     with col2:
         st.markdown(
@@ -2197,6 +2406,8 @@ elif page == "Value & Outliers":
                 )
             else:
                 st.success("No overpriced restaurants found—good market health!")
+        else:
+            st.info("No data available for the selected filters.")
 
     st.divider()
 
@@ -2234,6 +2445,8 @@ elif page == "Value & Outliers":
             f"<strong>Bottom-right</strong> = worst value. Dashed lines mark averages.",
             "💰",
         )
+    else:
+        st.info("No data available for the selected filters.")
 
     # Value Score Analysis
     st.markdown("<h3>⭐ Value Score Analysis</h3>", unsafe_allow_html=True)
@@ -2268,7 +2481,8 @@ elif page == "Value & Outliers":
             f"Restaurants above average offer competitive value.",
             "⭐",
         )
-# ============ END OF PART 4 ============
+    else:
+        st.info("No data available for the selected filters.")
 # ============ PAGE: ADVANCED INSIGHTS ============
 elif page == "Advanced Insights":
     st.markdown(
