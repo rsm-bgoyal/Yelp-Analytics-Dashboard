@@ -1,3 +1,7 @@
+# Force cache clear on first run
+if 'cache_cleared' not in st.session_state:
+    st.cache_data.clear()
+    st.session_state.cache_cleared = True
 import os
 
 os.environ["MPLCONFIGDIR"] = "/tmp/matplotlib"
@@ -234,31 +238,46 @@ def load_filter_options():
         
         # Handle both string and list types
         if isinstance(cities_raw, str):
-            cities = eval(cities_raw)
+            try:
+                cities = eval(cities_raw)
+            except:
+                cities = []
         else:
-            cities = cities_raw
+            cities = cities_raw if cities_raw else []
+        
+        # DEBUG: Print to see what we're getting
+        print(f"DEBUG: Raw cities = {cities}")
         
         # Remove duplicates using a dictionary (case-insensitive)
         cities_dict = {}
         for city in cities:
-            city_clean = city.strip()
-            city_key = city_clean.lower()
-            if city_key not in cities_dict:
-                cities_dict[city_key] = city_clean
+            if city:  # Skip empty strings
+                city_clean = str(city).strip()
+                city_key = city_clean.lower()
+                # Only add if not already present
+                if city_key not in cities_dict:
+                    cities_dict[city_key] = city_clean
         
         # Get unique cities and sort
         unique_cities = sorted(list(cities_dict.values()))
         
+        # DEBUG: Print to see what we're returning
+        print(f"DEBUG: Unique cities = {unique_cities}")
+        print(f"DEBUG: Removed {len(cities) - len(unique_cities)} duplicates")
+        
         # Parse price tiers
         price_tiers_raw = options["price_tiers"].iloc[0]
         if isinstance(price_tiers_raw, str):
-            price_tiers = eval(price_tiers_raw)
+            try:
+                price_tiers = eval(price_tiers_raw)
+            except:
+                price_tiers = []
         else:
-            price_tiers = price_tiers_raw
+            price_tiers = price_tiers_raw if price_tiers_raw else []
         
         return {
             "cities": unique_cities,
-            "price_tiers": sorted(price_tiers),
+            "price_tiers": sorted(price_tiers) if price_tiers else [],
             "min_date": options["min_date"].iloc[0],
             "max_date": options["max_date"].iloc[0],
         }
@@ -271,8 +290,60 @@ def load_filter_options():
     }
 
 
+# ============ FIX THE DROPDOWN DIRECTION ============
+# In your create_simple_filter function, change the city selectbox section to:
 
+def create_simple_filter(key_prefix, show_city=True, show_price=True):
+    """Create a simple filter section using pre-loaded options"""
+    st.markdown("#### 🔍 Filter Options")
 
+    filters = {}
+    cols = st.columns(4)
+
+    if show_city:
+        with cols[0]:
+            cities = ["All"] + filter_opts.get("cities", [])
+            
+            # Add custom CSS to force dropdown direction
+            st.markdown("""
+                <style>
+                [data-baseweb="select"] {
+                    margin-bottom: 300px !important;
+                }
+                </style>
+            """, unsafe_allow_html=True)
+            
+            filters["city"] = st.selectbox(
+                "🏙️ City", 
+                cities, 
+                key=f"{key_prefix}_city"
+            )
+
+    if show_price:
+        with cols[1]:
+            price_tiers = filter_opts.get("price_tiers", [])
+            filters["price_tiers"] = st.multiselect(
+                "💰 Price Tier",
+                price_tiers,
+                default=price_tiers,
+                key=f"{key_prefix}_price",
+            )
+
+    with cols[2]:
+        filters["min_rating"], filters["max_rating"] = st.slider(
+            "⭐ Rating Range", 1.0, 5.0, (1.0, 5.0), 0.5, key=f"{key_prefix}_rating"
+        )
+
+    with cols[3]:
+        filters["sentiment"] = st.multiselect(
+            "😊 Sentiment",
+            ["Positive", "Negative"],
+            default=["Positive", "Negative"],
+            key=f"{key_prefix}_sent",
+        )
+
+    st.markdown("---")
+    return filters
 
 @st.cache_data
 def load_main_data():
