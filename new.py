@@ -226,16 +226,27 @@ def load_kpis():
 
 @st.cache_data
 def load_filter_options():
-    """Load filter options"""
+    """Load filter options with duplicate removal"""
     options = load_aggregated_data("filter_options.csv")
     if len(options) > 0:
+        # Parse the cities list
+        cities = eval(options["cities"].iloc[0]) if isinstance(options["cities"].iloc[0], str) else []
+        
+        # Remove duplicates while preserving order
+        # Use a set to track what we've seen (case-insensitive)
+        seen = set()
+        unique_cities = []
+        for city in cities:
+            city_lower = city.lower().strip()
+            if city_lower not in seen:
+                seen.add(city_lower)
+                unique_cities.append(city)
+        
+        price_tiers = eval(options["price_tiers"].iloc[0]) if isinstance(options["price_tiers"].iloc[0], str) else []
+        
         return {
-            "cities": eval(options["cities"].iloc[0])
-            if isinstance(options["cities"].iloc[0], str)
-            else [],
-            "price_tiers": eval(options["price_tiers"].iloc[0])
-            if isinstance(options["price_tiers"].iloc[0], str)
-            else [],
+            "cities": sorted(unique_cities),  # Sort alphabetically
+            "price_tiers": sorted(price_tiers),
             "min_date": options["min_date"].iloc[0],
             "max_date": options["max_date"].iloc[0],
         }
@@ -245,6 +256,7 @@ def load_filter_options():
         "min_date": "2020-01-01",
         "max_date": "2024-12-31",
     }
+
 
 
 @st.cache_data
