@@ -230,32 +230,47 @@ def load_filter_options():
     options = load_aggregated_data("filter_options.csv")
     if len(options) > 0:
         # Parse the cities list
-        cities = eval(options["cities"].iloc[0]) if isinstance(options["cities"].iloc[0], str) else []
+        cities_raw = options["cities"].iloc[0]
         
-        # Remove duplicates while preserving order
-        # Use a set to track what we've seen (case-insensitive)
-        seen = set()
-        unique_cities = []
+        # Handle both string and list types
+        if isinstance(cities_raw, str):
+            cities = eval(cities_raw)
+        else:
+            cities = cities_raw
+        
+        # Remove duplicates using a dictionary (case-insensitive)
+        cities_dict = {}
         for city in cities:
-            city_lower = city.lower().strip()
-            if city_lower not in seen:
-                seen.add(city_lower)
-                unique_cities.append(city)
+            city_clean = city.strip()
+            city_key = city_clean.lower()
+            if city_key not in cities_dict:
+                cities_dict[city_key] = city_clean
         
-        price_tiers = eval(options["price_tiers"].iloc[0]) if isinstance(options["price_tiers"].iloc[0], str) else []
+        # Get unique cities and sort
+        unique_cities = sorted(list(cities_dict.values()))
+        
+        # Parse price tiers
+        price_tiers_raw = options["price_tiers"].iloc[0]
+        if isinstance(price_tiers_raw, str):
+            price_tiers = eval(price_tiers_raw)
+        else:
+            price_tiers = price_tiers_raw
         
         return {
-            "cities": sorted(unique_cities),  # Sort alphabetically
+            "cities": unique_cities,
             "price_tiers": sorted(price_tiers),
             "min_date": options["min_date"].iloc[0],
             "max_date": options["max_date"].iloc[0],
         }
+    
     return {
         "cities": [],
         "price_tiers": [],
         "min_date": "2020-01-01",
         "max_date": "2024-12-31",
     }
+
+
 
 
 
