@@ -674,7 +674,7 @@ if page == "Overview":
                     "Excellent": "#93c5fd",
                 },
             )
-            fig.update_layout(showlegend=False, height=400)
+            fig.update_layout(showlegend=False, height=450)
             st.plotly_chart(fig, use_container_width=True)
 
             total = rating_cat["count"].sum()
