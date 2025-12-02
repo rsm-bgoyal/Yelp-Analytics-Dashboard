@@ -494,6 +494,60 @@ def get_insights_from_kpis(kpis):
     insights.append(f"🏙️ Data covers {int(k.get('unique_cities', 0))} unique cities")
 
     return insights
+def filter_out_non_cuisines(df, cuisine_col='cuisine'):
+    """
+    Remove non-food businesses that shouldn't appear as cuisines
+    """
+    if len(df) == 0 or cuisine_col not in df.columns:
+        return df
+    
+    # List of terms to exclude (case-insensitive)
+    exclude_terms = [
+        'nutritionist',
+        'nutritionists',
+        'weight loss',
+        'weight loss center',
+        'weight loss centers',
+        'health & medical',
+        'health markets',
+        'grocery',
+        'farmers market',
+        'specialty food',
+        'imported food',
+        'ethnic grocery',
+        'butcher',
+        'seafood markets',
+        'cannabis',
+        'active life',
+        'arts & entertainment',
+        'professional services',
+        'event planning',
+        'church',
+        'churches',
+        'temple',
+        'school',
+        'college',
+        'sports club',
+        'gym',
+        'fitness',
+        'yoga',
+        'pilates',
+        'spa',
+        'salon',
+        'massage',
+        'beauty',
+        'hair salon',
+        'barber',
+        'hotel',
+        'motel',
+    ]
+    
+    # Filter out rows where cuisine contains any of the exclude terms
+    mask = df[cuisine_col].str.lower().apply(
+        lambda x: not any(term in str(x).lower() for term in exclude_terms)
+    )
+    
+    return df[mask]
 
 
 # ============ END OF PART 1 ============
@@ -1382,9 +1436,7 @@ elif page == "Exploratory Analysis":
         )
     else:
         st.info("No restaurants match the selected filters.")
-
-
-# ============ PAGE: CUISINE ANALYSIS (FIXED VERSION) ============
+# ============ CUISINE ANALYSIS PAGE ============
 elif page == "Cuisine Analysis":
     st.markdown(
         """
@@ -1422,10 +1474,23 @@ elif page == "Cuisine Analysis":
             df_cuisine_exploded = filtered_data.explode('cuisine_list')
             df_cuisine_exploded['cuisine_list'] = df_cuisine_exploded['cuisine_list'].str.strip()
             
-            # Filter out generic terms
+            # Filter out generic terms AND non-food businesses
             exclude_terms = ['Restaurants', 'Food', 'Event Planning & Services']
             df_cuisine_exploded = df_cuisine_exploded[
                 ~df_cuisine_exploded['cuisine_list'].isin(exclude_terms)
+            ]
+            
+            # Additional filtering for non-cuisines (case-insensitive substring match)
+            non_cuisine_terms = [
+                'nutritionist', 'weight loss', 'health & medical',
+                'grocery', 'farmers market', 'specialty food',
+                'butcher', 'seafood markets', 'gym', 'fitness',
+                'yoga', 'spa', 'salon', 'church', 'school',
+            ]
+            df_cuisine_exploded = df_cuisine_exploded[
+                ~df_cuisine_exploded['cuisine_list'].str.lower().apply(
+                    lambda x: any(term in str(x).lower() for term in non_cuisine_terms)
+                )
             ]
             
             # Recalculate cuisine rating
@@ -1505,6 +1570,13 @@ elif page == "Cuisine Analysis":
         heatmap_data = load_aggregated_data("agg_cuisine_price_heatmap.csv")
         cuisine_sentiment = load_aggregated_data("agg_cuisine_sentiment.csv")
         cuisine_trends = load_aggregated_data("agg_cuisine_trends.csv")
+        
+        # Apply filtering to pre-aggregated data too
+        cuisine_rating = filter_out_non_cuisines(cuisine_rating, 'cuisine')
+        cuisine_count = filter_out_non_cuisines(cuisine_count, 'cuisine')
+        heatmap_data = filter_out_non_cuisines(heatmap_data, 'cuisine')
+        cuisine_sentiment = filter_out_non_cuisines(cuisine_sentiment, 'cuisine')
+        cuisine_trends = filter_out_non_cuisines(cuisine_trends, 'cuisine')
 
     col1, col2 = st.columns(2)
 
@@ -1646,6 +1718,7 @@ elif page == "Cuisine Analysis":
             )
         else:
             st.info("No data available for the selected filters.")
+
 # ============ PAGE: MAP EXPLORER ============
 elif page == "Map Explorer":
     st.markdown(
